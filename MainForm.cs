@@ -16,6 +16,7 @@ namespace Investment_ideas_platform
         String p1 = "rmpwd";
         String u2 = "CL";
         String p2 = "clpwd";
+        //test
         public MainForm()
         {
             InitializeComponent();
