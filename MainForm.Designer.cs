@@ -124,7 +124,7 @@ namespace Investment_ideas_platform
             // 
             // btnLoginCancel
             // 
-            this.btnLoginCancel.Location = new System.Drawing.Point(260, 313);
+            this.btnLoginCancel.Location = new System.Drawing.Point(260, 315);
             this.btnLoginCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoginCancel.Name = "btnLoginCancel";
             this.btnLoginCancel.Size = new System.Drawing.Size(108, 33);
