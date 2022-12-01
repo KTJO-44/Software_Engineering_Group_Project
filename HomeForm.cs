@@ -19,14 +19,6 @@ namespace Investment_ideas_platform
             //textBox1.Text = username;
         }
 
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.userLoggedIn = false;
-            Program.currForm = null;
-            Program.f1.Show();
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             //dashBoardRM1.BringToFront()
@@ -56,6 +48,14 @@ namespace Investment_ideas_platform
         {
             //username = uname;
             //usertype = utype;
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.userLoggedIn = false;
+            Program.currForm = null;
+            Program.f1.Show();
         }
     }
 }
