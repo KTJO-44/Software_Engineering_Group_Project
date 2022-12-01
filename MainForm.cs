@@ -19,6 +19,7 @@ namespace Investment_ideas_platform
         //test
         //test2
         //test3
+        //test4
         public MainForm()
         {
             InitializeComponent();
