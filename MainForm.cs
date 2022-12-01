@@ -18,6 +18,7 @@ namespace Investment_ideas_platform
         String p2 = "clpwd";
         //test
         //test2
+        //test3
         public MainForm()
         {
             InitializeComponent();
