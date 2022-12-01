@@ -13,6 +13,10 @@ namespace Investment_ideas_platform
         public HomeForm()
         {
             InitializeComponent();
+
+            pnNavBtnHighlighter.Height = btnDashboard.Height;
+            pnNavBtnHighlighter.Top = btnDashboard.Top;
+            pnNavBtnHighlighter.Left = btnDashboard.Left;
         }
         private void Form2_Shown(object sender, EventArgs e)
         {
@@ -40,7 +44,7 @@ namespace Investment_ideas_platform
                 Controls.Add(dashBoardIG);
             }
             */
-
+            pnDashboard.Visible = true;
             //Controls.Clear();
         }
 
@@ -56,6 +60,22 @@ namespace Investment_ideas_platform
             Program.userLoggedIn = false;
             Program.currForm = null;
             Program.f1.Show();
+        }
+
+        private void setPanelsInvisible()
+        {
+            pnDashboard.Visible = false;
+            
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            setPanelsInvisible();
+            pnNavBtnHighlighter.Height = btnDashboard.Height;
+            pnNavBtnHighlighter.Top = btnDashboard.Top;
+            pnNavBtnHighlighter.Left = btnDashboard.Left;
+            btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            pnDashboard.Visible = true;
         }
     }
 }

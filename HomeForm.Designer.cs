@@ -40,9 +40,13 @@ namespace Investment_ideas_platform
             this.btnIdeas = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
+            this.pnNavBtnHighlighter = new System.Windows.Forms.Panel();
+            this.pnDashboard = new System.Windows.Forms.Panel();
+            this.lblRMDashboard = new System.Windows.Forms.Label();
             this.pnNavMenu.SuspendLayout();
             this.pnUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
+            this.pnDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -63,6 +67,7 @@ namespace Investment_ideas_platform
             // pnNavMenu
             // 
             this.pnNavMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnNavMenu.Controls.Add(this.pnNavBtnHighlighter);
             this.pnNavMenu.Controls.Add(this.btnClients);
             this.pnNavMenu.Controls.Add(this.btnProducts);
             this.pnNavMenu.Controls.Add(this.btnIdeas);
@@ -137,6 +142,7 @@ namespace Investment_ideas_platform
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnIdeas
             // 
@@ -179,9 +185,37 @@ namespace Investment_ideas_platform
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(281, 56);
             this.btnClients.TabIndex = 1;
-            this.btnClients.Text = "Dashboard";
+            this.btnClients.Text = "Clients";
             this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClients.UseVisualStyleBackColor = true;
+            // 
+            // pnNavBtnHighlighter
+            // 
+            this.pnNavBtnHighlighter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pnNavBtnHighlighter.Location = new System.Drawing.Point(0, 257);
+            this.pnNavBtnHighlighter.Name = "pnNavBtnHighlighter";
+            this.pnNavBtnHighlighter.Size = new System.Drawing.Size(3, 133);
+            this.pnNavBtnHighlighter.TabIndex = 2;
+            // 
+            // pnDashboard
+            // 
+            this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnDashboard.Controls.Add(this.lblRMDashboard);
+            this.pnDashboard.Location = new System.Drawing.Point(301, 47);
+            this.pnDashboard.Name = "pnDashboard";
+            this.pnDashboard.Size = new System.Drawing.Size(1500, 839);
+            this.pnDashboard.TabIndex = 2;
+            // 
+            // lblRMDashboard
+            // 
+            this.lblRMDashboard.AutoSize = true;
+            this.lblRMDashboard.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRMDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRMDashboard.Location = new System.Drawing.Point(54, 17);
+            this.lblRMDashboard.Name = "lblRMDashboard";
+            this.lblRMDashboard.Size = new System.Drawing.Size(1133, 81);
+            this.lblRMDashboard.TabIndex = 0;
+            this.lblRMDashboard.Text = "RELATIONSHIP MANAGER - DASHBOARD";
             // 
             // HomeForm
             // 
@@ -189,6 +223,7 @@ namespace Investment_ideas_platform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnNavMenu);
             this.Controls.Add(this.btnExit);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
@@ -202,6 +237,8 @@ namespace Investment_ideas_platform
             this.pnUserDetails.ResumeLayout(false);
             this.pnUserDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
+            this.pnDashboard.ResumeLayout(false);
+            this.pnDashboard.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -218,5 +255,8 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnIdeas;
         private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Panel pnNavBtnHighlighter;
+        private System.Windows.Forms.Panel pnDashboard;
+        private System.Windows.Forms.Label lblRMDashboard;
     }
 }
