@@ -15,6 +15,7 @@ namespace Investment_ideas_platform
         public MainForm()
         {
             InitializeComponent();
+            //biraj
         }
 
     }
