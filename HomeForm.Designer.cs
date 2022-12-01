@@ -49,6 +49,10 @@ namespace Investment_ideas_platform
             this.lblProducts = new System.Windows.Forms.Label();
             this.pnClients = new System.Windows.Forms.Panel();
             this.lblClients = new System.Windows.Forms.Label();
+            this.pnDashboardIdeas = new System.Windows.Forms.Panel();
+            this.lblDMIdeas = new System.Windows.Forms.Label();
+            this.pbDMIdeas = new System.Windows.Forms.PictureBox();
+            this.lblDMIdeasNumbers = new System.Windows.Forms.Label();
             this.pnNavMenu.SuspendLayout();
             this.pnUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -56,6 +60,8 @@ namespace Investment_ideas_platform
             this.pnIdeas.SuspendLayout();
             this.pnProducts.SuspendLayout();
             this.pnClients.SuspendLayout();
+            this.pnDashboardIdeas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -216,6 +222,7 @@ namespace Investment_ideas_platform
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnDashboard.Controls.Add(this.pnDashboardIdeas);
             this.pnDashboard.Controls.Add(this.lblRMDashboard);
             this.pnDashboard.Location = new System.Drawing.Point(301, 47);
             this.pnDashboard.Name = "pnDashboard";
@@ -296,16 +303,59 @@ namespace Investment_ideas_platform
             this.lblClients.TabIndex = 0;
             this.lblClients.Text = "CLIENTS";
             // 
+            // pnDashboardIdeas
+            // 
+            this.pnDashboardIdeas.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnDashboardIdeas.Controls.Add(this.pbDMIdeas);
+            this.pnDashboardIdeas.Controls.Add(this.lblDMIdeasNumbers);
+            this.pnDashboardIdeas.Controls.Add(this.lblDMIdeas);
+            this.pnDashboardIdeas.Location = new System.Drawing.Point(30, 141);
+            this.pnDashboardIdeas.Name = "pnDashboardIdeas";
+            this.pnDashboardIdeas.Size = new System.Drawing.Size(343, 212);
+            this.pnDashboardIdeas.TabIndex = 1;
+            // 
+            // lblDMIdeas
+            // 
+            this.lblDMIdeas.AutoSize = true;
+            this.lblDMIdeas.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDMIdeas.ForeColor = System.Drawing.Color.White;
+            this.lblDMIdeas.Location = new System.Drawing.Point(25, 14);
+            this.lblDMIdeas.Name = "lblDMIdeas";
+            this.lblDMIdeas.Size = new System.Drawing.Size(85, 38);
+            this.lblDMIdeas.TabIndex = 0;
+            this.lblDMIdeas.Text = "Ideas";
+            // 
+            // pbDMIdeas
+            // 
+            this.pbDMIdeas.Image = ((System.Drawing.Image)(resources.GetObject("pbDMIdeas.Image")));
+            this.pbDMIdeas.Location = new System.Drawing.Point(264, 14);
+            this.pbDMIdeas.Name = "pbDMIdeas";
+            this.pbDMIdeas.Size = new System.Drawing.Size(55, 56);
+            this.pbDMIdeas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDMIdeas.TabIndex = 2;
+            this.pbDMIdeas.TabStop = false;
+            // 
+            // lblDMIdeasNumbers
+            // 
+            this.lblDMIdeasNumbers.AutoSize = true;
+            this.lblDMIdeasNumbers.Font = new System.Drawing.Font("Nirmala UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDMIdeasNumbers.ForeColor = System.Drawing.Color.White;
+            this.lblDMIdeasNumbers.Location = new System.Drawing.Point(25, 76);
+            this.lblDMIdeasNumbers.Name = "lblDMIdeasNumbers";
+            this.lblDMIdeasNumbers.Size = new System.Drawing.Size(109, 50);
+            this.lblDMIdeasNumbers.TabIndex = 0;
+            this.lblDMIdeasNumbers.Text = "405K";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnClients);
             this.Controls.Add(this.pnProducts);
             this.Controls.Add(this.pnIdeas);
-            this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnNavMenu);
             this.Controls.Add(this.btnExit);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
@@ -327,6 +377,9 @@ namespace Investment_ideas_platform
             this.pnProducts.PerformLayout();
             this.pnClients.ResumeLayout(false);
             this.pnClients.PerformLayout();
+            this.pnDashboardIdeas.ResumeLayout(false);
+            this.pnDashboardIdeas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,5 +405,9 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Label lblProducts;
         private System.Windows.Forms.Panel pnClients;
         private System.Windows.Forms.Label lblClients;
+        private System.Windows.Forms.Panel pnDashboardIdeas;
+        private System.Windows.Forms.PictureBox pbDMIdeas;
+        private System.Windows.Forms.Label lblDMIdeasNumbers;
+        private System.Windows.Forms.Label lblDMIdeas;
     }
 }
