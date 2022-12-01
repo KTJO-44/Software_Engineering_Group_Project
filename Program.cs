@@ -8,7 +8,7 @@ namespace Investment_ideas_platform
 {
     static class Program
     {
-        //Just a test by jordan
+        //Just a test by jordan boy
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
