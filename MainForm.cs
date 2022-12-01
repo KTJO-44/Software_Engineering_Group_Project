@@ -15,8 +15,11 @@ namespace Investment_ideas_platform
         public MainForm()
         {
             InitializeComponent();
-            //biraj
         }
 
+        private void btnLoginCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

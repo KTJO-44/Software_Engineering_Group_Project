@@ -128,6 +128,7 @@ namespace Investment_ideas_platform
             this.btnLoginCancel.TabIndex = 3;
             this.btnLoginCancel.Text = "Cancel";
             this.btnLoginCancel.UseVisualStyleBackColor = true;
+            this.btnLoginCancel.Click += new System.EventHandler(this.btnLoginCancel_Click);
             // 
             // MainForm
             // 
