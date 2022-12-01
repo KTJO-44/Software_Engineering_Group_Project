@@ -24,6 +24,7 @@ namespace Investment_ideas_platform
 
         private void btnLoginCancel_Click(object sender, EventArgs e)
         {
+            //Exit button
             Application.Exit();
         }
 
