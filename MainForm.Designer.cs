@@ -109,7 +109,7 @@ namespace Investment_ideas_platform
             this.txb_login_pwd.Name = "txb_login_pwd";
             this.txb_login_pwd.PasswordChar = '#';
             this.txb_login_pwd.Size = new System.Drawing.Size(277, 32);
-            this.txb_login_pwd.TabIndex = 0;
+            this.txb_login_pwd.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -117,7 +117,7 @@ namespace Investment_ideas_platform
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 33);
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);

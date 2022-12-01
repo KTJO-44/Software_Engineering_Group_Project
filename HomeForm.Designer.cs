@@ -32,21 +32,30 @@ namespace Investment_ideas_platform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnExit = new System.Windows.Forms.Button();
             this.pnNavMenu = new System.Windows.Forms.Panel();
+            this.pnNavBtnHighlighter = new System.Windows.Forms.Panel();
+            this.btnClients = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.btnIdeas = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.pnUserDetails = new System.Windows.Forms.Panel();
             this.lblUserAccTypeDescription = new System.Windows.Forms.Label();
             this.lblUserAccountType = new System.Windows.Forms.Label();
             this.pbProfilePicture = new System.Windows.Forms.PictureBox();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnIdeas = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
-            this.btnClients = new System.Windows.Forms.Button();
-            this.pnNavBtnHighlighter = new System.Windows.Forms.Panel();
             this.pnDashboard = new System.Windows.Forms.Panel();
             this.lblRMDashboard = new System.Windows.Forms.Label();
+            this.pnIdeas = new System.Windows.Forms.Panel();
+            this.lblIdeas = new System.Windows.Forms.Label();
+            this.pnProducts = new System.Windows.Forms.Panel();
+            this.lblProducts = new System.Windows.Forms.Label();
+            this.pnClients = new System.Windows.Forms.Panel();
+            this.lblClients = new System.Windows.Forms.Label();
             this.pnNavMenu.SuspendLayout();
             this.pnUserDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.pnDashboard.SuspendLayout();
+            this.pnIdeas.SuspendLayout();
+            this.pnProducts.SuspendLayout();
+            this.pnClients.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -79,6 +88,82 @@ namespace Investment_ideas_platform
             this.pnNavMenu.Name = "pnNavMenu";
             this.pnNavMenu.Size = new System.Drawing.Size(281, 898);
             this.pnNavMenu.TabIndex = 1;
+            // 
+            // pnNavBtnHighlighter
+            // 
+            this.pnNavBtnHighlighter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pnNavBtnHighlighter.Location = new System.Drawing.Point(0, 257);
+            this.pnNavBtnHighlighter.Name = "pnNavBtnHighlighter";
+            this.pnNavBtnHighlighter.Size = new System.Drawing.Size(3, 133);
+            this.pnNavBtnHighlighter.TabIndex = 2;
+            // 
+            // btnClients
+            // 
+            this.btnClients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.Location = new System.Drawing.Point(0, 370);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(281, 56);
+            this.btnClients.TabIndex = 1;
+            this.btnClients.Text = "Clients";
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClients.UseVisualStyleBackColor = true;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            this.btnClients.Leave += new System.EventHandler(this.btnClients_Leave);
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProducts.FlatAppearance.BorderSize = 0;
+            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
+            this.btnProducts.Location = new System.Drawing.Point(0, 314);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(281, 56);
+            this.btnProducts.TabIndex = 1;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            this.btnProducts.Leave += new System.EventHandler(this.btnProducts_Leave);
+            // 
+            // btnIdeas
+            // 
+            this.btnIdeas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIdeas.FlatAppearance.BorderSize = 0;
+            this.btnIdeas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIdeas.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIdeas.Image = ((System.Drawing.Image)(resources.GetObject("btnIdeas.Image")));
+            this.btnIdeas.Location = new System.Drawing.Point(0, 258);
+            this.btnIdeas.Name = "btnIdeas";
+            this.btnIdeas.Size = new System.Drawing.Size(281, 56);
+            this.btnIdeas.TabIndex = 1;
+            this.btnIdeas.Text = "Ideas";
+            this.btnIdeas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIdeas.UseVisualStyleBackColor = true;
+            this.btnIdeas.Click += new System.EventHandler(this.btnIdeas_Click);
+            this.btnIdeas.Leave += new System.EventHandler(this.btnIdeas_Leave);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.Location = new System.Drawing.Point(0, 202);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(281, 56);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
             // pnUserDetails
             // 
@@ -128,75 +213,6 @@ namespace Investment_ideas_platform
             this.pbProfilePicture.TabIndex = 0;
             this.pbProfilePicture.TabStop = false;
             // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.Location = new System.Drawing.Point(0, 202);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(281, 56);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // btnIdeas
-            // 
-            this.btnIdeas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnIdeas.FlatAppearance.BorderSize = 0;
-            this.btnIdeas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIdeas.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnIdeas.Image = ((System.Drawing.Image)(resources.GetObject("btnIdeas.Image")));
-            this.btnIdeas.Location = new System.Drawing.Point(0, 258);
-            this.btnIdeas.Name = "btnIdeas";
-            this.btnIdeas.Size = new System.Drawing.Size(281, 56);
-            this.btnIdeas.TabIndex = 1;
-            this.btnIdeas.Text = "Ideas";
-            this.btnIdeas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIdeas.UseVisualStyleBackColor = true;
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProducts.FlatAppearance.BorderSize = 0;
-            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
-            this.btnProducts.Location = new System.Drawing.Point(0, 314);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(281, 56);
-            this.btnProducts.TabIndex = 1;
-            this.btnProducts.Text = "Products";
-            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProducts.UseVisualStyleBackColor = true;
-            // 
-            // btnClients
-            // 
-            this.btnClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClients.FlatAppearance.BorderSize = 0;
-            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClients.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
-            this.btnClients.Location = new System.Drawing.Point(0, 370);
-            this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(281, 56);
-            this.btnClients.TabIndex = 1;
-            this.btnClients.Text = "Clients";
-            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClients.UseVisualStyleBackColor = true;
-            // 
-            // pnNavBtnHighlighter
-            // 
-            this.pnNavBtnHighlighter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnNavBtnHighlighter.Location = new System.Drawing.Point(0, 257);
-            this.pnNavBtnHighlighter.Name = "pnNavBtnHighlighter";
-            this.pnNavBtnHighlighter.Size = new System.Drawing.Size(3, 133);
-            this.pnNavBtnHighlighter.TabIndex = 2;
-            // 
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -217,12 +233,78 @@ namespace Investment_ideas_platform
             this.lblRMDashboard.TabIndex = 0;
             this.lblRMDashboard.Text = "RELATIONSHIP MANAGER - DASHBOARD";
             // 
+            // pnIdeas
+            // 
+            this.pnIdeas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnIdeas.Controls.Add(this.lblIdeas);
+            this.pnIdeas.Location = new System.Drawing.Point(302, 48);
+            this.pnIdeas.Name = "pnIdeas";
+            this.pnIdeas.Size = new System.Drawing.Size(1500, 839);
+            this.pnIdeas.TabIndex = 2;
+            this.pnIdeas.Visible = false;
+            // 
+            // lblIdeas
+            // 
+            this.lblIdeas.AutoSize = true;
+            this.lblIdeas.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIdeas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblIdeas.Location = new System.Drawing.Point(54, 17);
+            this.lblIdeas.Name = "lblIdeas";
+            this.lblIdeas.Size = new System.Drawing.Size(561, 81);
+            this.lblIdeas.TabIndex = 0;
+            this.lblIdeas.Text = "INVESTMENT IDEAS";
+            // 
+            // pnProducts
+            // 
+            this.pnProducts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnProducts.Controls.Add(this.lblProducts);
+            this.pnProducts.Location = new System.Drawing.Point(302, 48);
+            this.pnProducts.Name = "pnProducts";
+            this.pnProducts.Size = new System.Drawing.Size(1500, 839);
+            this.pnProducts.TabIndex = 2;
+            this.pnProducts.Visible = false;
+            // 
+            // lblProducts
+            // 
+            this.lblProducts.AutoSize = true;
+            this.lblProducts.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblProducts.Location = new System.Drawing.Point(54, 17);
+            this.lblProducts.Name = "lblProducts";
+            this.lblProducts.Size = new System.Drawing.Size(332, 81);
+            this.lblProducts.TabIndex = 0;
+            this.lblProducts.Text = "PRODUCTS";
+            // 
+            // pnClients
+            // 
+            this.pnClients.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnClients.Controls.Add(this.lblClients);
+            this.pnClients.Location = new System.Drawing.Point(302, 48);
+            this.pnClients.Name = "pnClients";
+            this.pnClients.Size = new System.Drawing.Size(1500, 839);
+            this.pnClients.TabIndex = 2;
+            this.pnClients.Visible = false;
+            // 
+            // lblClients
+            // 
+            this.lblClients.AutoSize = true;
+            this.lblClients.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblClients.Location = new System.Drawing.Point(54, 17);
+            this.lblClients.Name = "lblClients";
+            this.lblClients.Size = new System.Drawing.Size(254, 81);
+            this.lblClients.TabIndex = 0;
+            this.lblClients.Text = "CLIENTS";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnClients);
+            this.Controls.Add(this.pnProducts);
+            this.Controls.Add(this.pnIdeas);
             this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnNavMenu);
             this.Controls.Add(this.btnExit);
@@ -239,6 +321,12 @@ namespace Investment_ideas_platform
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.pnDashboard.ResumeLayout(false);
             this.pnDashboard.PerformLayout();
+            this.pnIdeas.ResumeLayout(false);
+            this.pnIdeas.PerformLayout();
+            this.pnProducts.ResumeLayout(false);
+            this.pnProducts.PerformLayout();
+            this.pnClients.ResumeLayout(false);
+            this.pnClients.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -258,5 +346,11 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Panel pnNavBtnHighlighter;
         private System.Windows.Forms.Panel pnDashboard;
         private System.Windows.Forms.Label lblRMDashboard;
+        private System.Windows.Forms.Panel pnIdeas;
+        private System.Windows.Forms.Label lblIdeas;
+        private System.Windows.Forms.Panel pnProducts;
+        private System.Windows.Forms.Label lblProducts;
+        private System.Windows.Forms.Panel pnClients;
+        private System.Windows.Forms.Label lblClients;
     }
 }

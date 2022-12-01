@@ -44,6 +44,7 @@ namespace Investment_ideas_platform
                 Controls.Add(dashBoardIG);
             }
             */
+            setPanelsInvisible();
             pnDashboard.Visible = true;
             //Controls.Clear();
         }
@@ -65,6 +66,9 @@ namespace Investment_ideas_platform
         private void setPanelsInvisible()
         {
             pnDashboard.Visible = false;
+            pnIdeas.Visible = false;
+            pnProducts.Visible = false;
+            pnClients.Visible = false;
             
         }
 
@@ -76,6 +80,56 @@ namespace Investment_ideas_platform
             pnNavBtnHighlighter.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
             pnDashboard.Visible = true;
+        }
+
+        private void btnIdeas_Click(object sender, EventArgs e)
+        {
+            setPanelsInvisible();
+            pnNavBtnHighlighter.Height = btnIdeas.Height;
+            pnNavBtnHighlighter.Top = btnIdeas.Top;
+            pnNavBtnHighlighter.Left = btnIdeas.Left;
+            btnIdeas.BackColor = Color.FromArgb(46, 51, 73);
+            pnIdeas.Visible = true;
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            setPanelsInvisible();
+            pnNavBtnHighlighter.Height = btnProducts.Height;
+            pnNavBtnHighlighter.Top = btnProducts.Top;
+            pnNavBtnHighlighter.Left = btnProducts.Left;
+            btnProducts.BackColor = Color.FromArgb(46, 51, 73);
+            pnProducts.Visible = true;
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            setPanelsInvisible();
+            pnNavBtnHighlighter.Height = btnClients.Height;
+            pnNavBtnHighlighter.Top = btnClients.Top;
+            pnNavBtnHighlighter.Left = btnClients.Left;
+            btnClients.BackColor = Color.FromArgb(46, 51, 73);
+            pnClients.Visible = true;
+        }
+
+        private void btnDashboard_Leave(object sender, EventArgs e)
+        {
+            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnIdeas_Leave(object sender, EventArgs e)
+        {
+            btnIdeas.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnProducts_Leave(object sender, EventArgs e)
+        {
+            btnProducts.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnClients_Leave(object sender, EventArgs e)
+        {
+            btnClients.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }
