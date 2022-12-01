@@ -33,11 +33,12 @@ namespace Investment_ideas_platform
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.tbLoginUsername = new System.Windows.Forms.TextBox();
+            this.txtbx_login_uname = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.tbLoginPassword = new System.Windows.Forms.TextBox();
+            this.txb_login_pwd = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnLoginCancel = new System.Windows.Forms.Button();
+            this.lab_login_error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -76,15 +77,15 @@ namespace Investment_ideas_platform
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username";
             // 
-            // tbLoginUsername
+            // txtbx_login_uname
             // 
-            this.tbLoginUsername.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbLoginUsername.ForeColor = System.Drawing.Color.Navy;
-            this.tbLoginUsername.Location = new System.Drawing.Point(260, 204);
-            this.tbLoginUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.tbLoginUsername.Name = "tbLoginUsername";
-            this.tbLoginUsername.Size = new System.Drawing.Size(277, 32);
-            this.tbLoginUsername.TabIndex = 0;
+            this.txtbx_login_uname.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtbx_login_uname.ForeColor = System.Drawing.Color.Navy;
+            this.txtbx_login_uname.Location = new System.Drawing.Point(260, 204);
+            this.txtbx_login_uname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbx_login_uname.Name = "txtbx_login_uname";
+            this.txtbx_login_uname.Size = new System.Drawing.Size(277, 32);
+            this.txtbx_login_uname.TabIndex = 0;
             // 
             // lblPassword
             // 
@@ -99,15 +100,16 @@ namespace Investment_ideas_platform
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
-            // tbLoginPassword
+            // txb_login_pwd
             // 
-            this.tbLoginPassword.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbLoginPassword.ForeColor = System.Drawing.Color.Navy;
-            this.tbLoginPassword.Location = new System.Drawing.Point(259, 272);
-            this.tbLoginPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.tbLoginPassword.Name = "tbLoginPassword";
-            this.tbLoginPassword.Size = new System.Drawing.Size(277, 32);
-            this.tbLoginPassword.TabIndex = 0;
+            this.txb_login_pwd.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txb_login_pwd.ForeColor = System.Drawing.Color.Navy;
+            this.txb_login_pwd.Location = new System.Drawing.Point(259, 272);
+            this.txb_login_pwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txb_login_pwd.Name = "txb_login_pwd";
+            this.txb_login_pwd.PasswordChar = '#';
+            this.txb_login_pwd.Size = new System.Drawing.Size(277, 32);
+            this.txb_login_pwd.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -118,6 +120,7 @@ namespace Investment_ideas_platform
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnLoginCancel
             // 
@@ -130,6 +133,18 @@ namespace Investment_ideas_platform
             this.btnLoginCancel.UseVisualStyleBackColor = true;
             this.btnLoginCancel.Click += new System.EventHandler(this.btnLoginCancel_Click);
             // 
+            // lab_login_error
+            // 
+            this.lab_login_error.AutoSize = true;
+            this.lab_login_error.BackColor = System.Drawing.Color.Transparent;
+            this.lab_login_error.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lab_login_error.ForeColor = System.Drawing.Color.Red;
+            this.lab_login_error.Location = new System.Drawing.Point(267, 357);
+            this.lab_login_error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lab_login_error.Name = "lab_login_error";
+            this.lab_login_error.Size = new System.Drawing.Size(0, 18);
+            this.lab_login_error.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -138,8 +153,9 @@ namespace Investment_ideas_platform
             this.ClientSize = new System.Drawing.Size(545, 411);
             this.Controls.Add(this.btnLoginCancel);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.tbLoginPassword);
-            this.Controls.Add(this.tbLoginUsername);
+            this.Controls.Add(this.txb_login_pwd);
+            this.Controls.Add(this.txtbx_login_uname);
+            this.Controls.Add(this.lab_login_error);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.pictureBox2);
@@ -159,11 +175,12 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox tbLoginUsername;
+        private System.Windows.Forms.TextBox txtbx_login_uname;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox tbLoginPassword;
+        private System.Windows.Forms.TextBox txb_login_pwd;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLoginCancel;
+        private System.Windows.Forms.Label lab_login_error;
     }
 }
 
