@@ -16,6 +16,10 @@ namespace Investment_ideas_platform
         String p1 = "rmpwd";
         String u2 = "CL";
         String p2 = "clpwd";
+        
+        //Credentials for admin login:
+        String a1 = "katie@company.com";
+        String a2 = "password";
 
         public MainForm()
         {
@@ -40,6 +44,14 @@ namespace Investment_ideas_platform
                 txb_login_pwd.Text = "";
                 Program.currForm = f2;
                 f2.Show();
+            }
+            else if (txtbx_login_uname.Text.Equals(a1) && txb_login_pwd.Text.Equals(a2))
+            {
+                //Admin login
+                this.Hide();
+                Program.userLoggedIn = true;
+                Admin fA = new Admin();
+                
             }
             else if (txtbx_login_uname.Text.Equals("CL") && txb_login_pwd.Text.Equals("clpwd"))
             {
