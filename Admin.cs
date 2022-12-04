@@ -12,6 +12,7 @@ namespace Investment_ideas_platform
     {
         public Admin()
         {
+            //Test
             InitializeComponent();
         }
     }
