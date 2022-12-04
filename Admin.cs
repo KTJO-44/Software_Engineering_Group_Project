@@ -75,5 +75,13 @@ namespace Investment_ideas_platform
         {
             Application.Exit();
         }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            string newAccountEmail = tbCAEmail.Text;
+            string newAccountType = cbCAAccountType.GetItemText(cbCAAccountType.Text);
+            string newAccountFirstName = tbCAFirstName.Text;
+            string newAccountLastName = tbCALastName.Text;
+        }
     }
 }
