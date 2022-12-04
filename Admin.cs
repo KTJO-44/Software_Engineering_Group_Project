@@ -61,5 +61,19 @@ namespace Investment_ideas_platform
             hideMainPanels();
             pnAdminMyProfile.Visible = true;
         }
+
+        private void btnAdminLogout_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            Program.userLoggedIn = false;
+            Program.currForm = null;
+            Program.f1.Show();
+        }
+
+        private void btnAdminExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

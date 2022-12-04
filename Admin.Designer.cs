@@ -55,6 +55,7 @@ namespace Investment_ideas_platform
             this.pnAdminMyProfile = new System.Windows.Forms.Panel();
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnAdminExit = new System.Windows.Forms.Button();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
@@ -93,6 +94,7 @@ namespace Investment_ideas_platform
             this.btnAdminLogout.TabIndex = 1;
             this.btnAdminLogout.Text = "Logout";
             this.btnAdminLogout.UseVisualStyleBackColor = true;
+            this.btnAdminLogout.Click += new System.EventHandler(this.btnAdminLogout_Click);
             // 
             // btnHomepage
             // 
@@ -338,12 +340,26 @@ namespace Investment_ideas_platform
             this.label5.Size = new System.Drawing.Size(0, 54);
             this.label5.TabIndex = 0;
             // 
+            // btnAdminExit
+            // 
+            this.btnAdminExit.FlatAppearance.BorderSize = 0;
+            this.btnAdminExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminExit.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAdminExit.Location = new System.Drawing.Point(1777, 0);
+            this.btnAdminExit.Name = "btnAdminExit";
+            this.btnAdminExit.Size = new System.Drawing.Size(37, 41);
+            this.btnAdminExit.TabIndex = 2;
+            this.btnAdminExit.Text = "X";
+            this.btnAdminExit.UseVisualStyleBackColor = true;
+            this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.btnAdminExit);
             this.Controls.Add(this.pnAdminMyProfile);
             this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
@@ -399,5 +415,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Panel pnAdminMyProfile;
         private System.Windows.Forms.Label lblAdminMyProfile;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnAdminExit;
     }
 }
