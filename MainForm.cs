@@ -18,7 +18,7 @@ namespace Investment_ideas_platform
         String p2 = "clpwd";
         
         //Credentials for admin login:
-        String a1 = "katie@company.com";
+        String a1 = "jordan@company.com";
         String a2 = "password";
 
         User user;

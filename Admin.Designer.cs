@@ -47,6 +47,19 @@ namespace Investment_ideas_platform
             this.lblAdminNotifications = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnCreateAccounts = new System.Windows.Forms.Panel();
+            this.pnCAConfirmation = new System.Windows.Forms.Panel();
+            this.btnCAContinue = new System.Windows.Forms.Button();
+            this.tbCAGeneratedPassword = new System.Windows.Forms.TextBox();
+            this.lblCreatedNewAccount = new System.Windows.Forms.Label();
+            this.btnCreateAccount = new System.Windows.Forms.Button();
+            this.cbCAAccountType = new System.Windows.Forms.ComboBox();
+            this.tbCALastName = new System.Windows.Forms.TextBox();
+            this.tbCAFirstName = new System.Windows.Forms.TextBox();
+            this.tbCAEmail = new System.Windows.Forms.TextBox();
+            this.lblCALastName = new System.Windows.Forms.Label();
+            this.lblCAFirstName = new System.Windows.Forms.Label();
+            this.lblCAAccountType = new System.Windows.Forms.Label();
+            this.lblCAEmail = new System.Windows.Forms.Label();
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnViewAccounts = new System.Windows.Forms.Panel();
@@ -56,21 +69,13 @@ namespace Investment_ideas_platform
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdminExit = new System.Windows.Forms.Button();
-            this.lblCAEmail = new System.Windows.Forms.Label();
-            this.tbCAEmail = new System.Windows.Forms.TextBox();
-            this.lblCAAccountType = new System.Windows.Forms.Label();
-            this.cbCAAccountType = new System.Windows.Forms.ComboBox();
-            this.lblCAFirstName = new System.Windows.Forms.Label();
-            this.tbCAFirstName = new System.Windows.Forms.TextBox();
-            this.lblCALastName = new System.Windows.Forms.Label();
-            this.tbCALastName = new System.Windows.Forms.TextBox();
-            this.btnCreateAccount = new System.Windows.Forms.Button();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
             this.pnAdminHomepage.SuspendLayout();
             this.pnAdminNotifications.SuspendLayout();
             this.pnCreateAccounts.SuspendLayout();
+            this.pnCAConfirmation.SuspendLayout();
             this.pnViewAccounts.SuspendLayout();
             this.pnAdminMyProfile.SuspendLayout();
             this.SuspendLayout();
@@ -265,6 +270,7 @@ namespace Investment_ideas_platform
             // pnCreateAccounts
             // 
             this.pnCreateAccounts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnCreateAccounts.Controls.Add(this.pnCAConfirmation);
             this.pnCreateAccounts.Controls.Add(this.btnCreateAccount);
             this.pnCreateAccounts.Controls.Add(this.cbCAAccountType);
             this.pnCreateAccounts.Controls.Add(this.tbCALastName);
@@ -280,6 +286,147 @@ namespace Investment_ideas_platform
             this.pnCreateAccounts.Name = "pnCreateAccounts";
             this.pnCreateAccounts.Size = new System.Drawing.Size(1500, 839);
             this.pnCreateAccounts.TabIndex = 1;
+            // 
+            // pnCAConfirmation
+            // 
+            this.pnCAConfirmation.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnCAConfirmation.Controls.Add(this.btnCAContinue);
+            this.pnCAConfirmation.Controls.Add(this.tbCAGeneratedPassword);
+            this.pnCAConfirmation.Controls.Add(this.lblCreatedNewAccount);
+            this.pnCAConfirmation.Location = new System.Drawing.Point(415, 285);
+            this.pnCAConfirmation.Name = "pnCAConfirmation";
+            this.pnCAConfirmation.Size = new System.Drawing.Size(370, 230);
+            this.pnCAConfirmation.TabIndex = 6;
+            // 
+            // btnCAContinue
+            // 
+            this.btnCAContinue.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCAContinue.FlatAppearance.BorderSize = 0;
+            this.btnCAContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCAContinue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCAContinue.Location = new System.Drawing.Point(127, 162);
+            this.btnCAContinue.Name = "btnCAContinue";
+            this.btnCAContinue.Size = new System.Drawing.Size(128, 47);
+            this.btnCAContinue.TabIndex = 2;
+            this.btnCAContinue.Text = "OK";
+            this.btnCAContinue.UseVisualStyleBackColor = false;
+            this.btnCAContinue.Click += new System.EventHandler(this.btnCAContinue_Click);
+            // 
+            // tbCAGeneratedPassword
+            // 
+            this.tbCAGeneratedPassword.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbCAGeneratedPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCAGeneratedPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCAGeneratedPassword.Location = new System.Drawing.Point(32, 111);
+            this.tbCAGeneratedPassword.Name = "tbCAGeneratedPassword";
+            this.tbCAGeneratedPassword.ReadOnly = true;
+            this.tbCAGeneratedPassword.Size = new System.Drawing.Size(301, 27);
+            this.tbCAGeneratedPassword.TabIndex = 1;
+            this.tbCAGeneratedPassword.TabStop = false;
+            this.tbCAGeneratedPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCreatedNewAccount
+            // 
+            this.lblCreatedNewAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCreatedNewAccount.Location = new System.Drawing.Point(18, 5);
+            this.lblCreatedNewAccount.Name = "lblCreatedNewAccount";
+            this.lblCreatedNewAccount.Size = new System.Drawing.Size(335, 91);
+            this.lblCreatedNewAccount.TabIndex = 0;
+            this.lblCreatedNewAccount.Text = "This is an auto-generated password. Please copy it and send it to the new account" +
+    " owner.";
+            this.lblCreatedNewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCreateAccount
+            // 
+            this.btnCreateAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCreateAccount.Location = new System.Drawing.Point(237, 560);
+            this.btnCreateAccount.Name = "btnCreateAccount";
+            this.btnCreateAccount.Size = new System.Drawing.Size(361, 68);
+            this.btnCreateAccount.TabIndex = 4;
+            this.btnCreateAccount.Text = "Create account";
+            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
+            // 
+            // cbCAAccountType
+            // 
+            this.cbCAAccountType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCAAccountType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbCAAccountType.FormattingEnabled = true;
+            this.cbCAAccountType.Items.AddRange(new object[] {
+            "Admin",
+            "Relationship manager",
+            "Idea creator"});
+            this.cbCAAccountType.Location = new System.Drawing.Point(237, 251);
+            this.cbCAAccountType.Name = "cbCAAccountType";
+            this.cbCAAccountType.Size = new System.Drawing.Size(361, 36);
+            this.cbCAAccountType.TabIndex = 1;
+            // 
+            // tbCALastName
+            // 
+            this.tbCALastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCALastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCALastName.Location = new System.Drawing.Point(237, 441);
+            this.tbCALastName.Name = "tbCALastName";
+            this.tbCALastName.Size = new System.Drawing.Size(361, 27);
+            this.tbCALastName.TabIndex = 3;
+            // 
+            // tbCAFirstName
+            // 
+            this.tbCAFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCAFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCAFirstName.Location = new System.Drawing.Point(237, 347);
+            this.tbCAFirstName.Name = "tbCAFirstName";
+            this.tbCAFirstName.Size = new System.Drawing.Size(361, 27);
+            this.tbCAFirstName.TabIndex = 2;
+            // 
+            // tbCAEmail
+            // 
+            this.tbCAEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCAEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCAEmail.Location = new System.Drawing.Point(237, 162);
+            this.tbCAEmail.Name = "tbCAEmail";
+            this.tbCAEmail.Size = new System.Drawing.Size(361, 27);
+            this.tbCAEmail.TabIndex = 0;
+            // 
+            // lblCALastName
+            // 
+            this.lblCALastName.AutoSize = true;
+            this.lblCALastName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCALastName.Location = new System.Drawing.Point(107, 439);
+            this.lblCALastName.Name = "lblCALastName";
+            this.lblCALastName.Size = new System.Drawing.Size(124, 31);
+            this.lblCALastName.TabIndex = 2;
+            this.lblCALastName.Text = "Last name:";
+            // 
+            // lblCAFirstName
+            // 
+            this.lblCAFirstName.AutoSize = true;
+            this.lblCAFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCAFirstName.Location = new System.Drawing.Point(103, 345);
+            this.lblCAFirstName.Name = "lblCAFirstName";
+            this.lblCAFirstName.Size = new System.Drawing.Size(128, 31);
+            this.lblCAFirstName.TabIndex = 2;
+            this.lblCAFirstName.Text = "First name:";
+            // 
+            // lblCAAccountType
+            // 
+            this.lblCAAccountType.AutoSize = true;
+            this.lblCAAccountType.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCAAccountType.Location = new System.Drawing.Point(45, 252);
+            this.lblCAAccountType.Name = "lblCAAccountType";
+            this.lblCAAccountType.Size = new System.Drawing.Size(186, 31);
+            this.lblCAAccountType.TabIndex = 2;
+            this.lblCAAccountType.Text = "Type of account:";
+            // 
+            // lblCAEmail
+            // 
+            this.lblCAEmail.AutoSize = true;
+            this.lblCAEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCAEmail.Location = new System.Drawing.Point(59, 158);
+            this.lblCAEmail.Name = "lblCAEmail";
+            this.lblCAEmail.Size = new System.Drawing.Size(172, 31);
+            this.lblCAEmail.TabIndex = 2;
+            this.lblCAEmail.Text = "E-mail address:";
             // 
             // lblCreateAccount
             // 
@@ -371,98 +518,6 @@ namespace Investment_ideas_platform
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
             // 
-            // lblCAEmail
-            // 
-            this.lblCAEmail.AutoSize = true;
-            this.lblCAEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCAEmail.Location = new System.Drawing.Point(59, 158);
-            this.lblCAEmail.Name = "lblCAEmail";
-            this.lblCAEmail.Size = new System.Drawing.Size(172, 31);
-            this.lblCAEmail.TabIndex = 2;
-            this.lblCAEmail.Text = "E-mail address:";
-            // 
-            // tbCAEmail
-            // 
-            this.tbCAEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCAEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCAEmail.Location = new System.Drawing.Point(237, 162);
-            this.tbCAEmail.Name = "tbCAEmail";
-            this.tbCAEmail.Size = new System.Drawing.Size(361, 27);
-            this.tbCAEmail.TabIndex = 3;
-            // 
-            // lblCAAccountType
-            // 
-            this.lblCAAccountType.AutoSize = true;
-            this.lblCAAccountType.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCAAccountType.Location = new System.Drawing.Point(45, 252);
-            this.lblCAAccountType.Name = "lblCAAccountType";
-            this.lblCAAccountType.Size = new System.Drawing.Size(186, 31);
-            this.lblCAAccountType.TabIndex = 2;
-            this.lblCAAccountType.Text = "Type of account:";
-            // 
-            // cbCAAccountType
-            // 
-            this.cbCAAccountType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCAAccountType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbCAAccountType.FormattingEnabled = true;
-            this.cbCAAccountType.Items.AddRange(new object[] {
-            "Admin",
-            "Relationship manager",
-            "Idea creator"});
-            this.cbCAAccountType.Location = new System.Drawing.Point(237, 251);
-            this.cbCAAccountType.Name = "cbCAAccountType";
-            this.cbCAAccountType.Size = new System.Drawing.Size(361, 36);
-            this.cbCAAccountType.TabIndex = 4;
-            // 
-            // lblCAFirstName
-            // 
-            this.lblCAFirstName.AutoSize = true;
-            this.lblCAFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCAFirstName.Location = new System.Drawing.Point(103, 345);
-            this.lblCAFirstName.Name = "lblCAFirstName";
-            this.lblCAFirstName.Size = new System.Drawing.Size(128, 31);
-            this.lblCAFirstName.TabIndex = 2;
-            this.lblCAFirstName.Text = "First name:";
-            // 
-            // tbCAFirstName
-            // 
-            this.tbCAFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCAFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCAFirstName.Location = new System.Drawing.Point(237, 347);
-            this.tbCAFirstName.Name = "tbCAFirstName";
-            this.tbCAFirstName.Size = new System.Drawing.Size(361, 27);
-            this.tbCAFirstName.TabIndex = 3;
-            // 
-            // lblCALastName
-            // 
-            this.lblCALastName.AutoSize = true;
-            this.lblCALastName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCALastName.Location = new System.Drawing.Point(107, 439);
-            this.lblCALastName.Name = "lblCALastName";
-            this.lblCALastName.Size = new System.Drawing.Size(124, 31);
-            this.lblCALastName.TabIndex = 2;
-            this.lblCALastName.Text = "Last name:";
-            // 
-            // tbCALastName
-            // 
-            this.tbCALastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCALastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCALastName.Location = new System.Drawing.Point(237, 441);
-            this.tbCALastName.Name = "tbCALastName";
-            this.tbCALastName.Size = new System.Drawing.Size(361, 27);
-            this.tbCALastName.TabIndex = 3;
-            // 
-            // btnCreateAccount
-            // 
-            this.btnCreateAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCreateAccount.Location = new System.Drawing.Point(237, 560);
-            this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(361, 68);
-            this.btnCreateAccount.TabIndex = 5;
-            this.btnCreateAccount.Text = "Create account";
-            this.btnCreateAccount.UseVisualStyleBackColor = true;
-            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -490,6 +545,8 @@ namespace Investment_ideas_platform
             this.pnAdminNotifications.PerformLayout();
             this.pnCreateAccounts.ResumeLayout(false);
             this.pnCreateAccounts.PerformLayout();
+            this.pnCAConfirmation.ResumeLayout(false);
+            this.pnCAConfirmation.PerformLayout();
             this.pnViewAccounts.ResumeLayout(false);
             this.pnViewAccounts.PerformLayout();
             this.pnAdminMyProfile.ResumeLayout(false);
@@ -535,5 +592,9 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.TextBox tbCALastName;
         private System.Windows.Forms.Label lblCALastName;
+        private System.Windows.Forms.Panel pnCAConfirmation;
+        private System.Windows.Forms.Button btnCAContinue;
+        private System.Windows.Forms.TextBox tbCAGeneratedPassword;
+        private System.Windows.Forms.Label lblCreatedNewAccount;
     }
 }

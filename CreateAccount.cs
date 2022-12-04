@@ -39,7 +39,8 @@ namespace Investment_ideas_platform
             {
                 if (!LogUserIn.userExists(email))
                 {
-                    string uPass = generatePassword();
+                    //string uPass = generatePassword();
+                    string uPass = "password";
                     //string encryptedPassword = Encrypt.encryptString(uPass);
                     DBConnection.getInstanceOfDBConnection().addNewAccountToDB(Constants.ADD_NEW_ACCOUNT, email, accountType, firstName, lastName, "password");
                     //MessageBox.Show(uPass);

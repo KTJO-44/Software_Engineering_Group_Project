@@ -30,6 +30,7 @@ namespace Investment_ideas_platform
             pnCreateAccounts.Visible = false;
             pnViewAccounts.Visible = false;
             pnAdminMyProfile.Visible = false;
+            pnCAConfirmation.Visible = false;
         }
 
         private void btnHomepage_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace Investment_ideas_platform
         {
             hideMainPanels();
             pnCreateAccounts.Visible = true;
+            cbCAAccountType.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnViewAccounts_Click(object sender, EventArgs e)
@@ -76,12 +78,40 @@ namespace Investment_ideas_platform
             Application.Exit();
         }
 
+        private void clearCreateAccountTBs()
+        {
+            tbCAEmail.Clear();
+            tbCAFirstName.Clear();
+            tbCALastName.Clear();
+            cbCAAccountType.ResetText();
+            cbCAAccountType.SelectedIndex = -1;
+        }
+
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             string newAccountEmail = tbCAEmail.Text;
             string newAccountType = cbCAAccountType.GetItemText(cbCAAccountType.Text);
             string newAccountFirstName = tbCAFirstName.Text;
             string newAccountLastName = tbCALastName.Text;
+
+            string createAccount = CreateAccount.createNewAccount(newAccountEmail, newAccountType, newAccountFirstName, newAccountLastName);
+
+            if (createAccount != "")
+            {
+                pnCAConfirmation.Visible = true;
+                pnCAConfirmation.BringToFront();
+                tbCAGeneratedPassword.Text = createAccount;
+                clearCreateAccountTBs();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all fields and make sure you use a company email");
+            }
+        }
+
+        private void btnCAContinue_Click(object sender, EventArgs e)
+        {
+            pnCAConfirmation.Visible = false;
         }
     }
 }
