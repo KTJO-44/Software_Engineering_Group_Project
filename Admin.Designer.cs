@@ -67,9 +67,17 @@ namespace Investment_ideas_platform
             this.lblViewStaffAccounts = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnAdminMyProfile = new System.Windows.Forms.Panel();
+            this.lblAdminMPLastNameFetched = new System.Windows.Forms.Label();
+            this.lblAdminMPFirstNameFetched = new System.Windows.Forms.Label();
+            this.lblAdminMPEmailFetched = new System.Windows.Forms.Label();
+            this.lblAdminMPPassword = new System.Windows.Forms.Label();
+            this.lblAdminMPLastName = new System.Windows.Forms.Label();
+            this.lblAdminMPFirstName = new System.Windows.Forms.Label();
+            this.lblAdminMPEmail = new System.Windows.Forms.Label();
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdminExit = new System.Windows.Forms.Button();
+            this.btnMPChangePassword = new System.Windows.Forms.Button();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
@@ -497,12 +505,90 @@ namespace Investment_ideas_platform
             // pnAdminMyProfile
             // 
             this.pnAdminMyProfile.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnAdminMyProfile.Controls.Add(this.btnMPChangePassword);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPLastNameFetched);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPFirstNameFetched);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPEmailFetched);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPPassword);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPLastName);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPFirstName);
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMPEmail);
             this.pnAdminMyProfile.Controls.Add(this.lblAdminMyProfile);
             this.pnAdminMyProfile.Controls.Add(this.label5);
             this.pnAdminMyProfile.Location = new System.Drawing.Point(301, 47);
             this.pnAdminMyProfile.Name = "pnAdminMyProfile";
             this.pnAdminMyProfile.Size = new System.Drawing.Size(1500, 839);
             this.pnAdminMyProfile.TabIndex = 1;
+            // 
+            // lblAdminMPLastNameFetched
+            // 
+            this.lblAdminMPLastNameFetched.AutoSize = true;
+            this.lblAdminMPLastNameFetched.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPLastNameFetched.Location = new System.Drawing.Point(186, 285);
+            this.lblAdminMPLastNameFetched.Name = "lblAdminMPLastNameFetched";
+            this.lblAdminMPLastNameFetched.Size = new System.Drawing.Size(107, 31);
+            this.lblAdminMPLastNameFetched.TabIndex = 2;
+            this.lblAdminMPLastNameFetched.Text = "lastname";
+            // 
+            // lblAdminMPFirstNameFetched
+            // 
+            this.lblAdminMPFirstNameFetched.AutoSize = true;
+            this.lblAdminMPFirstNameFetched.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPFirstNameFetched.Location = new System.Drawing.Point(186, 221);
+            this.lblAdminMPFirstNameFetched.Name = "lblAdminMPFirstNameFetched";
+            this.lblAdminMPFirstNameFetched.Size = new System.Drawing.Size(110, 31);
+            this.lblAdminMPFirstNameFetched.TabIndex = 2;
+            this.lblAdminMPFirstNameFetched.Text = "firstname";
+            // 
+            // lblAdminMPEmailFetched
+            // 
+            this.lblAdminMPEmailFetched.AutoSize = true;
+            this.lblAdminMPEmailFetched.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPEmailFetched.Location = new System.Drawing.Point(186, 162);
+            this.lblAdminMPEmailFetched.Name = "lblAdminMPEmailFetched";
+            this.lblAdminMPEmailFetched.Size = new System.Drawing.Size(70, 31);
+            this.lblAdminMPEmailFetched.TabIndex = 2;
+            this.lblAdminMPEmailFetched.Text = "email";
+            // 
+            // lblAdminMPPassword
+            // 
+            this.lblAdminMPPassword.AutoSize = true;
+            this.lblAdminMPPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPPassword.Location = new System.Drawing.Point(45, 365);
+            this.lblAdminMPPassword.Name = "lblAdminMPPassword";
+            this.lblAdminMPPassword.Size = new System.Drawing.Size(112, 31);
+            this.lblAdminMPPassword.TabIndex = 2;
+            this.lblAdminMPPassword.Text = "Password";
+            // 
+            // lblAdminMPLastName
+            // 
+            this.lblAdminMPLastName.AutoSize = true;
+            this.lblAdminMPLastName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPLastName.Location = new System.Drawing.Point(41, 285);
+            this.lblAdminMPLastName.Name = "lblAdminMPLastName";
+            this.lblAdminMPLastName.Size = new System.Drawing.Size(124, 31);
+            this.lblAdminMPLastName.TabIndex = 2;
+            this.lblAdminMPLastName.Text = "Last name:";
+            // 
+            // lblAdminMPFirstName
+            // 
+            this.lblAdminMPFirstName.AutoSize = true;
+            this.lblAdminMPFirstName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPFirstName.Location = new System.Drawing.Point(37, 221);
+            this.lblAdminMPFirstName.Name = "lblAdminMPFirstName";
+            this.lblAdminMPFirstName.Size = new System.Drawing.Size(128, 31);
+            this.lblAdminMPFirstName.TabIndex = 2;
+            this.lblAdminMPFirstName.Text = "First name:";
+            // 
+            // lblAdminMPEmail
+            // 
+            this.lblAdminMPEmail.AutoSize = true;
+            this.lblAdminMPEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMPEmail.Location = new System.Drawing.Point(80, 162);
+            this.lblAdminMPEmail.Name = "lblAdminMPEmail";
+            this.lblAdminMPEmail.Size = new System.Drawing.Size(85, 31);
+            this.lblAdminMPEmail.TabIndex = 2;
+            this.lblAdminMPEmail.Text = "E-mail:";
             // 
             // lblAdminMyProfile
             // 
@@ -536,6 +622,19 @@ namespace Investment_ideas_platform
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
             // 
+            // btnMPChangePassword
+            // 
+            this.btnMPChangePassword.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMPChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnMPChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMPChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMPChangePassword.Location = new System.Drawing.Point(186, 361);
+            this.btnMPChangePassword.Name = "btnMPChangePassword";
+            this.btnMPChangePassword.Size = new System.Drawing.Size(144, 40);
+            this.btnMPChangePassword.TabIndex = 3;
+            this.btnMPChangePassword.Text = "Change";
+            this.btnMPChangePassword.UseVisualStyleBackColor = false;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -543,11 +642,11 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnAdminExit);
+            this.Controls.Add(this.pnAdminMyProfile);
+            this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
-            this.Controls.Add(this.pnAdminMyProfile);
             this.Controls.Add(this.pnAdminNotifications);
-            this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnAdminMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
@@ -616,5 +715,13 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.TextBox tbCAGeneratedPassword;
         private System.Windows.Forms.Label lblCreatedNewAccount;
         private System.Windows.Forms.DataGridView dgvViewAllAccounts;
+        private System.Windows.Forms.Label lblAdminMPLastNameFetched;
+        private System.Windows.Forms.Label lblAdminMPFirstNameFetched;
+        private System.Windows.Forms.Label lblAdminMPEmailFetched;
+        private System.Windows.Forms.Label lblAdminMPPassword;
+        private System.Windows.Forms.Label lblAdminMPLastName;
+        private System.Windows.Forms.Label lblAdminMPFirstName;
+        private System.Windows.Forms.Label lblAdminMPEmail;
+        private System.Windows.Forms.Button btnMPChangePassword;
     }
 }

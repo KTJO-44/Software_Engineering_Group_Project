@@ -25,5 +25,6 @@ namespace Investment_ideas_platform
             f1 = new MainForm();
             Application.Run(f1);
         }
+
     }
 }

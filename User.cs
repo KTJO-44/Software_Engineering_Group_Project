@@ -4,14 +4,9 @@ using System.Text;
 
 namespace Investment_ideas_platform
 {
-    public class User
+    public static class User
     {
-        private string userEmail;
+        public static string userEmail { get; set; }
 
-        public string UserEmail
-        {
-            get { return userEmail; }
-            set { userEmail = value; }
-        }
     }
 }

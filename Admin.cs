@@ -10,15 +10,16 @@ namespace Investment_ideas_platform
 {
     public partial class Admin : Form
     {
-        public Admin(User user)
+        public Admin()
         {
             InitializeComponent();
             hideMainPanels();
             pnAdminHomepage.Visible = true;
 
-            string userEmail = user.UserEmail;
+            string userEmail = User.userEmail;
             string userFirstName = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_FIRSTNAME, userEmail);
             lblAdminWelcome.Text = "Welcome, " + userFirstName + "!";
+            lblAdminMenuName.Text = userFirstName;
 
             loadDGVViewAllAccounts();
             dgvViewAllAccounts.Columns[0].HeaderText = "Email";
@@ -72,6 +73,11 @@ namespace Investment_ideas_platform
         {
             hideMainPanels();
             pnAdminMyProfile.Visible = true;
+
+            lblAdminMPEmailFetched.Text = User.userEmail;
+            lblAdminMPFirstNameFetched.Text = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_FIRSTNAME, User.userEmail);
+            lblAdminMPLastNameFetched.Text = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_LASTNAME, User.userEmail);
+
         }
 
         private void btnAdminLogout_Click(object sender, EventArgs e)

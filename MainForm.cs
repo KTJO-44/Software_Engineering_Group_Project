@@ -23,13 +23,13 @@ namespace Investment_ideas_platform
         String a2 = "password";
         */
 
-        User user;
+        //User user;
 
         public MainForm()
         {
             InitializeComponent();
 
-            user = new User(); //instantiate the object
+            //user = new User(); //instantiate the object
         }
 
         private void btnLoginCancel_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace Investment_ideas_platform
 
                 if (LogUserIn.logIn(userEmail, userPassword)) 
                 {
-                    user.UserEmail = userEmail; //set the email so the program knows what email/user is logged in
+                    User.userEmail = userEmail; //set the email so the program knows what email/user is logged in
                     string userAccountType = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.CHECK_ACCOUNT_TYPE, userEmail);
                     txtbx_login_uname.Clear();
                     txb_login_pwd.Clear();
@@ -117,11 +117,19 @@ namespace Investment_ideas_platform
                             lab_login_error.Text = "";
                             txtbx_login_uname.Clear();
                             txb_login_pwd.Clear();
-                            Admin fA = new Admin(user);
+                            Admin fA = new Admin();
                             fA.Show();
                             break;
                         case "Relationship manager":
-                            //write code to show RM homepage here
+                            this.Hide();
+                            Program.userLoggedIn = true;
+                            HomeForm f2 = new HomeForm();
+                            f2.setUser(txtbx_login_uname.Text, "RM");
+                            lab_login_error.Text = "";
+                            txtbx_login_uname.Text = "";
+                            txb_login_pwd.Text = "";
+                            Program.currForm = f2;
+                            f2.Show();
                             break;
                         case "Idea creator":
                             //write code to show IC homepage here
