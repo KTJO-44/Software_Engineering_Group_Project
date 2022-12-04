@@ -18,7 +18,7 @@ namespace Investment_ideas_platform
 
             string userEmail = user.UserEmail;
             string userFirstName = DBConnection.getInstanceOfDBConnection().getUserFirstName(Constants.FETCH_USER_FIRSTNAME, userEmail);
-            lblAdminWelcome.Text = "Welcome, " + userFirstName + "!"; //does not work for some reason
+            lblAdminWelcome.Text = "Welcome " + userFirstName; //does not work for some reason
 
         }
 
@@ -28,6 +28,8 @@ namespace Investment_ideas_platform
             pnAdminHomepage.Visible = false;
             pnAdminNotifications.Visible = false;
             pnCreateAccounts.Visible = false;
+            pnViewAccounts.Visible = false;
+            pnAdminMyProfile.Visible = false;
         }
 
         private void btnHomepage_Click(object sender, EventArgs e)
@@ -46,6 +48,18 @@ namespace Investment_ideas_platform
         {
             hideMainPanels();
             pnCreateAccounts.Visible = true;
+        }
+
+        private void btnViewAccounts_Click(object sender, EventArgs e)
+        {
+            hideMainPanels();
+            pnViewAccounts.Visible = true;
+        }
+
+        private void btnMyProfileAdmin_Click(object sender, EventArgs e)
+        {
+            hideMainPanels();
+            pnAdminMyProfile.Visible = true;
         }
     }
 }

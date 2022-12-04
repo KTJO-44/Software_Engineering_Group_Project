@@ -49,12 +49,20 @@ namespace Investment_ideas_platform
             this.pnCreateAccounts = new System.Windows.Forms.Panel();
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pnViewAccounts = new System.Windows.Forms.Panel();
+            this.lblViewStaffAccounts = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnAdminMyProfile = new System.Windows.Forms.Panel();
+            this.lblAdminMyProfile = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
             this.pnAdminHomepage.SuspendLayout();
             this.pnAdminNotifications.SuspendLayout();
             this.pnCreateAccounts.SuspendLayout();
+            this.pnViewAccounts.SuspendLayout();
+            this.pnAdminMyProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnAdminMenu
@@ -112,6 +120,7 @@ namespace Investment_ideas_platform
             this.btnMyProfileAdmin.TabIndex = 1;
             this.btnMyProfileAdmin.Text = "My profile";
             this.btnMyProfileAdmin.UseVisualStyleBackColor = true;
+            this.btnMyProfileAdmin.Click += new System.EventHandler(this.btnMyProfileAdmin_Click);
             // 
             // btnViewAccounts
             // 
@@ -125,6 +134,7 @@ namespace Investment_ideas_platform
             this.btnViewAccounts.TabIndex = 1;
             this.btnViewAccounts.Text = "View accounts";
             this.btnViewAccounts.UseVisualStyleBackColor = true;
+            this.btnViewAccounts.Click += new System.EventHandler(this.btnViewAccounts_Click);
             // 
             // btnCreateAccounts
             // 
@@ -270,12 +280,72 @@ namespace Investment_ideas_platform
             this.label3.Size = new System.Drawing.Size(0, 54);
             this.label3.TabIndex = 0;
             // 
+            // pnViewAccounts
+            // 
+            this.pnViewAccounts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnViewAccounts.Controls.Add(this.lblViewStaffAccounts);
+            this.pnViewAccounts.Controls.Add(this.label4);
+            this.pnViewAccounts.Location = new System.Drawing.Point(301, 47);
+            this.pnViewAccounts.Name = "pnViewAccounts";
+            this.pnViewAccounts.Size = new System.Drawing.Size(1500, 839);
+            this.pnViewAccounts.TabIndex = 1;
+            // 
+            // lblViewStaffAccounts
+            // 
+            this.lblViewStaffAccounts.AutoSize = true;
+            this.lblViewStaffAccounts.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblViewStaffAccounts.Location = new System.Drawing.Point(44, 46);
+            this.lblViewStaffAccounts.Name = "lblViewStaffAccounts";
+            this.lblViewStaffAccounts.Size = new System.Drawing.Size(626, 62);
+            this.lblViewStaffAccounts.TabIndex = 1;
+            this.lblViewStaffAccounts.Text = "View and edit staff accounts";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(37, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 54);
+            this.label4.TabIndex = 0;
+            // 
+            // pnAdminMyProfile
+            // 
+            this.pnAdminMyProfile.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnAdminMyProfile.Controls.Add(this.lblAdminMyProfile);
+            this.pnAdminMyProfile.Controls.Add(this.label5);
+            this.pnAdminMyProfile.Location = new System.Drawing.Point(301, 47);
+            this.pnAdminMyProfile.Name = "pnAdminMyProfile";
+            this.pnAdminMyProfile.Size = new System.Drawing.Size(1500, 839);
+            this.pnAdminMyProfile.TabIndex = 1;
+            // 
+            // lblAdminMyProfile
+            // 
+            this.lblAdminMyProfile.AutoSize = true;
+            this.lblAdminMyProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminMyProfile.Location = new System.Drawing.Point(44, 46);
+            this.lblAdminMyProfile.Name = "lblAdminMyProfile";
+            this.lblAdminMyProfile.Size = new System.Drawing.Size(244, 62);
+            this.lblAdminMyProfile.TabIndex = 1;
+            this.lblAdminMyProfile.Text = "My profile";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(37, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 54);
+            this.label5.TabIndex = 0;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnAdminMyProfile);
+            this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
             this.Controls.Add(this.pnAdminNotifications);
             this.Controls.Add(this.pnAdminHomepage);
@@ -294,6 +364,10 @@ namespace Investment_ideas_platform
             this.pnAdminNotifications.PerformLayout();
             this.pnCreateAccounts.ResumeLayout(false);
             this.pnCreateAccounts.PerformLayout();
+            this.pnViewAccounts.ResumeLayout(false);
+            this.pnViewAccounts.PerformLayout();
+            this.pnAdminMyProfile.ResumeLayout(false);
+            this.pnAdminMyProfile.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +393,11 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Panel pnCreateAccounts;
         private System.Windows.Forms.Label lblCreateAccount;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnViewAccounts;
+        private System.Windows.Forms.Label lblViewStaffAccounts;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnAdminMyProfile;
+        private System.Windows.Forms.Label lblAdminMyProfile;
+        private System.Windows.Forms.Label label5;
     }
 }
