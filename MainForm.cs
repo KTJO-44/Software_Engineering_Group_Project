@@ -21,9 +21,13 @@ namespace Investment_ideas_platform
         String a1 = "katie@company.com";
         String a2 = "password";
 
+        User user;
+
         public MainForm()
         {
             InitializeComponent();
+
+            user = new User(); //instantiate the object
         }
 
         private void btnLoginCancel_Click(object sender, EventArgs e)
@@ -50,8 +54,11 @@ namespace Investment_ideas_platform
                 //Admin login
                 this.Hide();
                 Program.userLoggedIn = true;
-                Admin fA = new Admin();
-                
+                user.UserEmail = a1; //set email for the user object here
+                lab_login_error.Text = "";
+                txtbx_login_uname.Clear();
+                txb_login_pwd.Clear();
+                new Admin().Show(); //takes user to the admin form
             }
             else if (txtbx_login_uname.Text.Equals("CL") && txb_login_pwd.Text.Equals("clpwd"))
             {
