@@ -10,11 +10,20 @@ namespace Investment_ideas_platform
 {
     public partial class Admin : Form
     {
-        public Admin()
+        public Admin(User user)
         {
             InitializeComponent();
             hideMainPanels();
             pnAdminHomepage.Visible = true;
+            //User user = new User();
+            //user.UserEmail = user.UserEmail;
+            /*
+            string userFirstName = user.UserEmail;
+            lblAdminWelcome.Text = userFirstName;
+            */
+            string userEmail = user.UserEmail;
+            string userFirstName = DBConnection.getInstanceOfDBConnection().getUserFirstName(Constants.FETCH_USER_FIRSTNAME, userEmail);
+            lblAdminWelcome.Text = "Welcome, " + userFirstName + "!"; //does not work for some reason
 
         }
 

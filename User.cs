@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Investment_ideas_platform
 {
-    class User
+    public class User
     {
         private string userEmail;
 

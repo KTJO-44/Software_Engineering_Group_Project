@@ -58,7 +58,9 @@ namespace Investment_ideas_platform
                 lab_login_error.Text = "";
                 txtbx_login_uname.Clear();
                 txb_login_pwd.Clear();
-                new Admin().Show(); //takes user to the admin form
+                //new Admin().Show(); //takes user to the admin form
+                Admin fA = new Admin(user);
+                fA.Show();
             }
             else if (txtbx_login_uname.Text.Equals("CL") && txb_login_pwd.Text.Equals("clpwd"))
             {

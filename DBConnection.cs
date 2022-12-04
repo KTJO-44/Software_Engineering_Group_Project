@@ -28,5 +28,25 @@ namespace Investment_ideas_platform
 
             return _instance;
         }
+
+        public string getUserFirstName(string sqlQuery, string email)
+        {
+            string value;
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("userEmail", email));
+
+                value = (string)command.ExecuteScalar(); //since we only want one value/string
+
+                connToDB.Close();
+            }
+
+            return value;
+        }
+
     }
 }
