@@ -29,7 +29,7 @@ namespace Investment_ideas_platform
             return _instance;
         }
 
-        public string getUserFirstName(string sqlQuery, string email)
+        public string getSingleValueUsingJustEmail(string sqlQuery, string email)
         {
             string value;
 
@@ -117,6 +117,28 @@ namespace Investment_ideas_platform
 
                 connToDB.Close();
             }
+        }
+
+        public bool authenticatePassword(string sqlQuery, string email, string userPassword)
+        {
+            string dBPassword;
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("userEmail", email));
+
+                dBPassword = (string)command.ExecuteScalar();
+
+                connToDB.Close();
+
+                if (dBPassword.Equals(userPassword)) { return true; }
+
+            }
+
+            return false;
         }
 
     }

@@ -12,6 +12,7 @@ namespace Investment_ideas_platform
 {
     public partial class MainForm : Form
     {
+        /*
         String u1 = "RM";
         String p1 = "rmpwd";
         String u2 = "CL";
@@ -20,6 +21,7 @@ namespace Investment_ideas_platform
         //Credentials for admin login:
         String a1 = "jordan@company.com";
         String a2 = "password";
+        */
 
         User user;
 
@@ -37,6 +39,7 @@ namespace Investment_ideas_platform
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            /*
             if (txtbx_login_uname.Text.Equals("RM") && txb_login_pwd.Text.Equals("rmpwd"))
             {
                 this.Hide();
@@ -89,6 +92,54 @@ namespace Investment_ideas_platform
             else
             {
                 lab_login_error.Text = "Incorrect credentials.";
+            }
+            */
+            string userEmail = txtbx_login_uname.Text;
+            string userPassword = txb_login_pwd.Text;
+
+            if (LogUserIn.userExists(userEmail))
+            {
+                //Encryption to be added
+
+                if (LogUserIn.logIn(userEmail, userPassword)) 
+                {
+                    user.UserEmail = userEmail; //set the email so the program knows what email/user is logged in
+                    string userAccountType = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.CHECK_ACCOUNT_TYPE, userEmail);
+                    txtbx_login_uname.Clear();
+                    txb_login_pwd.Clear();
+                    
+                    switch (userAccountType)
+                    {
+                        case "Admin":
+                            //show admin homepage here
+                            this.Hide();
+                            Program.userLoggedIn = true;
+                            lab_login_error.Text = "";
+                            txtbx_login_uname.Clear();
+                            txb_login_pwd.Clear();
+                            Admin fA = new Admin(user);
+                            fA.Show();
+                            break;
+                        case "Relationship manager":
+                            //write code to show RM homepage here
+                            break;
+                        case "Idea creator":
+                            //write code to show IC homepage here
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password");
+                    txb_login_pwd.Clear();
+                }
+
+            } 
+            else
+            {
+                MessageBox.Show("Account does not exist, please use a valid email");
+                txtbx_login_uname.Clear();
+                txb_login_pwd.Clear();
             }
         }
     }

@@ -15,5 +15,15 @@ namespace Investment_ideas_platform
             }
             return false;
         }
+
+        public static bool logIn(string email, string password)
+        {
+            if (DBConnection.getInstanceOfDBConnection().authenticatePassword(Constants.FETCH_PASSWORD, email, password))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

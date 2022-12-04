@@ -17,8 +17,8 @@ namespace Investment_ideas_platform
             pnAdminHomepage.Visible = true;
 
             string userEmail = user.UserEmail;
-            string userFirstName = DBConnection.getInstanceOfDBConnection().getUserFirstName(Constants.FETCH_USER_FIRSTNAME, userEmail);
-            lblAdminWelcome.Text = "Welcome " + userFirstName; //does not work for some reason
+            string userFirstName = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_FIRSTNAME, userEmail);
+            lblAdminWelcome.Text = "Welcome, " + userFirstName + "!";
 
             loadDGVViewAllAccounts();
             dgvViewAllAccounts.Columns[0].HeaderText = "Email";
