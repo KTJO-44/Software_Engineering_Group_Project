@@ -89,5 +89,35 @@ namespace Investment_ideas_platform
             }
         }
 
+        public DataSet getDataSet(string sqlQuery)
+        {
+            DataSet dataset = new DataSet();
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, connToDB);
+                adapter.Fill(dataset);
+            }
+
+            return dataset;
+        }
+
+        public void deleteAccountFromDB(string sqlQuery, string email)
+        {
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("staffEmail", email));
+
+                command.ExecuteNonQuery();
+
+                connToDB.Close();
+            }
+        }
+
     }
 }

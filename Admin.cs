@@ -20,6 +20,15 @@ namespace Investment_ideas_platform
             string userFirstName = DBConnection.getInstanceOfDBConnection().getUserFirstName(Constants.FETCH_USER_FIRSTNAME, userEmail);
             lblAdminWelcome.Text = "Welcome " + userFirstName; //does not work for some reason
 
+            loadDGVViewAllAccounts();
+            dgvViewAllAccounts.Columns[0].HeaderText = "Email";
+            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+            btnCol.HeaderText = "Delete account";
+            btnCol.Text = "Delete";
+            btnCol.Name = "btnDeleteAccount";
+            btnCol.UseColumnTextForButtonValue = true;
+            dgvViewAllAccounts.Columns.Add(btnCol);
+
         }
 
         public void hideMainPanels()
@@ -55,6 +64,7 @@ namespace Investment_ideas_platform
         private void btnViewAccounts_Click(object sender, EventArgs e)
         {
             hideMainPanels();
+            loadDGVViewAllAccounts();
             pnViewAccounts.Visible = true;
         }
 
@@ -112,6 +122,41 @@ namespace Investment_ideas_platform
         private void btnCAContinue_Click(object sender, EventArgs e)
         {
             pnCAConfirmation.Visible = false;
+        }
+
+        private void loadDGVViewAllAccounts()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_ACCOUNTS);
+
+            dgvViewAllAccounts.DataSource = ds.Tables[0];
+        }
+
+        private void dgvViewAllAccounts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvViewAllAccounts.Columns[e.ColumnIndex].Name == "btnDeleteAccount")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //int index = dgvViewAllAccounts.SelectedRows[0].Index;
+                    int selectedrowindex = dgvViewAllAccounts.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = dgvViewAllAccounts.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells["Email"].Value);
+                    bool deleteStaffAccount = DeleteAccount.deleteStaffAccount(cellValue);
+
+                    if (deleteStaffAccount)
+                    {
+                        //MessageBox.Show("Success!");
+                        //refresh dgv
+                        loadDGVViewAllAccounts(); //This adds a couple columns/messes things up.
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete account");
+                    }
+                    //MessageBox.Show(cellValue);
+                    //delete func here
+                }
+            }
         }
     }
 }

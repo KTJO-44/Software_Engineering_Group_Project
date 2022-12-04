@@ -63,6 +63,7 @@ namespace Investment_ideas_platform
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnViewAccounts = new System.Windows.Forms.Panel();
+            this.dgvViewAllAccounts = new System.Windows.Forms.DataGridView();
             this.lblViewStaffAccounts = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnAdminMyProfile = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@ namespace Investment_ideas_platform
             this.pnCreateAccounts.SuspendLayout();
             this.pnCAConfirmation.SuspendLayout();
             this.pnViewAccounts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAccounts)).BeginInit();
             this.pnAdminMyProfile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -450,12 +452,28 @@ namespace Investment_ideas_platform
             // pnViewAccounts
             // 
             this.pnViewAccounts.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnViewAccounts.Controls.Add(this.dgvViewAllAccounts);
             this.pnViewAccounts.Controls.Add(this.lblViewStaffAccounts);
             this.pnViewAccounts.Controls.Add(this.label4);
             this.pnViewAccounts.Location = new System.Drawing.Point(301, 47);
             this.pnViewAccounts.Name = "pnViewAccounts";
             this.pnViewAccounts.Size = new System.Drawing.Size(1500, 839);
             this.pnViewAccounts.TabIndex = 1;
+            // 
+            // dgvViewAllAccounts
+            // 
+            this.dgvViewAllAccounts.AllowUserToAddRows = false;
+            this.dgvViewAllAccounts.AllowUserToDeleteRows = false;
+            this.dgvViewAllAccounts.AllowUserToOrderColumns = true;
+            this.dgvViewAllAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewAllAccounts.Location = new System.Drawing.Point(72, 177);
+            this.dgvViewAllAccounts.Name = "dgvViewAllAccounts";
+            this.dgvViewAllAccounts.ReadOnly = true;
+            this.dgvViewAllAccounts.RowHeadersWidth = 51;
+            this.dgvViewAllAccounts.RowTemplate.Height = 29;
+            this.dgvViewAllAccounts.Size = new System.Drawing.Size(1324, 580);
+            this.dgvViewAllAccounts.TabIndex = 2;
+            this.dgvViewAllAccounts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewAllAccounts_CellContentClick);
             // 
             // lblViewStaffAccounts
             // 
@@ -525,9 +543,9 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnAdminExit);
+            this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
             this.Controls.Add(this.pnAdminMyProfile);
-            this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnAdminNotifications);
             this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnAdminMenu);
@@ -549,6 +567,7 @@ namespace Investment_ideas_platform
             this.pnCAConfirmation.PerformLayout();
             this.pnViewAccounts.ResumeLayout(false);
             this.pnViewAccounts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAccounts)).EndInit();
             this.pnAdminMyProfile.ResumeLayout(false);
             this.pnAdminMyProfile.PerformLayout();
             this.ResumeLayout(false);
@@ -596,5 +615,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnCAContinue;
         private System.Windows.Forms.TextBox tbCAGeneratedPassword;
         private System.Windows.Forms.Label lblCreatedNewAccount;
+        private System.Windows.Forms.DataGridView dgvViewAllAccounts;
     }
 }
