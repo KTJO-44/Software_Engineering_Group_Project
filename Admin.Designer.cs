@@ -32,7 +32,7 @@ namespace Investment_ideas_platform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.pnAdminMenu = new System.Windows.Forms.Panel();
             this.pnAdminNavBar = new System.Windows.Forms.Panel();
-            this.pbAdminProfilePic = new System.Windows.Forms.PictureBox();
+            this.pbAdminMenuIcon = new System.Windows.Forms.PictureBox();
             this.lblAdminMenuLabel = new System.Windows.Forms.Label();
             this.lblAdminMenuName = new System.Windows.Forms.Label();
             this.btnAdminNotifications = new System.Windows.Forms.Button();
@@ -40,15 +40,20 @@ namespace Investment_ideas_platform
             this.btnViewAccounts = new System.Windows.Forms.Button();
             this.btnMyProfileAdmin = new System.Windows.Forms.Button();
             this.btnAdminLogout = new System.Windows.Forms.Button();
+            this.pnAdminHomepage = new System.Windows.Forms.Panel();
+            this.lblAdminWelcome = new System.Windows.Forms.Label();
+            this.btnHomepage = new System.Windows.Forms.Button();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAdminProfilePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
+            this.pnAdminHomepage.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnAdminMenu
             // 
             this.pnAdminMenu.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pnAdminMenu.Controls.Add(this.btnAdminLogout);
+            this.pnAdminMenu.Controls.Add(this.btnHomepage);
             this.pnAdminMenu.Controls.Add(this.btnMyProfileAdmin);
             this.pnAdminMenu.Controls.Add(this.btnViewAccounts);
             this.pnAdminMenu.Controls.Add(this.btnCreateAccounts);
@@ -64,22 +69,22 @@ namespace Investment_ideas_platform
             // 
             this.pnAdminNavBar.Controls.Add(this.lblAdminMenuName);
             this.pnAdminNavBar.Controls.Add(this.lblAdminMenuLabel);
-            this.pnAdminNavBar.Controls.Add(this.pbAdminProfilePic);
+            this.pnAdminNavBar.Controls.Add(this.pbAdminMenuIcon);
             this.pnAdminNavBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAdminNavBar.Location = new System.Drawing.Point(0, 0);
             this.pnAdminNavBar.Name = "pnAdminNavBar";
             this.pnAdminNavBar.Size = new System.Drawing.Size(280, 166);
             this.pnAdminNavBar.TabIndex = 0;
             // 
-            // pbAdminProfilePic
+            // pbAdminMenuIcon
             // 
-            this.pbAdminProfilePic.Image = ((System.Drawing.Image)(resources.GetObject("pbAdminProfilePic.Image")));
-            this.pbAdminProfilePic.Location = new System.Drawing.Point(78, 12);
-            this.pbAdminProfilePic.Name = "pbAdminProfilePic";
-            this.pbAdminProfilePic.Size = new System.Drawing.Size(125, 78);
-            this.pbAdminProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAdminProfilePic.TabIndex = 0;
-            this.pbAdminProfilePic.TabStop = false;
+            this.pbAdminMenuIcon.Image = ((System.Drawing.Image)(resources.GetObject("pbAdminMenuIcon.Image")));
+            this.pbAdminMenuIcon.Location = new System.Drawing.Point(78, 12);
+            this.pbAdminMenuIcon.Name = "pbAdminMenuIcon";
+            this.pbAdminMenuIcon.Size = new System.Drawing.Size(125, 78);
+            this.pbAdminMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAdminMenuIcon.TabIndex = 0;
+            this.pbAdminMenuIcon.TabStop = false;
             // 
             // lblAdminMenuLabel
             // 
@@ -165,12 +170,46 @@ namespace Investment_ideas_platform
             this.btnAdminLogout.Text = "Logout";
             this.btnAdminLogout.UseVisualStyleBackColor = true;
             // 
+            // pnAdminHomepage
+            // 
+            this.pnAdminHomepage.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnAdminHomepage.Controls.Add(this.lblAdminWelcome);
+            this.pnAdminHomepage.Location = new System.Drawing.Point(301, 47);
+            this.pnAdminHomepage.Name = "pnAdminHomepage";
+            this.pnAdminHomepage.Size = new System.Drawing.Size(1500, 839);
+            this.pnAdminHomepage.TabIndex = 1;
+            // 
+            // lblAdminWelcome
+            // 
+            this.lblAdminWelcome.AutoSize = true;
+            this.lblAdminWelcome.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdminWelcome.Location = new System.Drawing.Point(37, 46);
+            this.lblAdminWelcome.Name = "lblAdminWelcome";
+            this.lblAdminWelcome.Size = new System.Drawing.Size(212, 54);
+            this.lblAdminWelcome.TabIndex = 0;
+            this.lblAdminWelcome.Text = "Welcome, ";
+            // 
+            // btnHomepage
+            // 
+            this.btnHomepage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHomepage.FlatAppearance.BorderSize = 0;
+            this.btnHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomepage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnHomepage.Location = new System.Drawing.Point(0, 494);
+            this.btnHomepage.Name = "btnHomepage";
+            this.btnHomepage.Size = new System.Drawing.Size(280, 82);
+            this.btnHomepage.TabIndex = 1;
+            this.btnHomepage.Text = "Home";
+            this.btnHomepage.UseVisualStyleBackColor = true;
+            this.btnHomepage.Click += new System.EventHandler(this.btnHomepage_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnAdminMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
@@ -179,7 +218,9 @@ namespace Investment_ideas_platform
             this.pnAdminMenu.ResumeLayout(false);
             this.pnAdminNavBar.ResumeLayout(false);
             this.pnAdminNavBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAdminProfilePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).EndInit();
+            this.pnAdminHomepage.ResumeLayout(false);
+            this.pnAdminHomepage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -195,6 +236,9 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnAdminNotifications;
         private System.Windows.Forms.Label lblAdminMenuName;
         private System.Windows.Forms.Label lblAdminMenuLabel;
-        private System.Windows.Forms.PictureBox pbAdminProfilePic;
+        private System.Windows.Forms.PictureBox pbAdminMenuIcon;
+        private System.Windows.Forms.Panel pnAdminHomepage;
+        private System.Windows.Forms.Label lblAdminWelcome;
+        private System.Windows.Forms.Button btnHomepage;
     }
 }

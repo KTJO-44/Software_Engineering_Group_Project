@@ -13,6 +13,21 @@ namespace Investment_ideas_platform
         public Admin()
         {
             InitializeComponent();
+            hideMainPanels();
+            pnAdminHomepage.Visible = true;
+
+        }
+
+        public void hideMainPanels()
+        {
+            //Will contain code to hide page panels
+            pnAdminHomepage.Visible = false;
+        }
+
+        private void btnHomepage_Click(object sender, EventArgs e)
+        {
+            hideMainPanels();
+            pnAdminHomepage.Visible = true;
         }
     }
 }
