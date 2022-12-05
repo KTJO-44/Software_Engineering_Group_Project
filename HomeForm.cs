@@ -28,12 +28,7 @@ namespace Investment_ideas_platform
             LoadDGVViewAllIdeas();
             DGVViewAllIdeas.Columns[0].HeaderText = "Idea Title";
 
-            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
-            btnCol.HeaderText = "Delete account";
-            btnCol.Text = "Delete";
-            btnCol.Name = "btnDeleteAccount";
-            btnCol.UseColumnTextForButtonValue = true;
-            DGVViewAllIdeas.Columns.Add(btnCol);
+          
 
         }
 
@@ -47,6 +42,10 @@ namespace Investment_ideas_platform
 
         }
 
+        private void ASortIdeas_Click(object sender, EventArgs e)
+        {
+            DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Ascending);
+        }
     }
 }
 
