@@ -48,6 +48,25 @@ namespace Investment_ideas_platform
             return value;
         }
 
+        public int getSingleIntUsingJustEmail(string sqlQuery, string email)
+        {
+            int value;
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("userEmail", email));
+
+                value = Convert.ToInt32(command.ExecuteScalar());
+
+                connToDB.Close();
+            }
+
+            return value;
+        }
+
         public bool emailExists(string sqlQuery, string userEmail)
         {
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
@@ -150,6 +169,22 @@ namespace Investment_ideas_platform
                 command.CommandType = CommandType.Text;
                 command.Parameters.Add(new SqlParameter("newPassword", password));
                 command.Parameters.Add(new SqlParameter("userEmail", email));
+
+                command.ExecuteNonQuery();
+
+                connToDB.Close();
+            }
+        }
+
+        public void createNotification(string sqlQuery, int notificationID, int staffID)
+        {
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("nID", notificationID));
+                command.Parameters.Add(new SqlParameter("sID", staffID));
 
                 command.ExecuteNonQuery();
 

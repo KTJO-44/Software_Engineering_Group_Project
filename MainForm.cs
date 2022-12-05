@@ -153,7 +153,21 @@ namespace Investment_ideas_platform
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
-
+            string userEmail = txtbx_login_uname.Text;
+            if (LogUserIn.userExists(userEmail))
+            {
+                //Double check that the user wants to reset password
+                if (MessageBox.Show("Are you sure you want to request a password reset?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Make notification here
+                    CreateResetNotification.findStaffID(userEmail);
+                    MessageBox.Show("Reset request sent");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Account does not exist");
+            }
         }
     }
 }

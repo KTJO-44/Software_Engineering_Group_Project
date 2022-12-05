@@ -67,6 +67,17 @@ namespace Investment_ideas_platform
             this.lblViewStaffAccounts = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnAdminMyProfile = new System.Windows.Forms.Panel();
+            this.pnChangePassword = new System.Windows.Forms.Panel();
+            this.tbConfirmNewPassword = new System.Windows.Forms.TextBox();
+            this.btnChangePasswordCancel = new System.Windows.Forms.Button();
+            this.btnConfirmChangePassword = new System.Windows.Forms.Button();
+            this.tbNewPassword = new System.Windows.Forms.TextBox();
+            this.tbOldPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmNewPassword = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
+            this.lblEnterOldPassword = new System.Windows.Forms.Label();
+            this.lblChangeYourPassword = new System.Windows.Forms.Label();
+            this.btnMPChangePassword = new System.Windows.Forms.Button();
             this.lblAdminMPLastNameFetched = new System.Windows.Forms.Label();
             this.lblAdminMPFirstNameFetched = new System.Windows.Forms.Label();
             this.lblAdminMPEmailFetched = new System.Windows.Forms.Label();
@@ -77,17 +88,7 @@ namespace Investment_ideas_platform
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdminExit = new System.Windows.Forms.Button();
-            this.btnMPChangePassword = new System.Windows.Forms.Button();
-            this.pnChangePassword = new System.Windows.Forms.Panel();
-            this.lblChangeYourPassword = new System.Windows.Forms.Label();
-            this.lblEnterOldPassword = new System.Windows.Forms.Label();
-            this.lblNewPassword = new System.Windows.Forms.Label();
-            this.lblConfirmNewPassword = new System.Windows.Forms.Label();
-            this.tbOldPassword = new System.Windows.Forms.TextBox();
-            this.tbNewPassword = new System.Windows.Forms.TextBox();
-            this.tbConfirmNewPassword = new System.Windows.Forms.TextBox();
-            this.btnConfirmChangePassword = new System.Windows.Forms.Button();
-            this.btnChangePasswordCancel = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
@@ -99,6 +100,7 @@ namespace Investment_ideas_platform
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAccounts)).BeginInit();
             this.pnAdminMyProfile.SuspendLayout();
             this.pnChangePassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAdminMenu
@@ -262,6 +264,7 @@ namespace Investment_ideas_platform
             // pnAdminNotifications
             // 
             this.pnAdminNotifications.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnAdminNotifications.Controls.Add(this.dataGridView1);
             this.pnAdminNotifications.Controls.Add(this.lblAdminNotifications);
             this.pnAdminNotifications.Controls.Add(this.label1);
             this.pnAdminNotifications.Location = new System.Drawing.Point(301, 47);
@@ -532,6 +535,138 @@ namespace Investment_ideas_platform
             this.pnAdminMyProfile.Size = new System.Drawing.Size(1500, 839);
             this.pnAdminMyProfile.TabIndex = 1;
             // 
+            // pnChangePassword
+            // 
+            this.pnChangePassword.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnChangePassword.Controls.Add(this.tbConfirmNewPassword);
+            this.pnChangePassword.Controls.Add(this.btnChangePasswordCancel);
+            this.pnChangePassword.Controls.Add(this.btnConfirmChangePassword);
+            this.pnChangePassword.Controls.Add(this.tbNewPassword);
+            this.pnChangePassword.Controls.Add(this.tbOldPassword);
+            this.pnChangePassword.Controls.Add(this.lblConfirmNewPassword);
+            this.pnChangePassword.Controls.Add(this.lblNewPassword);
+            this.pnChangePassword.Controls.Add(this.lblEnterOldPassword);
+            this.pnChangePassword.Controls.Add(this.lblChangeYourPassword);
+            this.pnChangePassword.Location = new System.Drawing.Point(400, 46);
+            this.pnChangePassword.Name = "pnChangePassword";
+            this.pnChangePassword.Size = new System.Drawing.Size(806, 763);
+            this.pnChangePassword.TabIndex = 4;
+            // 
+            // tbConfirmNewPassword
+            // 
+            this.tbConfirmNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbConfirmNewPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbConfirmNewPassword.Location = new System.Drawing.Point(294, 361);
+            this.tbConfirmNewPassword.MaxLength = 255;
+            this.tbConfirmNewPassword.Name = "tbConfirmNewPassword";
+            this.tbConfirmNewPassword.PasswordChar = '*';
+            this.tbConfirmNewPassword.Size = new System.Drawing.Size(319, 31);
+            this.tbConfirmNewPassword.TabIndex = 1;
+            // 
+            // btnChangePasswordCancel
+            // 
+            this.btnChangePasswordCancel.BackColor = System.Drawing.Color.Gray;
+            this.btnChangePasswordCancel.FlatAppearance.BorderSize = 0;
+            this.btnChangePasswordCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePasswordCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnChangePasswordCancel.Location = new System.Drawing.Point(294, 528);
+            this.btnChangePasswordCancel.Name = "btnChangePasswordCancel";
+            this.btnChangePasswordCancel.Size = new System.Drawing.Size(319, 40);
+            this.btnChangePasswordCancel.TabIndex = 3;
+            this.btnChangePasswordCancel.Text = "Cancel";
+            this.btnChangePasswordCancel.UseVisualStyleBackColor = false;
+            this.btnChangePasswordCancel.Click += new System.EventHandler(this.btnChangePasswordCancel_Click);
+            // 
+            // btnConfirmChangePassword
+            // 
+            this.btnConfirmChangePassword.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConfirmChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnConfirmChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmChangePassword.Location = new System.Drawing.Point(294, 463);
+            this.btnConfirmChangePassword.Name = "btnConfirmChangePassword";
+            this.btnConfirmChangePassword.Size = new System.Drawing.Size(319, 40);
+            this.btnConfirmChangePassword.TabIndex = 3;
+            this.btnConfirmChangePassword.Text = "Confirm";
+            this.btnConfirmChangePassword.UseVisualStyleBackColor = false;
+            this.btnConfirmChangePassword.Click += new System.EventHandler(this.btnConfirmChangePassword_Click);
+            // 
+            // tbNewPassword
+            // 
+            this.tbNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNewPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNewPassword.Location = new System.Drawing.Point(294, 262);
+            this.tbNewPassword.MaxLength = 255;
+            this.tbNewPassword.Name = "tbNewPassword";
+            this.tbNewPassword.PasswordChar = '*';
+            this.tbNewPassword.Size = new System.Drawing.Size(319, 31);
+            this.tbNewPassword.TabIndex = 1;
+            // 
+            // tbOldPassword
+            // 
+            this.tbOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbOldPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbOldPassword.Location = new System.Drawing.Point(294, 171);
+            this.tbOldPassword.MaxLength = 255;
+            this.tbOldPassword.Name = "tbOldPassword";
+            this.tbOldPassword.PasswordChar = '*';
+            this.tbOldPassword.Size = new System.Drawing.Size(319, 31);
+            this.tbOldPassword.TabIndex = 1;
+            // 
+            // lblConfirmNewPassword
+            // 
+            this.lblConfirmNewPassword.AutoSize = true;
+            this.lblConfirmNewPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblConfirmNewPassword.Location = new System.Drawing.Point(15, 361);
+            this.lblConfirmNewPassword.Name = "lblConfirmNewPassword";
+            this.lblConfirmNewPassword.Size = new System.Drawing.Size(258, 31);
+            this.lblConfirmNewPassword.TabIndex = 0;
+            this.lblConfirmNewPassword.Text = "Confirm new password:";
+            // 
+            // lblNewPassword
+            // 
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNewPassword.Location = new System.Drawing.Point(97, 262);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(173, 31);
+            this.lblNewPassword.TabIndex = 0;
+            this.lblNewPassword.Text = "New password:";
+            // 
+            // lblEnterOldPassword
+            // 
+            this.lblEnterOldPassword.AutoSize = true;
+            this.lblEnterOldPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnterOldPassword.Location = new System.Drawing.Point(107, 171);
+            this.lblEnterOldPassword.Name = "lblEnterOldPassword";
+            this.lblEnterOldPassword.Size = new System.Drawing.Size(163, 31);
+            this.lblEnterOldPassword.TabIndex = 0;
+            this.lblEnterOldPassword.Text = "Old password:";
+            // 
+            // lblChangeYourPassword
+            // 
+            this.lblChangeYourPassword.AutoSize = true;
+            this.lblChangeYourPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblChangeYourPassword.Location = new System.Drawing.Point(262, 31);
+            this.lblChangeYourPassword.Name = "lblChangeYourPassword";
+            this.lblChangeYourPassword.Size = new System.Drawing.Size(252, 31);
+            this.lblChangeYourPassword.TabIndex = 0;
+            this.lblChangeYourPassword.Text = "Change your password";
+            // 
+            // btnMPChangePassword
+            // 
+            this.btnMPChangePassword.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMPChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnMPChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMPChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMPChangePassword.Location = new System.Drawing.Point(186, 361);
+            this.btnMPChangePassword.Name = "btnMPChangePassword";
+            this.btnMPChangePassword.Size = new System.Drawing.Size(144, 40);
+            this.btnMPChangePassword.TabIndex = 3;
+            this.btnMPChangePassword.Text = "Change";
+            this.btnMPChangePassword.UseVisualStyleBackColor = false;
+            this.btnMPChangePassword.Click += new System.EventHandler(this.btnMPChangePassword_Click);
+            // 
             // lblAdminMPLastNameFetched
             // 
             this.lblAdminMPLastNameFetched.AutoSize = true;
@@ -634,137 +769,19 @@ namespace Investment_ideas_platform
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
             // 
-            // btnMPChangePassword
+            // dataGridView1
             // 
-            this.btnMPChangePassword.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnMPChangePassword.FlatAppearance.BorderSize = 0;
-            this.btnMPChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMPChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMPChangePassword.Location = new System.Drawing.Point(186, 361);
-            this.btnMPChangePassword.Name = "btnMPChangePassword";
-            this.btnMPChangePassword.Size = new System.Drawing.Size(144, 40);
-            this.btnMPChangePassword.TabIndex = 3;
-            this.btnMPChangePassword.Text = "Change";
-            this.btnMPChangePassword.UseVisualStyleBackColor = false;
-            this.btnMPChangePassword.Click += new System.EventHandler(this.btnMPChangePassword_Click);
-            // 
-            // pnChangePassword
-            // 
-            this.pnChangePassword.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pnChangePassword.Controls.Add(this.tbConfirmNewPassword);
-            this.pnChangePassword.Controls.Add(this.btnChangePasswordCancel);
-            this.pnChangePassword.Controls.Add(this.btnConfirmChangePassword);
-            this.pnChangePassword.Controls.Add(this.tbNewPassword);
-            this.pnChangePassword.Controls.Add(this.tbOldPassword);
-            this.pnChangePassword.Controls.Add(this.lblConfirmNewPassword);
-            this.pnChangePassword.Controls.Add(this.lblNewPassword);
-            this.pnChangePassword.Controls.Add(this.lblEnterOldPassword);
-            this.pnChangePassword.Controls.Add(this.lblChangeYourPassword);
-            this.pnChangePassword.Location = new System.Drawing.Point(400, 46);
-            this.pnChangePassword.Name = "pnChangePassword";
-            this.pnChangePassword.Size = new System.Drawing.Size(806, 763);
-            this.pnChangePassword.TabIndex = 4;
-            // 
-            // lblChangeYourPassword
-            // 
-            this.lblChangeYourPassword.AutoSize = true;
-            this.lblChangeYourPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblChangeYourPassword.Location = new System.Drawing.Point(262, 31);
-            this.lblChangeYourPassword.Name = "lblChangeYourPassword";
-            this.lblChangeYourPassword.Size = new System.Drawing.Size(252, 31);
-            this.lblChangeYourPassword.TabIndex = 0;
-            this.lblChangeYourPassword.Text = "Change your password";
-            // 
-            // lblEnterOldPassword
-            // 
-            this.lblEnterOldPassword.AutoSize = true;
-            this.lblEnterOldPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEnterOldPassword.Location = new System.Drawing.Point(107, 171);
-            this.lblEnterOldPassword.Name = "lblEnterOldPassword";
-            this.lblEnterOldPassword.Size = new System.Drawing.Size(163, 31);
-            this.lblEnterOldPassword.TabIndex = 0;
-            this.lblEnterOldPassword.Text = "Old password:";
-            // 
-            // lblNewPassword
-            // 
-            this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNewPassword.Location = new System.Drawing.Point(97, 262);
-            this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(173, 31);
-            this.lblNewPassword.TabIndex = 0;
-            this.lblNewPassword.Text = "New password:";
-            // 
-            // lblConfirmNewPassword
-            // 
-            this.lblConfirmNewPassword.AutoSize = true;
-            this.lblConfirmNewPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblConfirmNewPassword.Location = new System.Drawing.Point(15, 361);
-            this.lblConfirmNewPassword.Name = "lblConfirmNewPassword";
-            this.lblConfirmNewPassword.Size = new System.Drawing.Size(258, 31);
-            this.lblConfirmNewPassword.TabIndex = 0;
-            this.lblConfirmNewPassword.Text = "Confirm new password:";
-            // 
-            // tbOldPassword
-            // 
-            this.tbOldPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbOldPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbOldPassword.Location = new System.Drawing.Point(294, 171);
-            this.tbOldPassword.MaxLength = 255;
-            this.tbOldPassword.Name = "tbOldPassword";
-            this.tbOldPassword.PasswordChar = '*';
-            this.tbOldPassword.Size = new System.Drawing.Size(319, 31);
-            this.tbOldPassword.TabIndex = 1;
-            // 
-            // tbNewPassword
-            // 
-            this.tbNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNewPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNewPassword.Location = new System.Drawing.Point(294, 262);
-            this.tbNewPassword.MaxLength = 255;
-            this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.PasswordChar = '*';
-            this.tbNewPassword.Size = new System.Drawing.Size(319, 31);
-            this.tbNewPassword.TabIndex = 1;
-            // 
-            // tbConfirmNewPassword
-            // 
-            this.tbConfirmNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbConfirmNewPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbConfirmNewPassword.Location = new System.Drawing.Point(294, 361);
-            this.tbConfirmNewPassword.MaxLength = 255;
-            this.tbConfirmNewPassword.Name = "tbConfirmNewPassword";
-            this.tbConfirmNewPassword.PasswordChar = '*';
-            this.tbConfirmNewPassword.Size = new System.Drawing.Size(319, 31);
-            this.tbConfirmNewPassword.TabIndex = 1;
-            // 
-            // btnConfirmChangePassword
-            // 
-            this.btnConfirmChangePassword.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConfirmChangePassword.FlatAppearance.BorderSize = 0;
-            this.btnConfirmChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmChangePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmChangePassword.Location = new System.Drawing.Point(294, 463);
-            this.btnConfirmChangePassword.Name = "btnConfirmChangePassword";
-            this.btnConfirmChangePassword.Size = new System.Drawing.Size(319, 40);
-            this.btnConfirmChangePassword.TabIndex = 3;
-            this.btnConfirmChangePassword.Text = "Confirm";
-            this.btnConfirmChangePassword.UseVisualStyleBackColor = false;
-            this.btnConfirmChangePassword.Click += new System.EventHandler(this.btnConfirmChangePassword_Click);
-            // 
-            // btnChangePasswordCancel
-            // 
-            this.btnChangePasswordCancel.BackColor = System.Drawing.Color.Gray;
-            this.btnChangePasswordCancel.FlatAppearance.BorderSize = 0;
-            this.btnChangePasswordCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePasswordCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnChangePasswordCancel.Location = new System.Drawing.Point(294, 528);
-            this.btnChangePasswordCancel.Name = "btnChangePasswordCancel";
-            this.btnChangePasswordCancel.Size = new System.Drawing.Size(319, 40);
-            this.btnChangePasswordCancel.TabIndex = 3;
-            this.btnChangePasswordCancel.Text = "Cancel";
-            this.btnChangePasswordCancel.UseVisualStyleBackColor = false;
-            this.btnChangePasswordCancel.Click += new System.EventHandler(this.btnChangePasswordCancel_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(59, 192);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(896, 488);
+            this.dataGridView1.TabIndex = 2;
             // 
             // Admin
             // 
@@ -773,11 +790,11 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnAdminExit);
+            this.Controls.Add(this.pnAdminNotifications);
             this.Controls.Add(this.pnAdminMyProfile);
             this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
-            this.Controls.Add(this.pnAdminNotifications);
             this.Controls.Add(this.pnAdminMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
@@ -802,6 +819,7 @@ namespace Investment_ideas_platform
             this.pnAdminMyProfile.PerformLayout();
             this.pnChangePassword.ResumeLayout(false);
             this.pnChangePassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -866,5 +884,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Label lblEnterOldPassword;
         private System.Windows.Forms.Label lblChangeYourPassword;
         private System.Windows.Forms.Button btnChangePasswordCancel;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

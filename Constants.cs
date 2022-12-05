@@ -15,7 +15,8 @@ namespace Investment_ideas_platform
         public static string CHECK_ACCOUNT_TYPE = "SELECT accountType FROM staffAccounts WHERE email=@userEmail";
         public static string FETCH_PASSWORD = "SELECT password FROM staffAccounts WHERE email=@userEmail";
         public static string CHANGE_PASSWORD = "UPDATE staffAccounts SET password=@newPassword WHERE email=@userEmail";
-
+        public static string FETCH_STAFFID = "SELECT staffID FROM staffAccounts WHERE email=@userEmail";
+        public static string CREATE_RESET_NOTIFICATION = "INSERT INTO accountNotifications (notificationID, staffID) VALUES (@nID, sID)";
 
     }
 }
