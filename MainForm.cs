@@ -150,5 +150,10 @@ namespace Investment_ideas_platform
                 txb_login_pwd.Clear();
             }
         }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

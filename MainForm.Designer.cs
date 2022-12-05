@@ -39,6 +39,7 @@ namespace Investment_ideas_platform
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnLoginCancel = new System.Windows.Forms.Button();
             this.lab_login_error = new System.Windows.Forms.Label();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -145,12 +146,24 @@ namespace Investment_ideas_platform
             this.lab_login_error.Size = new System.Drawing.Size(0, 18);
             this.lab_login_error.TabIndex = 2;
             // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.Location = new System.Drawing.Point(258, 357);
+            this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(227, 33);
+            this.btnForgotPassword.TabIndex = 3;
+            this.btnForgotPassword.Text = "Forgotten password";
+            this.btnForgotPassword.UseVisualStyleBackColor = true;
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(545, 411);
+            this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnLoginCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txb_login_pwd);
@@ -182,6 +195,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLoginCancel;
         private System.Windows.Forms.Label lab_login_error;
+        private System.Windows.Forms.Button btnForgotPassword;
     }
 }
 
