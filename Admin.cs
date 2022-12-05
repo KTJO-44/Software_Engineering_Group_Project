@@ -173,11 +173,46 @@ namespace Investment_ideas_platform
 
         private void btnConfirmChangePassword_Click(object sender, EventArgs e)
         {
+            string userEmail = User.userEmail;
             string oldPassword = tbOldPassword.Text;
             string newPassword = tbNewPassword.Text;
             string confirmNewPassword = tbConfirmNewPassword.Text;
 
-            
+            if (!oldPassword.Equals("") && !newPassword.Equals("") && !confirmNewPassword.Equals("")) { 
+                //Authenticate current password
+                if (DBConnection.getInstanceOfDBConnection().authenticatePassword(Constants.FETCH_PASSWORD, userEmail, oldPassword))
+                {
+                    //pass was correct
+                    if (ChangePassword.changeExistingPassword(userEmail, newPassword, confirmNewPassword))
+                    {
+                        MessageBox.Show("Password updated successfully");
+                        tbOldPassword.Clear();
+                        tbNewPassword.Clear();
+                        tbConfirmNewPassword.Clear();
+                        pnChangePassword.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("New passwords didn't match");
+                        tbNewPassword.Clear();
+                        tbConfirmNewPassword.Clear();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Password was incorrect");
+                    tbOldPassword.Clear();
+                    tbNewPassword.Clear();
+                    tbConfirmNewPassword.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all boxes");
+                tbOldPassword.Clear();
+                tbNewPassword.Clear();
+                tbConfirmNewPassword.Clear();
+            }
 
         }
 
