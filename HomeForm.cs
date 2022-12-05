@@ -19,10 +19,34 @@ namespace Investment_ideas_platform
 
         }
 
+        private void btnViewIdeas_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnViewIdeas.Visible = true;
+
+
+            LoadDGVViewAllIdeas();
+            DGVViewAllIdeas.Columns[0].HeaderText = "Idea Title";
+
+            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+            btnCol.HeaderText = "Delete account";
+            btnCol.Text = "Delete";
+            btnCol.Name = "btnDeleteAccount";
+            btnCol.UseColumnTextForButtonValue = true;
+            DGVViewAllIdeas.Columns.Add(btnCol);
+
+        }
+
+        private void LoadDGVViewAllIdeas()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_IDEAS);
+
+
+            dgvViewAl.DataSource = ds.Tables[0];
 
 
         }
 
     }
-
+}
 
