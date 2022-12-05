@@ -41,6 +41,7 @@ namespace Investment_ideas_platform
             pnViewAccounts.Visible = false;
             pnAdminMyProfile.Visible = false;
             pnCAConfirmation.Visible = false;
+            pnChangePassword.Visible = false;
         }
 
         private void btnHomepage_Click(object sender, EventArgs e)
@@ -163,6 +164,24 @@ namespace Investment_ideas_platform
                     //delete func here
                 }
             }
+        }
+
+        private void btnMPChangePassword_Click(object sender, EventArgs e)
+        {
+            pnChangePassword.Visible = true;
+        }
+
+        private void btnConfirmChangePassword_Click(object sender, EventArgs e)
+        {
+            string oldPassword = tbOldPassword.Text;
+            string newPassword = tbNewPassword.Text;
+            string confirmNewPassword = tbConfirmNewPassword.Text;
+
+        }
+
+        private void btnChangePasswordCancel_Click(object sender, EventArgs e)
+        {
+            pnChangePassword.Visible = false;
         }
     }
 }
