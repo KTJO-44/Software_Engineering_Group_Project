@@ -14,5 +14,10 @@ namespace Investment_ideas_platform
         {
             InitializeComponent();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
