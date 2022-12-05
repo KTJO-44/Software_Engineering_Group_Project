@@ -159,9 +159,16 @@ namespace Investment_ideas_platform
                 //Double check that the user wants to reset password
                 if (MessageBox.Show("Are you sure you want to request a password reset?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //Make notification here
-                    CreateResetNotification.findStaffID(userEmail);
-                    MessageBox.Show("Reset request sent");
+                    if (!CreateResetNotification.findStaffID(userEmail))
+                    {
+                        //Make notification here
+                        CreateResetNotification.makeResetNotification(userEmail);
+                        MessageBox.Show("Reset request sent");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Already sent a reset request");
+                    }
                 }
             }
             else
