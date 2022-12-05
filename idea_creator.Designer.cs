@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.pn_sidebar = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.pn_sidebar_top = new System.Windows.Forms.Panel();
             this.lb_idea_creator = new System.Windows.Forms.Label();
             this.pn_top_bar = new System.Windows.Forms.Panel();
-            this.btn_logout = new System.Windows.Forms.Button();
+            this.lb_idea_dashboard = new System.Windows.Forms.Label();
             this.pn_sidebar.SuspendLayout();
             this.pn_sidebar_top.SuspendLayout();
+            this.pn_top_bar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_sidebar
@@ -47,6 +49,20 @@
             this.pn_sidebar.Name = "pn_sidebar";
             this.pn_sidebar.Size = new System.Drawing.Size(200, 555);
             this.pn_sidebar.TabIndex = 0;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_logout.Location = new System.Drawing.Point(0, 519);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(200, 36);
+            this.btn_logout.TabIndex = 1;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // pn_sidebar_top
             // 
@@ -71,24 +87,23 @@
             // pn_top_bar
             // 
             this.pn_top_bar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.pn_top_bar.Controls.Add(this.lb_idea_dashboard);
             this.pn_top_bar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_top_bar.Location = new System.Drawing.Point(200, 0);
             this.pn_top_bar.Name = "pn_top_bar";
             this.pn_top_bar.Size = new System.Drawing.Size(788, 100);
             this.pn_top_bar.TabIndex = 1;
             // 
-            // btn_logout
+            // lb_idea_dashboard
             // 
-            this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Location = new System.Drawing.Point(0, 519);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(200, 36);
-            this.btn_logout.TabIndex = 1;
-            this.btn_logout.Text = "Logout";
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            this.lb_idea_dashboard.AutoSize = true;
+            this.lb_idea_dashboard.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_idea_dashboard.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lb_idea_dashboard.Location = new System.Drawing.Point(277, 31);
+            this.lb_idea_dashboard.Name = "lb_idea_dashboard";
+            this.lb_idea_dashboard.Size = new System.Drawing.Size(231, 32);
+            this.lb_idea_dashboard.TabIndex = 2;
+            this.lb_idea_dashboard.Text = "Main Dashboard";
             // 
             // idea_creator
             // 
@@ -103,6 +118,8 @@
             this.pn_sidebar.ResumeLayout(false);
             this.pn_sidebar_top.ResumeLayout(false);
             this.pn_sidebar_top.PerformLayout();
+            this.pn_top_bar.ResumeLayout(false);
+            this.pn_top_bar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -114,5 +131,6 @@
         private System.Windows.Forms.Label lb_idea_creator;
         private System.Windows.Forms.Panel pn_top_bar;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Label lb_idea_dashboard;
     }
 }
