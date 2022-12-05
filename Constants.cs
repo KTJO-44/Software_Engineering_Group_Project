@@ -23,5 +23,6 @@ namespace Investment_ideas_platform
         public static string DELETE_RESET_NOTIFICATION = "DELETE FROM accountNotifications WHERE notificationID=@nID AND staffID=@sID";
 
 
+
     }
 }

@@ -26,9 +26,9 @@ namespace Investment_ideas_platform.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\rando\\Desktop\\DT\\C#\\" +
-            "Group_project_2\\Investment_ideas_platform\\InvestmentIdeasDB.mdf;Integrated Secur" +
-            "ity=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Jordan English\\OneDr" +
+            "ive - Anglia Ruskin University\\seee\\InvestmentIdeasDB.mdf;Integrated Security=Tr" +
+            "ue;Connect Timeout=30")]
         public string InvestmentIdeasDBConnectionString {
             get {
                 return ((string)(this["InvestmentIdeasDBConnectionString"]));
