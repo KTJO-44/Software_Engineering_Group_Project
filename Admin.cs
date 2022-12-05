@@ -34,6 +34,14 @@ namespace Investment_ideas_platform
             {
                 //If there are notifications, load them in
                 loadDGVViewAdminNotifications();
+                dgvViewAdminNotifications.Columns[0].HeaderText = "Email";
+                DataGridViewButtonColumn btnColResetPassword = new DataGridViewButtonColumn();
+                btnColResetPassword.HeaderText = "Reset password";
+                btnColResetPassword.Text = "Reset";
+                btnColResetPassword.Name = "btnResetForgottenPassword";
+                btnColResetPassword.UseColumnTextForButtonValue = true;
+                dgvViewAdminNotifications.Columns.Add(btnColResetPassword);
+
             }
             
         }
@@ -65,9 +73,13 @@ namespace Investment_ideas_platform
         //#####################################################
         private void loadDGVViewAdminNotifications()
         {
-            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.FETCH_RESET_NOTIFICATIONS);
+            if (DBConnection.getInstanceOfDBConnection().notificationsExist(Constants.CHECK_EXISTS_NOTIFICATIONS))
+            {
+                DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.FETCH_RESET_NOTIFICATIONS);
 
-            dgvViewAdminNotifications.DataSource = ds.Tables[0];
+                dgvViewAdminNotifications.DataSource = ds.Tables[0];
+
+            }
         }
 
         private void btnCreateAccounts_Click(object sender, EventArgs e)
@@ -233,6 +245,30 @@ namespace Investment_ideas_platform
         private void btnChangePasswordCancel_Click(object sender, EventArgs e)
         {
             pnChangePassword.Visible = false;
+        }
+
+        private void dgvViewAdminNotifications_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvViewAdminNotifications.Columns[e.ColumnIndex].Name == "btnResetForgottenPassword")
+            {
+                if (MessageBox.Show("Are you sure you want to reset this account's password?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //reset the account's password
+                    int selectedrowindex = dgvViewAdminNotifications.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = dgvViewAdminNotifications.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells["Email"].Value);
+                    bool resetStaffAccountPassword = ChangePassword.resetStaffPassword(cellValue);
+                    if (resetStaffAccountPassword)
+                    {
+                        MessageBox.Show("Success!");
+                        loadDGVViewAdminNotifications();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to reset password");
+                    }
+                }
+            }
         }
     }
 }

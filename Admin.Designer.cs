@@ -44,6 +44,7 @@ namespace Investment_ideas_platform
             this.pnAdminHomepage = new System.Windows.Forms.Panel();
             this.lblAdminWelcome = new System.Windows.Forms.Label();
             this.pnAdminNotifications = new System.Windows.Forms.Panel();
+            this.dgvViewAdminNotifications = new System.Windows.Forms.DataGridView();
             this.lblAdminNotifications = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnCreateAccounts = new System.Windows.Forms.Panel();
@@ -88,19 +89,18 @@ namespace Investment_ideas_platform
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdminExit = new System.Windows.Forms.Button();
-            this.dgvViewAdminNotifications = new System.Windows.Forms.DataGridView();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
             this.pnAdminHomepage.SuspendLayout();
             this.pnAdminNotifications.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).BeginInit();
             this.pnCreateAccounts.SuspendLayout();
             this.pnCAConfirmation.SuspendLayout();
             this.pnViewAccounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAccounts)).BeginInit();
             this.pnAdminMyProfile.SuspendLayout();
             this.pnChangePassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAdminMenu
@@ -271,6 +271,21 @@ namespace Investment_ideas_platform
             this.pnAdminNotifications.Name = "pnAdminNotifications";
             this.pnAdminNotifications.Size = new System.Drawing.Size(1500, 839);
             this.pnAdminNotifications.TabIndex = 1;
+            // 
+            // dgvViewAdminNotifications
+            // 
+            this.dgvViewAdminNotifications.AllowUserToAddRows = false;
+            this.dgvViewAdminNotifications.AllowUserToDeleteRows = false;
+            this.dgvViewAdminNotifications.AllowUserToOrderColumns = true;
+            this.dgvViewAdminNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewAdminNotifications.Location = new System.Drawing.Point(59, 192);
+            this.dgvViewAdminNotifications.Name = "dgvViewAdminNotifications";
+            this.dgvViewAdminNotifications.ReadOnly = true;
+            this.dgvViewAdminNotifications.RowHeadersWidth = 51;
+            this.dgvViewAdminNotifications.RowTemplate.Height = 29;
+            this.dgvViewAdminNotifications.Size = new System.Drawing.Size(896, 488);
+            this.dgvViewAdminNotifications.TabIndex = 2;
+            this.dgvViewAdminNotifications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewAdminNotifications_CellContentClick);
             // 
             // lblAdminNotifications
             // 
@@ -769,20 +784,6 @@ namespace Investment_ideas_platform
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
             // 
-            // dgvViewAdminNotifications
-            // 
-            this.dgvViewAdminNotifications.AllowUserToAddRows = false;
-            this.dgvViewAdminNotifications.AllowUserToDeleteRows = false;
-            this.dgvViewAdminNotifications.AllowUserToOrderColumns = true;
-            this.dgvViewAdminNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvViewAdminNotifications.Location = new System.Drawing.Point(59, 192);
-            this.dgvViewAdminNotifications.Name = "dgvViewAdminNotifications";
-            this.dgvViewAdminNotifications.ReadOnly = true;
-            this.dgvViewAdminNotifications.RowHeadersWidth = 51;
-            this.dgvViewAdminNotifications.RowTemplate.Height = 29;
-            this.dgvViewAdminNotifications.Size = new System.Drawing.Size(896, 488);
-            this.dgvViewAdminNotifications.TabIndex = 2;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -808,6 +809,7 @@ namespace Investment_ideas_platform
             this.pnAdminHomepage.PerformLayout();
             this.pnAdminNotifications.ResumeLayout(false);
             this.pnAdminNotifications.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).EndInit();
             this.pnCreateAccounts.ResumeLayout(false);
             this.pnCreateAccounts.PerformLayout();
             this.pnCAConfirmation.ResumeLayout(false);
@@ -819,7 +821,6 @@ namespace Investment_ideas_platform
             this.pnAdminMyProfile.PerformLayout();
             this.pnChangePassword.ResumeLayout(false);
             this.pnChangePassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).EndInit();
             this.ResumeLayout(false);
 
         }
