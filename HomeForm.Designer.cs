@@ -45,12 +45,15 @@ namespace Investment_ideas_platform
             this.pnClients = new System.Windows.Forms.Panel();
             this.lblClients = new System.Windows.Forms.Label();
             this.pnViewIdeas = new System.Windows.Forms.Panel();
+            this.DGVViewAllIdeas = new System.Windows.Forms.DataGridView();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
             this.pnIdeas.SuspendLayout();
             this.pnProducts.SuspendLayout();
             this.pnClients.SuspendLayout();
+            this.pnViewIdeas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllIdeas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -208,10 +211,21 @@ namespace Investment_ideas_platform
             // pnViewIdeas
             // 
             this.pnViewIdeas.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewIdeas.Controls.Add(this.DGVViewAllIdeas);
             this.pnViewIdeas.Location = new System.Drawing.Point(39, 7);
             this.pnViewIdeas.Name = "pnViewIdeas";
             this.pnViewIdeas.Size = new System.Drawing.Size(1325, 772);
             this.pnViewIdeas.TabIndex = 5;
+            // 
+            // DGVViewAllIdeas
+            // 
+            this.DGVViewAllIdeas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVViewAllIdeas.Location = new System.Drawing.Point(651, 176);
+            this.DGVViewAllIdeas.Name = "DGVViewAllIdeas";
+            this.DGVViewAllIdeas.RowHeadersWidth = 51;
+            this.DGVViewAllIdeas.RowTemplate.Height = 29;
+            this.DGVViewAllIdeas.Size = new System.Drawing.Size(608, 482);
+            this.DGVViewAllIdeas.TabIndex = 0;
             // 
             // HomeForm
             // 
@@ -243,6 +257,8 @@ namespace Investment_ideas_platform
             this.pnProducts.PerformLayout();
             this.pnClients.ResumeLayout(false);
             this.pnClients.PerformLayout();
+            this.pnViewIdeas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllIdeas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,5 +280,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Label lblDMIdeas;
         private System.Windows.Forms.Button btnViewIdeas;
         private System.Windows.Forms.Panel pnViewIdeas;
+        private System.Windows.Forms.DataGridView DGVViewAllIdeas;
     }
 }

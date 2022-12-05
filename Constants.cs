@@ -22,7 +22,8 @@ namespace Investment_ideas_platform
         public static string CHECK_EXISTS_SPECIFIC_NOTIFICATION = "SELECT notificationID FROM accountNotifications WHERE staffID=@sID";
         public static string DELETE_RESET_NOTIFICATION = "DELETE FROM accountNotifications WHERE notificationID=@nID AND staffID=@sID";
 
-
+        public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateCreated, abstract, dateExpires, ideaContent, riskRating, Views FROM InvestmentIdeas";
+        public static string DELETE_STAFF_IDEAS = "DELETE FROM  InvestmentIdeas WHERE ideaTitle=@staffIdeas";
 
     }
 }

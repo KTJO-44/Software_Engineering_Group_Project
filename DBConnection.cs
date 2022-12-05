@@ -231,6 +231,9 @@ namespace Investment_ideas_platform
 
                 connToDB.Close();
             }
+
+
+
         }
 
     }

@@ -19,10 +19,10 @@ namespace Investment_ideas_platform
 
         }
 
-        private void btnViewIdeas_Click(object sender, EventArgs e)
-        {
-            pnDashboard.Visible = false;
-            pnViewIdeas.Visible = true;
+
+
         }
+
     }
-}
+
+
