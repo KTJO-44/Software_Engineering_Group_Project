@@ -177,6 +177,8 @@ namespace Investment_ideas_platform
             string newPassword = tbNewPassword.Text;
             string confirmNewPassword = tbConfirmNewPassword.Text;
 
+            
+
         }
 
         private void btnChangePasswordCancel_Click(object sender, EventArgs e)

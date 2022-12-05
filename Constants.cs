@@ -14,6 +14,8 @@ namespace Investment_ideas_platform
         public static string DELETE_STAFF_ACCOUNT = "DELETE FROM staffAccounts WHERE email=@staffEmail";
         public static string CHECK_ACCOUNT_TYPE = "SELECT accountType FROM staffAccounts WHERE email=@userEmail";
         public static string FETCH_PASSWORD = "SELECT password FROM staffAccounts WHERE email=@userEmail";
+        public static string CHANGE_PASSWORD = "UPDATE staffAccounts SET password=@newPassword WHERE email=@userEmail";
+
 
     }
 }

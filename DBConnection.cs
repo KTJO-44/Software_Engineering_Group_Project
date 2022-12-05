@@ -141,5 +141,21 @@ namespace Investment_ideas_platform
             return false;
         }
 
+        public void changePassword(string sqlQuery, string email, string password)
+        {
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("newPassword", password));
+                command.Parameters.Add(new SqlParameter("userEmail", email));
+
+                command.ExecuteNonQuery();
+
+                connToDB.Close();
+            }
+        }
+
     }
 }
