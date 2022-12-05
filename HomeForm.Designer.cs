@@ -45,8 +45,9 @@ namespace Investment_ideas_platform
             this.pnClients = new System.Windows.Forms.Panel();
             this.lblClients = new System.Windows.Forms.Label();
             this.pnViewIdeas = new System.Windows.Forms.Panel();
-            this.DGVViewAllIdeas = new System.Windows.Forms.DataGridView();
             this.ASortIdeas = new System.Windows.Forms.Button();
+            this.DGVViewAllIdeas = new System.Windows.Forms.DataGridView();
+            this.DSortIdeas = new System.Windows.Forms.Button();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -212,12 +213,23 @@ namespace Investment_ideas_platform
             // pnViewIdeas
             // 
             this.pnViewIdeas.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewIdeas.Controls.Add(this.DSortIdeas);
             this.pnViewIdeas.Controls.Add(this.ASortIdeas);
             this.pnViewIdeas.Controls.Add(this.DGVViewAllIdeas);
             this.pnViewIdeas.Location = new System.Drawing.Point(39, 7);
             this.pnViewIdeas.Name = "pnViewIdeas";
             this.pnViewIdeas.Size = new System.Drawing.Size(1325, 772);
             this.pnViewIdeas.TabIndex = 5;
+            // 
+            // ASortIdeas
+            // 
+            this.ASortIdeas.Location = new System.Drawing.Point(107, 110);
+            this.ASortIdeas.Name = "ASortIdeas";
+            this.ASortIdeas.Size = new System.Drawing.Size(94, 29);
+            this.ASortIdeas.TabIndex = 1;
+            this.ASortIdeas.Text = "Accend";
+            this.ASortIdeas.UseVisualStyleBackColor = true;
+            this.ASortIdeas.Click += new System.EventHandler(this.ASortIdeas_Click);
             // 
             // DGVViewAllIdeas
             // 
@@ -229,15 +241,15 @@ namespace Investment_ideas_platform
             this.DGVViewAllIdeas.Size = new System.Drawing.Size(608, 482);
             this.DGVViewAllIdeas.TabIndex = 0;
             // 
-            // ASortIdeas
+            // DSortIdeas
             // 
-            this.ASortIdeas.Location = new System.Drawing.Point(107, 110);
-            this.ASortIdeas.Name = "ASortIdeas";
-            this.ASortIdeas.Size = new System.Drawing.Size(94, 29);
-            this.ASortIdeas.TabIndex = 1;
-            this.ASortIdeas.Text = "Accend";
-            this.ASortIdeas.UseVisualStyleBackColor = true;
-            this.ASortIdeas.Click += new System.EventHandler(this.ASortIdeas_Click);
+            this.DSortIdeas.Location = new System.Drawing.Point(107, 194);
+            this.DSortIdeas.Name = "DSortIdeas";
+            this.DSortIdeas.Size = new System.Drawing.Size(94, 29);
+            this.DSortIdeas.TabIndex = 2;
+            this.DSortIdeas.Text = "Decend";
+            this.DSortIdeas.UseVisualStyleBackColor = true;
+            this.DSortIdeas.Click += new System.EventHandler(this.DSortIdeas_Click);
             // 
             // HomeForm
             // 
@@ -294,5 +306,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Panel pnViewIdeas;
         private System.Windows.Forms.DataGridView DGVViewAllIdeas;
         private System.Windows.Forms.Button ASortIdeas;
+        private System.Windows.Forms.Button DSortIdeas;
     }
 }

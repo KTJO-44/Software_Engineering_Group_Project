@@ -46,6 +46,11 @@ namespace Investment_ideas_platform
         {
             DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Ascending);
         }
+
+        private void DSortIdeas_Click(object sender, EventArgs e)
+        {
+            DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Descending);
+        }
     }
 }
 
