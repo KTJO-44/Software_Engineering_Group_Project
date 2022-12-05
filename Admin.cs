@@ -29,13 +29,10 @@ namespace Investment_ideas_platform
             btnCol.Name = "btnDeleteAccount";
             btnCol.UseColumnTextForButtonValue = true;
             dgvViewAllAccounts.Columns.Add(btnCol);
-
-            bool something = true;
-
             
-            if (something)
+            if (DBConnection.getInstanceOfDBConnection().notificationsExist(Constants.CHECK_EXISTS_NOTIFICATIONS))
             {
-                //If there are notifications, load them in.
+                //If there are notifications, load them in
                 loadDGVViewAdminNotifications();
             }
             

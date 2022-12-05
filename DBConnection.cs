@@ -88,6 +88,26 @@ namespace Investment_ideas_platform
             return false;
         }
 
+        public bool notificationsExist(string sqlQuery)
+        {
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         public void addNewAccountToDB(string sqlQuery, string email, string accountType, string firstName, string lastName, string password)
         {
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))

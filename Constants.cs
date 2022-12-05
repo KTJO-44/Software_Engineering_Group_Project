@@ -22,6 +22,8 @@ namespace Investment_ideas_platform
         //Trying out this one:
         //public static string FETCH_RESET_NOTIFICATIONS = "SELECT sA.email, sA.staffID, aN.notificationID, n.notificationType FROM ((staffAccounts AS sA INNER JOIN accountNotifications AS aN ON sA.staffID = aN.staffID) INNER JOIN notifications AS n ON aN.notificationID = n.notificationID)";
         public static string FETCH_RESET_NOTIFICATIONS = "SELECT sA.email, sA.firstName, sA.lastName, aN.timeStamp, n.notificationType FROM ((staffAccounts AS sA INNER JOIN accountNotifications AS aN ON sA.staffID = aN.staffID) INNER JOIN notifications AS n ON aN.notificationID = n.notificationID)";
+        public static string CHECK_EXISTS_NOTIFICATIONS = "SELECT * FROM accountNotifications";
+
 
     }
 }
