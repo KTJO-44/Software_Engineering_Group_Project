@@ -88,7 +88,7 @@ namespace Investment_ideas_platform
             this.lblAdminMyProfile = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdminExit = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvViewAdminNotifications = new System.Windows.Forms.DataGridView();
             this.pnAdminMenu.SuspendLayout();
             this.pnAdminNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminMenuIcon)).BeginInit();
@@ -100,7 +100,7 @@ namespace Investment_ideas_platform
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAccounts)).BeginInit();
             this.pnAdminMyProfile.SuspendLayout();
             this.pnChangePassword.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAdminMenu
@@ -264,7 +264,7 @@ namespace Investment_ideas_platform
             // pnAdminNotifications
             // 
             this.pnAdminNotifications.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnAdminNotifications.Controls.Add(this.dataGridView1);
+            this.pnAdminNotifications.Controls.Add(this.dgvViewAdminNotifications);
             this.pnAdminNotifications.Controls.Add(this.lblAdminNotifications);
             this.pnAdminNotifications.Controls.Add(this.label1);
             this.pnAdminNotifications.Location = new System.Drawing.Point(301, 47);
@@ -769,19 +769,19 @@ namespace Investment_ideas_platform
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
             // 
-            // dataGridView1
+            // dgvViewAdminNotifications
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 192);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(896, 488);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvViewAdminNotifications.AllowUserToAddRows = false;
+            this.dgvViewAdminNotifications.AllowUserToDeleteRows = false;
+            this.dgvViewAdminNotifications.AllowUserToOrderColumns = true;
+            this.dgvViewAdminNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViewAdminNotifications.Location = new System.Drawing.Point(59, 192);
+            this.dgvViewAdminNotifications.Name = "dgvViewAdminNotifications";
+            this.dgvViewAdminNotifications.ReadOnly = true;
+            this.dgvViewAdminNotifications.RowHeadersWidth = 51;
+            this.dgvViewAdminNotifications.RowTemplate.Height = 29;
+            this.dgvViewAdminNotifications.Size = new System.Drawing.Size(896, 488);
+            this.dgvViewAdminNotifications.TabIndex = 2;
             // 
             // Admin
             // 
@@ -819,7 +819,7 @@ namespace Investment_ideas_platform
             this.pnAdminMyProfile.PerformLayout();
             this.pnChangePassword.ResumeLayout(false);
             this.pnChangePassword.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViewAdminNotifications)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -884,6 +884,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Label lblEnterOldPassword;
         private System.Windows.Forms.Label lblChangeYourPassword;
         private System.Windows.Forms.Button btnChangePasswordCancel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvViewAdminNotifications;
     }
 }

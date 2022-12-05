@@ -30,6 +30,15 @@ namespace Investment_ideas_platform
             btnCol.UseColumnTextForButtonValue = true;
             dgvViewAllAccounts.Columns.Add(btnCol);
 
+            bool something = true;
+
+            
+            if (something)
+            {
+                //If there are notifications, load them in.
+                loadDGVViewAdminNotifications();
+            }
+            
         }
 
         public void hideMainPanels()
@@ -54,6 +63,14 @@ namespace Investment_ideas_platform
         {
             hideMainPanels();
             pnAdminNotifications.Visible = true;
+        }
+
+        //#####################################################
+        private void loadDGVViewAdminNotifications()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.FETCH_RESET_NOTIFICATIONS);
+
+            dgvViewAdminNotifications.DataSource = ds.Tables[0];
         }
 
         private void btnCreateAccounts_Click(object sender, EventArgs e)
