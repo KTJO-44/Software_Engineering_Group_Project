@@ -42,7 +42,7 @@ namespace Investment_ideas_platform
             DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_IDEAS);
 
 
-            dgvViewAl.DataSource = ds.Tables[0];
+            DGVViewAllIdeas.DataSource = ds.Tables[0];
 
 
         }
