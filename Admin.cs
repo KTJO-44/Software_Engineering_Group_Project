@@ -30,20 +30,15 @@ namespace Investment_ideas_platform
             btnCol.UseColumnTextForButtonValue = true;
             dgvViewAllAccounts.Columns.Add(btnCol);
             
-            if (DBConnection.getInstanceOfDBConnection().notificationsExist(Constants.CHECK_EXISTS_NOTIFICATIONS))
-            {
-                //If there are notifications, load them in
-                loadDGVViewAdminNotifications();
-                dgvViewAdminNotifications.Columns[0].HeaderText = "Email";
-                DataGridViewButtonColumn btnColResetPassword = new DataGridViewButtonColumn();
-                btnColResetPassword.HeaderText = "Reset password";
-                btnColResetPassword.Text = "Reset";
-                btnColResetPassword.Name = "btnResetForgottenPassword";
-                btnColResetPassword.UseColumnTextForButtonValue = true;
-                dgvViewAdminNotifications.Columns.Add(btnColResetPassword);
+            loadDGVViewAdminNotifications();
+            dgvViewAdminNotifications.Columns[0].HeaderText = "Email";
+            DataGridViewButtonColumn btnColResetPassword = new DataGridViewButtonColumn();
+            btnColResetPassword.HeaderText = "Reset password";
+            btnColResetPassword.Text = "Reset";
+            btnColResetPassword.Name = "btnResetForgottenPassword";
+            btnColResetPassword.UseColumnTextForButtonValue = true;
+            dgvViewAdminNotifications.Columns.Add(btnColResetPassword);
 
-            }
-            
         }
 
         public void hideMainPanels()
@@ -70,16 +65,12 @@ namespace Investment_ideas_platform
             pnAdminNotifications.Visible = true;
         }
 
-        //#####################################################
         private void loadDGVViewAdminNotifications()
         {
-            if (DBConnection.getInstanceOfDBConnection().notificationsExist(Constants.CHECK_EXISTS_NOTIFICATIONS))
-            {
-                DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.FETCH_RESET_NOTIFICATIONS);
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.FETCH_RESET_NOTIFICATIONS);
 
-                dgvViewAdminNotifications.DataSource = ds.Tables[0];
+            dgvViewAdminNotifications.DataSource = ds.Tables[0];
 
-            }
         }
 
         private void btnCreateAccounts_Click(object sender, EventArgs e)
