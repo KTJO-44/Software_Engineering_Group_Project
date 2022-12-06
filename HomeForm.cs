@@ -61,7 +61,31 @@ namespace Investment_ideas_platform
         {
             pnDashboard.Visible = false;
             pnViewAllProducts.Visible = true;
+
+            LoadDGVViewAllProducts();
+            DGVViewAllProducts.Columns[0].HeaderText = "Email";
+
+            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+            btnCol.HeaderText = "Delete account";
+            btnCol.Text = "Delete";
+            btnCol.Name = "btnDeleteAccount";
+            btnCol.UseColumnTextForButtonValue = true;
+            DGVViewAllProducts.Columns.Add(btnCol);
+
+        }
+
+        private void LoadDGVViewAllProducts()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_PRODUCTS);
+
+
+            DGVViewAllProducts.DataSource = ds.Tables[0];
+
+
         }
     }
-}
+
+       
+    }
+
 

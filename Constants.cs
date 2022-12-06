@@ -25,5 +25,9 @@ namespace Investment_ideas_platform
         public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateCreated, abstract, dateExpires, ideaContent, riskRating, Views FROM InvestmentIdeas";
         public static string DELETE_STAFF_IDEAS = "DELETE FROM  InvestmentIdeas WHERE ideaTitle=@staffIdeas";
 
+        public static string SELECT_VIEW_ALL_PRODUCTS = "SELECT productName, productType, companyName, productDescription FROM Products";
+        public static string DELETE_STAFF_PRODUCTS = "DELETE FROM Products WHERE productName=@staffProducts";
+     
+
     }
 }
