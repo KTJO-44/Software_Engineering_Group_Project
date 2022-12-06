@@ -63,7 +63,7 @@ namespace Investment_ideas_platform
             pnViewAllProducts.Visible = true;
 
             LoadDGVViewAllProducts();
-            DGVViewAllProducts.Columns[0].HeaderText = "Email";
+            DGVViewAllProducts.Columns[0].HeaderText = "Product name";
 
             DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
             btnCol.HeaderText = "Delete account";
@@ -92,6 +92,11 @@ namespace Investment_ideas_platform
         private void btnDSortProducts_Click(object sender, EventArgs e)
         {
             DGVViewAllProducts.Sort(DGVViewAllProducts.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void txtFilterBoxProducts_TextChanged(object sender, EventArgs e)
+        {
+            (DGVViewAllProducts.DataSource as DataTable).DefaultView.RowFilter = string.Format("productName = '{0}' OR productType = '{0}' OR companyName = '{0}' OR productDescription = '{0}'", txtFilterBoxProducts.Text);
         }
     }
 
