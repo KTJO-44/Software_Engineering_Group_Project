@@ -16,7 +16,7 @@ namespace Investment_ideas_platform
 
             pnDashboard.Visible = true;
             pnViewIdeas.Visible = false;
-
+            pnViewAllProducts.Visible = false;
         }
 
         private void btnViewIdeas_Click(object sender, EventArgs e)
@@ -50,6 +50,17 @@ namespace Investment_ideas_platform
         private void DSortIdeas_Click(object sender, EventArgs e)
         {
             DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void txtFilterboxIdea_TextChanged(object sender, EventArgs e)
+        {
+            (DGVViewAllIdeas.DataSource as DataTable).DefaultView.RowFilter = string.Format("ideaTitle = '{0}' OR abstract = '{0}'", txtFilterboxIdea.Text);
+        }
+
+        private void btnViewProducts_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnViewAllProducts.Visible = true;
         }
     }
 }
