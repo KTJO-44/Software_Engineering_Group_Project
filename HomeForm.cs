@@ -65,12 +65,7 @@ namespace Investment_ideas_platform
             LoadDGVViewAllProducts();
             DGVViewAllProducts.Columns[0].HeaderText = "Product name";
 
-            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
-            btnCol.HeaderText = "Delete account";
-            btnCol.Text = "Delete";
-            btnCol.Name = "btnDeleteAccount";
-            btnCol.UseColumnTextForButtonValue = true;
-            DGVViewAllProducts.Columns.Add(btnCol);
+         
 
         }
 
