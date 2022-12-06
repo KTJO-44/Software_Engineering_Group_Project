@@ -52,6 +52,8 @@ namespace Investment_ideas_platform
             this.DGVViewAllIdeas = new System.Windows.Forms.DataGridView();
             this.pnViewAllProducts = new System.Windows.Forms.Panel();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
+            this.btnASortProducts = new System.Windows.Forms.Button();
+            this.btnDSortProducts = new System.Windows.Forms.Button();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -280,6 +282,8 @@ namespace Investment_ideas_platform
             // pnViewAllProducts
             // 
             this.pnViewAllProducts.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllProducts.Controls.Add(this.btnDSortProducts);
+            this.pnViewAllProducts.Controls.Add(this.btnASortProducts);
             this.pnViewAllProducts.Controls.Add(this.DGVViewAllProducts);
             this.pnViewAllProducts.Location = new System.Drawing.Point(0, 0);
             this.pnViewAllProducts.Name = "pnViewAllProducts";
@@ -295,7 +299,26 @@ namespace Investment_ideas_platform
             this.DGVViewAllProducts.RowTemplate.Height = 29;
             this.DGVViewAllProducts.Size = new System.Drawing.Size(447, 319);
             this.DGVViewAllProducts.TabIndex = 0;
-         
+            // 
+            // btnASortProducts
+            // 
+            this.btnASortProducts.Location = new System.Drawing.Point(190, 200);
+            this.btnASortProducts.Name = "btnASortProducts";
+            this.btnASortProducts.Size = new System.Drawing.Size(94, 29);
+            this.btnASortProducts.TabIndex = 1;
+            this.btnASortProducts.Text = "Accend";
+            this.btnASortProducts.UseVisualStyleBackColor = true;
+            this.btnASortProducts.Click += new System.EventHandler(this.btnASortProducts_Click);
+            // 
+            // btnDSortProducts
+            // 
+            this.btnDSortProducts.Location = new System.Drawing.Point(190, 314);
+            this.btnDSortProducts.Name = "btnDSortProducts";
+            this.btnDSortProducts.Size = new System.Drawing.Size(94, 29);
+            this.btnDSortProducts.TabIndex = 2;
+            this.btnDSortProducts.Text = "decend";
+            this.btnDSortProducts.UseVisualStyleBackColor = true;
+            this.btnDSortProducts.Click += new System.EventHandler(this.btnDSortProducts_Click);
             // 
             // HomeForm
             // 
@@ -361,5 +384,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Panel pnViewAllProducts;
         private System.Windows.Forms.DataGridView DGVViewAllProducts;
         private System.Windows.Forms.Button btnViewProducts;
+        private System.Windows.Forms.Button btnDSortProducts;
+        private System.Windows.Forms.Button btnASortProducts;
     }
 }

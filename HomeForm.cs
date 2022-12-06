@@ -83,6 +83,16 @@ namespace Investment_ideas_platform
 
 
         }
+
+        private void btnASortProducts_Click(object sender, EventArgs e)
+        {
+            DGVViewAllProducts.Sort(DGVViewAllProducts.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void btnDSortProducts_Click(object sender, EventArgs e)
+        {
+            DGVViewAllProducts.Sort(DGVViewAllProducts.Columns[0], ListSortDirection.Descending);
+        }
     }
 
        
