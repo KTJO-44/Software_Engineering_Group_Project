@@ -28,7 +28,7 @@ namespace Investment_ideas_platform
         public static string SELECT_VIEW_ALL_PRODUCTS = "SELECT productName, productType, companyName, productDescription FROM Products";
         public static string DELETE_STAFF_PRODUCTS = "DELETE FROM Products WHERE productName=@staffProducts";
 
-        public static string SELECT_VIEW_ALL_CLIENTS= "SELECT firstName, lastName, email, phoneNumber, riskRating FROM clientProfiles";
+        public static string SELECT_VIEW_ALL_CLIENTS= "SELECT firstName, lastName, email, phoneNumber, riskRating,preferenceItem1,preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3  FROM clientProfiles";
         public static string ADD_NEW_CLIENT = "INSERT INTO clientProfiles (firstName, lastName, email, phoneNumber, riskRating) VALUES (@firstName, @lastName, @email, @phoneNumber, @riskRating)";
         public static string DELETE_CLIENT_ACCOUNT = "DELETE FROM clientProfiles WHERE firstName=@firstName";
     }

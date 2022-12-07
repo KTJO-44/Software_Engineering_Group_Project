@@ -365,7 +365,7 @@ namespace Investment_ideas_platform
             this.btnDSortclientProfile.Name = "btnDSortclientProfile";
             this.btnDSortclientProfile.Size = new System.Drawing.Size(94, 29);
             this.btnDSortclientProfile.TabIndex = 2;
-            this.btnDSortclientProfile.Text = "button2";
+            this.btnDSortclientProfile.Text = "Decend";
             this.btnDSortclientProfile.UseVisualStyleBackColor = true;
             this.btnDSortclientProfile.Click += new System.EventHandler(this.btnDSortclientProfile_Click);
             // 
