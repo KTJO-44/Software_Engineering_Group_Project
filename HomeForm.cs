@@ -162,6 +162,11 @@ namespace Investment_ideas_platform
         {
             DGVViewAllClients.Sort(DGVViewAllClients.Columns[0], ListSortDirection.Descending);
         }
+
+        private void txtFilterboxClientProfiles_TextChanged(object sender, EventArgs e)
+        {
+            (DGVViewAllClients.DataSource as DataTable).DefaultView.RowFilter = string.Format("firstName = '{0}' OR lastName = '{0}' OR email = '{0}' OR preferenceItem1 = '{0}' OR preferenceItem2 = '{0}' OR preferenceItem3 = '{0}'OR preferenceLocation1 = '{0}' OR preferenceLocation2 = '{0}' OR preferenceLocation3= '{0}'", txtFilterboxClientProfiles.Text);
+        }
     }
 }
 

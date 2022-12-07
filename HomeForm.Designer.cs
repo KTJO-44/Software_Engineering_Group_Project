@@ -60,6 +60,7 @@ namespace Investment_ideas_platform
             this.btnDSortclientProfile = new System.Windows.Forms.Button();
             this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
+            this.txtFilterboxClientProfiles = new System.Windows.Forms.TextBox();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -351,6 +352,7 @@ namespace Investment_ideas_platform
             // pnViewAllClients
             // 
             this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllClients.Controls.Add(this.txtFilterboxClientProfiles);
             this.pnViewAllClients.Controls.Add(this.btnDSortclientProfile);
             this.pnViewAllClients.Controls.Add(this.btnASortclientProfile);
             this.pnViewAllClients.Controls.Add(this.DGVViewAllClients);
@@ -389,6 +391,14 @@ namespace Investment_ideas_platform
             this.DGVViewAllClients.Size = new System.Drawing.Size(738, 495);
             this.DGVViewAllClients.TabIndex = 0;
             this.DGVViewAllClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVViewAllClients_CellContentClick);
+            // 
+            // txtFilterboxClientProfiles
+            // 
+            this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(950, 606);
+            this.txtFilterboxClientProfiles.Name = "txtFilterboxClientProfiles";
+            this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterboxClientProfiles.TabIndex = 3;
+            this.txtFilterboxClientProfiles.TextChanged += new System.EventHandler(this.txtFilterboxClientProfiles_TextChanged);
             // 
             // HomeForm
             // 
@@ -429,6 +439,7 @@ namespace Investment_ideas_platform
             this.pnViewAllProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllProducts)).EndInit();
             this.pnViewAllClients.ResumeLayout(false);
+            this.pnViewAllClients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllClients)).EndInit();
             this.ResumeLayout(false);
 
@@ -466,5 +477,6 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.DataGridView DGVViewAllClients;
         private System.Windows.Forms.Button btnDSortclientProfile;
         private System.Windows.Forms.Button btnASortclientProfile;
+        private System.Windows.Forms.TextBox txtFilterboxClientProfiles;
     }
 }
