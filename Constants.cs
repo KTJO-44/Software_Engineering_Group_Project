@@ -29,6 +29,5 @@ namespace Investment_ideas_platform
         public static string DELETE_STAFF_PRODUCTS = "DELETE FROM Products WHERE productName=@staffProducts";
 
 
-        public static string ADD_NEW_CLIENT = "INSERT INTO clientProfiles
     }
 }

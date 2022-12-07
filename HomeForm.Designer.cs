@@ -32,6 +32,7 @@ namespace Investment_ideas_platform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnExit = new System.Windows.Forms.Button();
             this.pnDashboard = new System.Windows.Forms.Panel();
+            this.btnViewClients = new System.Windows.Forms.Button();
             this.btnViewProducts = new System.Windows.Forms.Button();
             this.btnViewIdeas = new System.Windows.Forms.Button();
             this.pnDashboardIdeas = new System.Windows.Forms.Panel();
@@ -51,10 +52,12 @@ namespace Investment_ideas_platform
             this.ASortIdeas = new System.Windows.Forms.Button();
             this.DGVViewAllIdeas = new System.Windows.Forms.DataGridView();
             this.pnViewAllProducts = new System.Windows.Forms.Panel();
+            this.txtFilterBoxProducts = new System.Windows.Forms.TextBox();
             this.btnDSortProducts = new System.Windows.Forms.Button();
             this.btnASortProducts = new System.Windows.Forms.Button();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
-            this.txtFilterBoxProducts = new System.Windows.Forms.TextBox();
+            this.pnViewAllClients = new System.Windows.Forms.Panel();
+            this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -65,6 +68,8 @@ namespace Investment_ideas_platform
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllIdeas)).BeginInit();
             this.pnViewAllProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllProducts)).BeginInit();
+            this.pnViewAllClients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllClients)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -84,6 +89,7 @@ namespace Investment_ideas_platform
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnDashboard.Controls.Add(this.btnViewClients);
             this.pnDashboard.Controls.Add(this.btnViewProducts);
             this.pnDashboard.Controls.Add(this.btnViewIdeas);
             this.pnDashboard.Controls.Add(this.pnDashboardIdeas);
@@ -93,11 +99,21 @@ namespace Investment_ideas_platform
             this.pnDashboard.Size = new System.Drawing.Size(1765, 882);
             this.pnDashboard.TabIndex = 2;
             // 
+            // btnViewClients
+            // 
+            this.btnViewClients.Location = new System.Drawing.Point(731, 163);
+            this.btnViewClients.Name = "btnViewClients";
+            this.btnViewClients.Size = new System.Drawing.Size(131, 62);
+            this.btnViewClients.TabIndex = 6;
+            this.btnViewClients.Text = "View Clients";
+            this.btnViewClients.UseVisualStyleBackColor = true;
+            this.btnViewClients.Click += new System.EventHandler(this.btnViewClients_Click);
+            // 
             // btnViewProducts
             // 
             this.btnViewProducts.Location = new System.Drawing.Point(564, 163);
             this.btnViewProducts.Name = "btnViewProducts";
-            this.btnViewProducts.Size = new System.Drawing.Size(94, 29);
+            this.btnViewProducts.Size = new System.Drawing.Size(131, 62);
             this.btnViewProducts.TabIndex = 5;
             this.btnViewProducts.Text = "ViewProducts";
             this.btnViewProducts.UseVisualStyleBackColor = true;
@@ -107,7 +123,7 @@ namespace Investment_ideas_platform
             // 
             this.btnViewIdeas.Location = new System.Drawing.Point(401, 163);
             this.btnViewIdeas.Name = "btnViewIdeas";
-            this.btnViewIdeas.Size = new System.Drawing.Size(94, 29);
+            this.btnViewIdeas.Size = new System.Drawing.Size(107, 62);
             this.btnViewIdeas.TabIndex = 4;
             this.btnViewIdeas.Text = "button1";
             this.btnViewIdeas.UseVisualStyleBackColor = true;
@@ -292,6 +308,14 @@ namespace Investment_ideas_platform
             this.pnViewAllProducts.Size = new System.Drawing.Size(1325, 772);
             this.pnViewAllProducts.TabIndex = 6;
             // 
+            // txtFilterBoxProducts
+            // 
+            this.txtFilterBoxProducts.Location = new System.Drawing.Point(190, 462);
+            this.txtFilterBoxProducts.Name = "txtFilterBoxProducts";
+            this.txtFilterBoxProducts.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterBoxProducts.TabIndex = 3;
+            this.txtFilterBoxProducts.TextChanged += new System.EventHandler(this.txtFilterBoxProducts_TextChanged);
+            // 
             // btnDSortProducts
             // 
             this.btnDSortProducts.Location = new System.Drawing.Point(190, 314);
@@ -322,13 +346,24 @@ namespace Investment_ideas_platform
             this.DGVViewAllProducts.Size = new System.Drawing.Size(447, 319);
             this.DGVViewAllProducts.TabIndex = 0;
             // 
-            // txtFilterBoxProducts
+            // pnViewAllClients
             // 
-            this.txtFilterBoxProducts.Location = new System.Drawing.Point(190, 462);
-            this.txtFilterBoxProducts.Name = "txtFilterBoxProducts";
-            this.txtFilterBoxProducts.Size = new System.Drawing.Size(125, 29);
-            this.txtFilterBoxProducts.TabIndex = 3;
-            this.txtFilterBoxProducts.TextChanged += new System.EventHandler(this.txtFilterBoxProducts_TextChanged);
+            this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllClients.Controls.Add(this.DGVViewAllClients);
+            this.pnViewAllClients.Location = new System.Drawing.Point(0, 0);
+            this.pnViewAllClients.Name = "pnViewAllClients";
+            this.pnViewAllClients.Size = new System.Drawing.Size(1325, 772);
+            this.pnViewAllClients.TabIndex = 7;
+            // 
+            // DGVViewAllClients
+            // 
+            this.DGVViewAllClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVViewAllClients.Location = new System.Drawing.Point(600, 298);
+            this.DGVViewAllClients.Name = "DGVViewAllClients";
+            this.DGVViewAllClients.RowHeadersWidth = 51;
+            this.DGVViewAllClients.RowTemplate.Height = 29;
+            this.DGVViewAllClients.Size = new System.Drawing.Size(447, 319);
+            this.DGVViewAllClients.TabIndex = 0;
             // 
             // HomeForm
             // 
@@ -336,6 +371,7 @@ namespace Investment_ideas_platform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewIdeas);
@@ -367,6 +403,8 @@ namespace Investment_ideas_platform
             this.pnViewAllProducts.ResumeLayout(false);
             this.pnViewAllProducts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllProducts)).EndInit();
+            this.pnViewAllClients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllClients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,5 +436,8 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnDSortProducts;
         private System.Windows.Forms.Button btnASortProducts;
         private System.Windows.Forms.TextBox txtFilterBoxProducts;
+        private System.Windows.Forms.Button btnViewClients;
+        private System.Windows.Forms.Panel pnViewAllClients;
+        private System.Windows.Forms.DataGridView DGVViewAllClients;
     }
 }

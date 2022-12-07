@@ -17,6 +17,7 @@ namespace Investment_ideas_platform
             pnDashboard.Visible = true;
             pnViewIdeas.Visible = false;
             pnViewAllProducts.Visible = false;
+            pnViewAllClients.Visible = false;
         }
 
         private void btnViewIdeas_Click(object sender, EventArgs e)
@@ -92,6 +93,12 @@ namespace Investment_ideas_platform
         private void txtFilterBoxProducts_TextChanged(object sender, EventArgs e)
         {
             (DGVViewAllProducts.DataSource as DataTable).DefaultView.RowFilter = string.Format("productName = '{0}' OR productType = '{0}' OR companyName = '{0}' OR productDescription = '{0}'", txtFilterBoxProducts.Text);
+        }
+
+        private void btnViewClients_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnViewAllClients.Visible = true;
         }
     }
 
