@@ -144,7 +144,7 @@ namespace Investment_ideas_platform
                             lab_login_error.Text = "";
                             txtbx_login_uname.Clear();
                             txb_login_pwd.Clear();
-                            idea_creator ic = new idea_creator();
+                            idea_creator ic = new idea_creator(idea_creator);
                             ic.Show(); // Show the form when the case is called
                             break;
                     }
