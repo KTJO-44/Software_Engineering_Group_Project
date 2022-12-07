@@ -75,10 +75,11 @@ namespace Investment_ideas_platform
             this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
             this.pnChangePI1 = new System.Windows.Forms.Panel();
+            this.cmbChangePI2 = new System.Windows.Forms.ComboBox();
             this.btnChangeItem1 = new System.Windows.Forms.Button();
             this.cmbChangePI1 = new System.Windows.Forms.ComboBox();
             this.txtClientEmailItem1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cmbChangePI3 = new System.Windows.Forms.ComboBox();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -563,7 +564,8 @@ namespace Investment_ideas_platform
             // pnChangePI1
             // 
             this.pnChangePI1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.pnChangePI1.Controls.Add(this.textBox5);
+            this.pnChangePI1.Controls.Add(this.cmbChangePI3);
+            this.pnChangePI1.Controls.Add(this.cmbChangePI2);
             this.pnChangePI1.Controls.Add(this.btnChangeItem1);
             this.pnChangePI1.Controls.Add(this.cmbChangePI1);
             this.pnChangePI1.Controls.Add(this.txtClientEmailItem1);
@@ -571,6 +573,18 @@ namespace Investment_ideas_platform
             this.pnChangePI1.Name = "pnChangePI1";
             this.pnChangePI1.Size = new System.Drawing.Size(1332, 745);
             this.pnChangePI1.TabIndex = 8;
+            // 
+            // cmbChangePI2
+            // 
+            this.cmbChangePI2.FormattingEnabled = true;
+            this.cmbChangePI2.Items.AddRange(new object[] {
+            "4",
+            "5",
+            "6"});
+            this.cmbChangePI2.Location = new System.Drawing.Point(467, 274);
+            this.cmbChangePI2.Name = "cmbChangePI2";
+            this.cmbChangePI2.Size = new System.Drawing.Size(151, 29);
+            this.cmbChangePI2.TabIndex = 3;
             // 
             // btnChangeItem1
             // 
@@ -596,17 +610,22 @@ namespace Investment_ideas_platform
             // 
             // txtClientEmailItem1
             // 
-            this.txtClientEmailItem1.Location = new System.Drawing.Point(280, 152);
+            this.txtClientEmailItem1.Location = new System.Drawing.Point(484, 157);
             this.txtClientEmailItem1.Name = "txtClientEmailItem1";
             this.txtClientEmailItem1.Size = new System.Drawing.Size(125, 29);
             this.txtClientEmailItem1.TabIndex = 0;
             // 
-            // textBox5
+            // cmbChangePI3
             // 
-            this.textBox5.Location = new System.Drawing.Point(500, 264);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 29);
-            this.textBox5.TabIndex = 3;
+            this.cmbChangePI3.FormattingEnabled = true;
+            this.cmbChangePI3.Items.AddRange(new object[] {
+            "7",
+            "8",
+            "9"});
+            this.cmbChangePI3.Location = new System.Drawing.Point(657, 274);
+            this.cmbChangePI3.Name = "cmbChangePI3";
+            this.cmbChangePI3.Size = new System.Drawing.Size(151, 29);
+            this.cmbChangePI3.TabIndex = 4;
             // 
             // HomeForm
             // 
@@ -706,6 +725,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.ComboBox cmbChangePI1;
         private System.Windows.Forms.TextBox txtClientEmailItem1;
         private System.Windows.Forms.Button btnChangeItem1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cmbChangePI2;
+        private System.Windows.Forms.ComboBox cmbChangePI3;
     }
 }

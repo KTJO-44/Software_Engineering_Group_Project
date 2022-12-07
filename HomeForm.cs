@@ -214,14 +214,30 @@ namespace Investment_ideas_platform
         private void btnChangeItem1_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("update clientProfiles set preferenceItem1='" + cmbChangePI1.GetItemText(cmbChangePI1.Text) + "' where email='" + txtClientEmailItem1.Text +  "'", con);
-            cmd.ExecuteNonQuery();
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("update clientProfiles set preferenceItem1='" + cmbChangePI1.GetItemText(cmbChangePI1.Text) + "' where email='" + txtClientEmailItem1.Text +  "'", con1);
+            cmd1.ExecuteNonQuery();
+           
+
+            SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con2.Open();
+            SqlCommand cmd2 = new SqlCommand("update clientProfiles set preferenceItem2='" + cmbChangePI2.GetItemText(cmbChangePI2.Text) + "' where email='" + txtClientEmailItem1.Text + "'", con2);
+            cmd2.ExecuteNonQuery();
 
 
-            MessageBox.Show("Data Updated Successfully.");
-            con.Close();
+            SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con3.Open();
+            SqlCommand cmd3 = new SqlCommand("update clientProfiles set preferenceItem3='" + cmbChangePI3.GetItemText(cmbChangePI3.Text) + "' where email='" + txtClientEmailItem1.Text + "'", con2);
+            cmd3.ExecuteNonQuery();
+
+
+
+            MessageBox.Show("Please check database to see if your data is updated.");
+
+            con1.Close();
+            con2.Close();
+            con3.Close();
         }
     }
     }
