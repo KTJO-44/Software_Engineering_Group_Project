@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Investment_ideas_platform
 {
@@ -18,6 +19,7 @@ namespace Investment_ideas_platform
             pnViewIdeas.Visible = false;
             pnViewAllProducts.Visible = false;
             pnViewAllClients.Visible = false;
+            pnChangePI1.Visible = false;
         }
 
         private void btnViewIdeas_Click(object sender, EventArgs e)
@@ -200,8 +202,31 @@ namespace Investment_ideas_platform
             }
         }
 
+  
+
+
+        private void btnChangePI1_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnChangePI1.Visible = true;
+        }
+
+        private void btnChangeItem1_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update clientProfiles set preferenceItem1='" + cmbChangePI1.GetItemText(cmbChangePI1.Text) + "' where email='" + txtClientEmailItem1.Text +  "'", con);
+            cmd.ExecuteNonQuery();
+
+
+            MessageBox.Show("Data Updated Successfully.");
+            con.Close();
+        }
     }
-}
+    }
+
+
 
 
        

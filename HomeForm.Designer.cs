@@ -32,6 +32,7 @@ namespace Investment_ideas_platform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.btnExit = new System.Windows.Forms.Button();
             this.pnDashboard = new System.Windows.Forms.Panel();
+            this.btnChangePI1 = new System.Windows.Forms.Button();
             this.btnViewClients = new System.Windows.Forms.Button();
             this.btnViewProducts = new System.Windows.Forms.Button();
             this.btnViewIdeas = new System.Windows.Forms.Button();
@@ -73,7 +74,11 @@ namespace Investment_ideas_platform
             this.btnDSortclientProfile = new System.Windows.Forms.Button();
             this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnChangePI1 = new System.Windows.Forms.Panel();
+            this.btnChangeItem1 = new System.Windows.Forms.Button();
+            this.cmbChangePI1 = new System.Windows.Forms.ComboBox();
+            this.txtClientEmailItem1 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -86,6 +91,7 @@ namespace Investment_ideas_platform
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllProducts)).BeginInit();
             this.pnViewAllClients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllClients)).BeginInit();
+            this.pnChangePI1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -105,7 +111,7 @@ namespace Investment_ideas_platform
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnDashboard.Controls.Add(this.button1);
+            this.pnDashboard.Controls.Add(this.btnChangePI1);
             this.pnDashboard.Controls.Add(this.btnViewClients);
             this.pnDashboard.Controls.Add(this.btnViewProducts);
             this.pnDashboard.Controls.Add(this.btnViewIdeas);
@@ -115,6 +121,16 @@ namespace Investment_ideas_platform
             this.pnDashboard.Name = "pnDashboard";
             this.pnDashboard.Size = new System.Drawing.Size(1765, 882);
             this.pnDashboard.TabIndex = 2;
+            // 
+            // btnChangePI1
+            // 
+            this.btnChangePI1.Location = new System.Drawing.Point(212, 562);
+            this.btnChangePI1.Name = "btnChangePI1";
+            this.btnChangePI1.Size = new System.Drawing.Size(152, 78);
+            this.btnChangePI1.TabIndex = 7;
+            this.btnChangePI1.Text = "Change preference item 1";
+            this.btnChangePI1.UseVisualStyleBackColor = true;
+            this.btnChangePI1.Click += new System.EventHandler(this.btnChangePI1_Click);
             // 
             // btnViewClients
             // 
@@ -544,14 +560,53 @@ namespace Investment_ideas_platform
             this.DGVViewAllClients.TabIndex = 0;
             this.DGVViewAllClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVViewAllClients_CellContentClick);
             // 
-            // button1
+            // pnChangePI1
             // 
-            this.button1.Location = new System.Drawing.Point(564, 583);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pnChangePI1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnChangePI1.Controls.Add(this.textBox5);
+            this.pnChangePI1.Controls.Add(this.btnChangeItem1);
+            this.pnChangePI1.Controls.Add(this.cmbChangePI1);
+            this.pnChangePI1.Controls.Add(this.txtClientEmailItem1);
+            this.pnChangePI1.Location = new System.Drawing.Point(66, 10);
+            this.pnChangePI1.Name = "pnChangePI1";
+            this.pnChangePI1.Size = new System.Drawing.Size(1332, 745);
+            this.pnChangePI1.TabIndex = 8;
+            // 
+            // btnChangeItem1
+            // 
+            this.btnChangeItem1.Location = new System.Drawing.Point(239, 376);
+            this.btnChangeItem1.Name = "btnChangeItem1";
+            this.btnChangeItem1.Size = new System.Drawing.Size(94, 29);
+            this.btnChangeItem1.TabIndex = 2;
+            this.btnChangeItem1.Text = "button1";
+            this.btnChangeItem1.UseVisualStyleBackColor = true;
+            this.btnChangeItem1.Click += new System.EventHandler(this.btnChangeItem1_Click);
+            // 
+            // cmbChangePI1
+            // 
+            this.cmbChangePI1.FormattingEnabled = true;
+            this.cmbChangePI1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbChangePI1.Location = new System.Drawing.Point(290, 274);
+            this.cmbChangePI1.Name = "cmbChangePI1";
+            this.cmbChangePI1.Size = new System.Drawing.Size(151, 29);
+            this.cmbChangePI1.TabIndex = 1;
+            // 
+            // txtClientEmailItem1
+            // 
+            this.txtClientEmailItem1.Location = new System.Drawing.Point(280, 152);
+            this.txtClientEmailItem1.Name = "txtClientEmailItem1";
+            this.txtClientEmailItem1.Size = new System.Drawing.Size(125, 29);
+            this.txtClientEmailItem1.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(500, 264);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(125, 29);
+            this.textBox5.TabIndex = 3;
             // 
             // HomeForm
             // 
@@ -559,6 +614,7 @@ namespace Investment_ideas_platform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
+            this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnClients);
@@ -594,6 +650,8 @@ namespace Investment_ideas_platform
             this.pnViewAllClients.ResumeLayout(false);
             this.pnViewAllClients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllClients)).EndInit();
+            this.pnChangePI1.ResumeLayout(false);
+            this.pnChangePI1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -643,6 +701,11 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChangePI1;
+        private System.Windows.Forms.Panel pnChangePI1;
+        private System.Windows.Forms.ComboBox cmbChangePI1;
+        private System.Windows.Forms.TextBox txtClientEmailItem1;
+        private System.Windows.Forms.Button btnChangeItem1;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
