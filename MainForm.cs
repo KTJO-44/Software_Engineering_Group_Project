@@ -132,7 +132,7 @@ namespace Investment_ideas_platform
                             f2.Show();
                             break;
                             
-                            // (NATHAN) Added on Biraj's original code logic.
+                            // (NATHAN) Added on to Biraj's original code logic.
                             // Create a case in which the idea creator is selected to login
                             // Using credientials with the account creation from admin, account type be an idea creator saved in database
                             // Hide until called upon when database is referenced with login details with the account type
@@ -149,6 +149,7 @@ namespace Investment_ideas_platform
                             break;
                     }
                 }
+
                 // Nathan - create a condition in which the password or email does match the database records
                 // If conditions are not mentioned within the cases then show else conditions
 
