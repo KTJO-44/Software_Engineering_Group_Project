@@ -57,10 +57,23 @@ namespace Investment_ideas_platform
             this.btnASortProducts = new System.Windows.Forms.Button();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
             this.pnViewAllClients = new System.Windows.Forms.Panel();
+            this.btnCreateClient = new System.Windows.Forms.Button();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFilterboxClientProfiles = new System.Windows.Forms.TextBox();
             this.btnDSortclientProfile = new System.Windows.Forms.Button();
             this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
-            this.txtFilterboxClientProfiles = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -92,6 +105,7 @@ namespace Investment_ideas_platform
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnDashboard.Controls.Add(this.button1);
             this.pnDashboard.Controls.Add(this.btnViewClients);
             this.pnDashboard.Controls.Add(this.btnViewProducts);
             this.pnDashboard.Controls.Add(this.btnViewIdeas);
@@ -352,6 +366,18 @@ namespace Investment_ideas_platform
             // pnViewAllClients
             // 
             this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllClients.Controls.Add(this.btnCreateClient);
+            this.pnViewAllClients.Controls.Add(this.comboBox7);
+            this.pnViewAllClients.Controls.Add(this.comboBox6);
+            this.pnViewAllClients.Controls.Add(this.comboBox5);
+            this.pnViewAllClients.Controls.Add(this.comboBox4);
+            this.pnViewAllClients.Controls.Add(this.comboBox3);
+            this.pnViewAllClients.Controls.Add(this.comboBox2);
+            this.pnViewAllClients.Controls.Add(this.comboBox1);
+            this.pnViewAllClients.Controls.Add(this.textBox4);
+            this.pnViewAllClients.Controls.Add(this.textBox3);
+            this.pnViewAllClients.Controls.Add(this.textBox2);
+            this.pnViewAllClients.Controls.Add(this.textBox1);
             this.pnViewAllClients.Controls.Add(this.txtFilterboxClientProfiles);
             this.pnViewAllClients.Controls.Add(this.btnDSortclientProfile);
             this.pnViewAllClients.Controls.Add(this.btnASortclientProfile);
@@ -360,6 +386,132 @@ namespace Investment_ideas_platform
             this.pnViewAllClients.Name = "pnViewAllClients";
             this.pnViewAllClients.Size = new System.Drawing.Size(1325, 772);
             this.pnViewAllClients.TabIndex = 7;
+            // 
+            // btnCreateClient
+            // 
+            this.btnCreateClient.Location = new System.Drawing.Point(91, 586);
+            this.btnCreateClient.Name = "btnCreateClient";
+            this.btnCreateClient.Size = new System.Drawing.Size(210, 79);
+            this.btnCreateClient.TabIndex = 15;
+            this.btnCreateClient.Text = "Create client";
+            this.btnCreateClient.UseVisualStyleBackColor = true;
+            this.btnCreateClient.Click += new System.EventHandler(this.btnCreateClient_Click);
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "C",
+            "D"});
+            this.comboBox7.Location = new System.Drawing.Point(275, 490);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(151, 29);
+            this.comboBox7.TabIndex = 14;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "C",
+            "D"});
+            this.comboBox6.Location = new System.Drawing.Point(275, 399);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(151, 29);
+            this.comboBox6.TabIndex = 13;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "C",
+            "D"});
+            this.comboBox5.Location = new System.Drawing.Point(275, 325);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(151, 29);
+            this.comboBox5.TabIndex = 12;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "A",
+            "B"});
+            this.comboBox4.Location = new System.Drawing.Point(13, 490);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(151, 29);
+            this.comboBox4.TabIndex = 11;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "A",
+            "B"});
+            this.comboBox3.Location = new System.Drawing.Point(13, 401);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(151, 29);
+            this.comboBox3.TabIndex = 10;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "A",
+            "B"});
+            this.comboBox2.Location = new System.Drawing.Point(12, 329);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(151, 29);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBox1.Location = new System.Drawing.Point(133, 274);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 29);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(281, 202);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(125, 29);
+            this.textBox4.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(69, 202);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(125, 29);
+            this.textBox3.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(275, 105);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(125, 29);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(66, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 29);
+            this.textBox1.TabIndex = 4;
+            // 
+            // txtFilterboxClientProfiles
+            // 
+            this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(950, 606);
+            this.txtFilterboxClientProfiles.Name = "txtFilterboxClientProfiles";
+            this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterboxClientProfiles.TabIndex = 3;
+            this.txtFilterboxClientProfiles.TextChanged += new System.EventHandler(this.txtFilterboxClientProfiles_TextChanged);
             // 
             // btnDSortclientProfile
             // 
@@ -392,13 +544,14 @@ namespace Investment_ideas_platform
             this.DGVViewAllClients.TabIndex = 0;
             this.DGVViewAllClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVViewAllClients_CellContentClick);
             // 
-            // txtFilterboxClientProfiles
+            // button1
             // 
-            this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(950, 606);
-            this.txtFilterboxClientProfiles.Name = "txtFilterboxClientProfiles";
-            this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 29);
-            this.txtFilterboxClientProfiles.TabIndex = 3;
-            this.txtFilterboxClientProfiles.TextChanged += new System.EventHandler(this.txtFilterboxClientProfiles_TextChanged);
+            this.button1.Location = new System.Drawing.Point(564, 583);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
@@ -406,14 +559,14 @@ namespace Investment_ideas_platform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
-            this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pnViewAllProducts);
-            this.Controls.Add(this.pnViewIdeas);
             this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnClients);
             this.Controls.Add(this.pnProducts);
             this.Controls.Add(this.pnIdeas);
+            this.Controls.Add(this.pnViewAllClients);
+            this.Controls.Add(this.pnViewAllProducts);
+            this.Controls.Add(this.pnViewIdeas);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -478,5 +631,18 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnDSortclientProfile;
         private System.Windows.Forms.Button btnASortclientProfile;
         private System.Windows.Forms.TextBox txtFilterboxClientProfiles;
+        private System.Windows.Forms.Button btnCreateClient;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

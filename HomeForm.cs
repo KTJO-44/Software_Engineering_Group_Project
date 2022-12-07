@@ -167,8 +167,42 @@ namespace Investment_ideas_platform
         {
             (DGVViewAllClients.DataSource as DataTable).DefaultView.RowFilter = string.Format("firstName = '{0}' OR lastName = '{0}' OR email = '{0}' OR preferenceItem1 = '{0}' OR preferenceItem2 = '{0}' OR preferenceItem3 = '{0}'OR preferenceLocation1 = '{0}' OR preferenceLocation2 = '{0}' OR preferenceLocation3= '{0}'", txtFilterboxClientProfiles.Text);
         }
+
+        private void btnCreateClient_Click(object sender, EventArgs e)
+        {
+            //Get inputs from the text boxes and send them to the backend to create the account
+            string firstName = textBox1.Text;
+            string lastName = textBox2.Text;
+            string email = textBox3.Text;
+            string phoneNumber = textBox4.Text;
+            string riskRating = comboBox1.GetItemText(comboBox1.Text);
+            string preferenceItem1 = comboBox2.GetItemText(comboBox2.Text);
+            string preferenceItem2 = comboBox3.GetItemText(comboBox3.Text);
+            string preferenceItem3 = comboBox4.GetItemText(comboBox4.Text);
+            string preferenceLocation1 = comboBox5.GetItemText(comboBox5.Text);
+            string preferenceLocation2 = comboBox6.GetItemText(comboBox6.Text);
+            string preferenceLocation3 = comboBox7.GetItemText(comboBox7.Text);
+
+
+            //string password = tbPassword.Text; //Don't need password when creating an account, only when changing/logging in
+
+            //CreateAccount createAccount = new CreateAccount(accountEmail, selectedItem, accountFirstName, accountLastName);
+            bool createClient = CreateClient.createNewClient(firstName, lastName, email, phoneNumber, riskRating, preferenceItem1, preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3);
+
+            if (createClient)
+            {
+                MessageBox.Show("Success!");
+          
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all fields and make sure you use a company email");
+            }
+        }
+
     }
 }
+
 
        
     
