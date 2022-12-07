@@ -29,7 +29,7 @@ namespace Investment_ideas_platform
             LoadDGVViewAllIdeas();
             DGVViewAllIdeas.Columns[0].HeaderText = "Idea Title";
 
-          
+
 
         }
 
@@ -66,7 +66,7 @@ namespace Investment_ideas_platform
             LoadDGVViewAllProducts();
             DGVViewAllProducts.Columns[0].HeaderText = "Product name";
 
-         
+
 
         }
 
@@ -99,10 +99,63 @@ namespace Investment_ideas_platform
         {
             pnDashboard.Visible = false;
             pnViewAllClients.Visible = true;
+
+
+            LoadDGVViewAllClients();
+            DGVViewAllClients.Columns[0].HeaderText = "First name";
+
+            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+            btnCol.HeaderText = "Delete account";
+            btnCol.Text = "Delete";
+            btnCol.Name = "btnDeleteAccount";
+            btnCol.UseColumnTextForButtonValue = true;
+            DGVViewAllClients.Columns.Add(btnCol);
+
+
+        }
+
+        private void LoadDGVViewAllClients()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_CLIENTS);
+
+
+            DGVViewAllClients.DataSource = ds.Tables[0];
+
+
+        }
+
+
+
+        private void DGVViewAllClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //int index = dgvViewAllAccounts.SelectedRows[0].Index;
+                    int selectedrowindex = DGVViewAllClients.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = DGVViewAllClients.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells["firstName"].Value);
+                    bool deleteClientAccount = DeleteClient.deleteClientAccount(cellValue);
+
+                    if (deleteClientAccount)
+                    {
+                        MessageBox.Show("Success!");
+                        //refresh dgv
+                        LoadDGVViewAllClients(); //This adds a couple columns/messes things up.
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete account");
+                    }
+                    //MessageBox.Show(cellValue);
+                    //delete func here
+                }
+            }
         }
     }
+}
 
        
-    }
+    
 
 

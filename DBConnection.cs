@@ -231,10 +231,23 @@ namespace Investment_ideas_platform
 
                 connToDB.Close();
             }
+        }
 
+            public void deleteClientFromDB(string sqlQuery, string firstName)
+            {
+                using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+                {
+                    connToDB.Open();
+                    SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.Add(new SqlParameter("firstName", firstName));
 
+                    command.ExecuteNonQuery();
 
+                    connToDB.Close();
+                }
+            }
         }
 
     }
-}
+

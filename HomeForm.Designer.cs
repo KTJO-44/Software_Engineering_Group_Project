@@ -364,6 +364,7 @@ namespace Investment_ideas_platform
             this.DGVViewAllClients.RowTemplate.Height = 29;
             this.DGVViewAllClients.Size = new System.Drawing.Size(447, 319);
             this.DGVViewAllClients.TabIndex = 0;
+            this.DGVViewAllClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVViewAllClients_CellContentClick);
             // 
             // HomeForm
             // 
