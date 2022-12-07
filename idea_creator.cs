@@ -17,6 +17,8 @@ namespace Investment_ideas_platform
         public idea_creator() 
         {
             InitializeComponent();
+            hideMainPanel(); // Function created to hide panels
+            pn_main_dashboard.Visible = true; // When form is called upon by login, set dashboard panel to true to be shown first
         }
         
         // Adding a button to the form 
@@ -37,6 +39,34 @@ namespace Investment_ideas_platform
             Program.userLoggedIn = false; // current user from true to false to logout the idea creator
             Program.currForm = null; // current form is closed
             Program.f1.Show(); // show form 1 which is the main form for the login page
+        }
+
+        // Create a function in which all panels are set to false for .Visible
+        // This means that all the panels listed within the function will not be shown
+        // We can use this function to be called on to switch to True in which the panel will be shown
+        public void hideMainPanel()
+        {
+            pn_main_dashboard.Visible = false;
+            pn_ideas.Visible = false;
+            pn_ideas.Visible = false;
+        }
+
+        private void btn_home_Click(object sender, EventArgs e) // Create event on btn click
+        {
+            hideMainPanel(); // Function
+            pn_main_dashboard.Visible = true; // When btn click show the main dashboard page
+        }
+
+        private void btn_ideas_Click(object sender, EventArgs e) // Create event on btn click
+        {
+            hideMainPanel(); // Function
+            pn_ideas.Visible = true; // When btn click show the ideas page
+        }
+
+        private void btn_products_Click(object sender, EventArgs e) // Create event on btn click
+        {
+            hideMainPanel(); // Function
+            pnl_products.Visible = true;  // When btn is clicked show the products page
         }
     }
 }

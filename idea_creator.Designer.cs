@@ -30,18 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(idea_creator));
             this.pn_menu_sidebar = new System.Windows.Forms.Panel();
+            this.btn_products = new System.Windows.Forms.Button();
+            this.btn_ideas = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.pn_sidebar_top = new System.Windows.Forms.Panel();
             this.lb_idea_creator = new System.Windows.Forms.Label();
             this.pn_top_bar = new System.Windows.Forms.Panel();
-            this.lb_idea_dashboard = new System.Windows.Forms.Label();
-            this.btn_home = new System.Windows.Forms.Button();
-            this.btn_ideas = new System.Windows.Forms.Button();
-            this.btn_products = new System.Windows.Forms.Button();
+            this.lb_idea_header = new System.Windows.Forms.Label();
+            this.pn_main_dashboard = new System.Windows.Forms.Panel();
+            this.pn_ideas = new System.Windows.Forms.Panel();
+            this.lb_ideas_header = new System.Windows.Forms.Label();
+            this.pnl_products = new System.Windows.Forms.Panel();
+            this.lb_products = new System.Windows.Forms.Label();
             this.pn_menu_sidebar.SuspendLayout();
             this.pn_sidebar_top.SuspendLayout();
-            this.pn_top_bar.SuspendLayout();
+            this.pn_main_dashboard.SuspendLayout();
+            this.pn_ideas.SuspendLayout();
+            this.pnl_products.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_menu_sidebar
@@ -58,6 +65,57 @@
             this.pn_menu_sidebar.Name = "pn_menu_sidebar";
             this.pn_menu_sidebar.Size = new System.Drawing.Size(200, 555);
             this.pn_menu_sidebar.TabIndex = 0;
+            // 
+            // btn_products
+            // 
+            this.btn_products.FlatAppearance.BorderSize = 0;
+            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_products.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_products.Image = ((System.Drawing.Image)(resources.GetObject("btn_products.Image")));
+            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_products.Location = new System.Drawing.Point(7, 300);
+            this.btn_products.Name = "btn_products";
+            this.btn_products.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_products.Size = new System.Drawing.Size(185, 70);
+            this.btn_products.TabIndex = 5;
+            this.btn_products.Text = "Products";
+            this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_products.UseVisualStyleBackColor = true;
+            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
+            // 
+            // btn_ideas
+            // 
+            this.btn_ideas.FlatAppearance.BorderSize = 0;
+            this.btn_ideas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ideas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ideas.Image = ((System.Drawing.Image)(resources.GetObject("btn_ideas.Image")));
+            this.btn_ideas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ideas.Location = new System.Drawing.Point(7, 215);
+            this.btn_ideas.Name = "btn_ideas";
+            this.btn_ideas.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_ideas.Size = new System.Drawing.Size(185, 70);
+            this.btn_ideas.TabIndex = 4;
+            this.btn_ideas.Text = "Ideas";
+            this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ideas.UseVisualStyleBackColor = true;
+            this.btn_ideas.Click += new System.EventHandler(this.btn_ideas_Click);
+            // 
+            // btn_home
+            // 
+            this.btn_home.FlatAppearance.BorderSize = 0;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(7, 127);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_home.Size = new System.Drawing.Size(185, 70);
+            this.btn_home.TabIndex = 3;
+            this.btn_home.Text = "Main Dashboard";
+            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // btn_logout
             // 
@@ -108,77 +166,81 @@
             // pn_top_bar
             // 
             this.pn_top_bar.BackColor = System.Drawing.Color.DarkGray;
-            this.pn_top_bar.Controls.Add(this.lb_idea_dashboard);
             this.pn_top_bar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_top_bar.Location = new System.Drawing.Point(200, 0);
             this.pn_top_bar.Name = "pn_top_bar";
             this.pn_top_bar.Size = new System.Drawing.Size(788, 63);
             this.pn_top_bar.TabIndex = 1;
             // 
-            // lb_idea_dashboard
+            // lb_idea_header
             // 
-            this.lb_idea_dashboard.AutoSize = true;
-            this.lb_idea_dashboard.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_idea_dashboard.ForeColor = System.Drawing.Color.Black;
-            this.lb_idea_dashboard.Location = new System.Drawing.Point(279, 12);
-            this.lb_idea_dashboard.Name = "lb_idea_dashboard";
-            this.lb_idea_dashboard.Size = new System.Drawing.Size(231, 32);
-            this.lb_idea_dashboard.TabIndex = 2;
-            this.lb_idea_dashboard.Text = "Main Dashboard";
+            this.lb_idea_header.AutoSize = true;
+            this.lb_idea_header.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_idea_header.ForeColor = System.Drawing.Color.Black;
+            this.lb_idea_header.Location = new System.Drawing.Point(274, 16);
+            this.lb_idea_header.Name = "lb_idea_header";
+            this.lb_idea_header.Size = new System.Drawing.Size(231, 32);
+            this.lb_idea_header.TabIndex = 2;
+            this.lb_idea_header.Text = "Main Dashboard";
             // 
-            // btn_home
+            // pn_main_dashboard
             // 
-            this.btn_home.FlatAppearance.BorderSize = 0;
-            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_home.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
-            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.Location = new System.Drawing.Point(7, 127);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_home.Size = new System.Drawing.Size(185, 70);
-            this.btn_home.TabIndex = 3;
-            this.btn_home.Text = "Main Dashboard";
-            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_home.UseVisualStyleBackColor = true;
+            this.pn_main_dashboard.BackColor = System.Drawing.Color.DimGray;
+            this.pn_main_dashboard.Controls.Add(this.lb_idea_header);
+            this.pn_main_dashboard.Location = new System.Drawing.Point(200, 62);
+            this.pn_main_dashboard.Name = "pn_main_dashboard";
+            this.pn_main_dashboard.Size = new System.Drawing.Size(788, 493);
+            this.pn_main_dashboard.TabIndex = 2;
             // 
-            // btn_ideas
+            // pn_ideas
             // 
-            this.btn_ideas.FlatAppearance.BorderSize = 0;
-            this.btn_ideas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ideas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_ideas.Image = ((System.Drawing.Image)(resources.GetObject("btn_ideas.Image")));
-            this.btn_ideas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ideas.Location = new System.Drawing.Point(7, 215);
-            this.btn_ideas.Name = "btn_ideas";
-            this.btn_ideas.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_ideas.Size = new System.Drawing.Size(185, 70);
-            this.btn_ideas.TabIndex = 4;
-            this.btn_ideas.Text = "Ideas";
-            this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ideas.UseVisualStyleBackColor = true;
+            this.pn_ideas.BackColor = System.Drawing.Color.DimGray;
+            this.pn_ideas.Controls.Add(this.lb_ideas_header);
+            this.pn_ideas.Location = new System.Drawing.Point(201, 62);
+            this.pn_ideas.Name = "pn_ideas";
+            this.pn_ideas.Size = new System.Drawing.Size(785, 492);
+            this.pn_ideas.TabIndex = 3;
             // 
-            // btn_products
+            // lb_ideas_header
             // 
-            this.btn_products.FlatAppearance.BorderSize = 0;
-            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_products.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_products.Image = ((System.Drawing.Image)(resources.GetObject("btn_products.Image")));
-            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_products.Location = new System.Drawing.Point(7, 300);
-            this.btn_products.Name = "btn_products";
-            this.btn_products.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_products.Size = new System.Drawing.Size(185, 70);
-            this.btn_products.TabIndex = 5;
-            this.btn_products.Text = "Products";
-            this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_products.UseVisualStyleBackColor = true;
+            this.lb_ideas_header.AutoSize = true;
+            this.lb_ideas_header.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_ideas_header.ForeColor = System.Drawing.Color.Black;
+            this.lb_ideas_header.Location = new System.Drawing.Point(346, 15);
+            this.lb_ideas_header.Name = "lb_ideas_header";
+            this.lb_ideas_header.Size = new System.Drawing.Size(95, 32);
+            this.lb_ideas_header.TabIndex = 2;
+            this.lb_ideas_header.Text = "Ideas ";
+            // 
+            // pnl_products
+            // 
+            this.pnl_products.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_products.Controls.Add(this.lb_products);
+            this.pnl_products.Location = new System.Drawing.Point(201, 62);
+            this.pnl_products.Name = "pnl_products";
+            this.pnl_products.Size = new System.Drawing.Size(785, 492);
+            this.pnl_products.TabIndex = 4;
+            // 
+            // lb_products
+            // 
+            this.lb_products.AutoSize = true;
+            this.lb_products.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_products.ForeColor = System.Drawing.Color.Black;
+            this.lb_products.Location = new System.Drawing.Point(347, 15);
+            this.lb_products.Name = "lb_products";
+            this.lb_products.Size = new System.Drawing.Size(126, 32);
+            this.lb_products.TabIndex = 2;
+            this.lb_products.Text = "Products";
             // 
             // idea_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(988, 555);
+            this.Controls.Add(this.pn_main_dashboard);
+            this.Controls.Add(this.pn_ideas);
+            this.Controls.Add(this.pnl_products);
             this.Controls.Add(this.pn_top_bar);
             this.Controls.Add(this.pn_menu_sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -187,8 +249,12 @@
             this.pn_menu_sidebar.ResumeLayout(false);
             this.pn_sidebar_top.ResumeLayout(false);
             this.pn_sidebar_top.PerformLayout();
-            this.pn_top_bar.ResumeLayout(false);
-            this.pn_top_bar.PerformLayout();
+            this.pn_main_dashboard.ResumeLayout(false);
+            this.pn_main_dashboard.PerformLayout();
+            this.pn_ideas.ResumeLayout(false);
+            this.pn_ideas.PerformLayout();
+            this.pnl_products.ResumeLayout(false);
+            this.pnl_products.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -200,10 +266,15 @@
         private System.Windows.Forms.Label lb_idea_creator;
         private System.Windows.Forms.Panel pn_top_bar;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.Label lb_idea_dashboard;
+        private System.Windows.Forms.Label lb_idea_header;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_ideas;
         private System.Windows.Forms.Button btn_products;
+        private System.Windows.Forms.Panel pn_main_dashboard;
+        private System.Windows.Forms.Panel pn_ideas;
+        private System.Windows.Forms.Label lb_ideas_header;
+        private System.Windows.Forms.Panel pnl_products;
+        private System.Windows.Forms.Label lb_products;
     }
 }
