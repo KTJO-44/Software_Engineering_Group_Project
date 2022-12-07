@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(idea_creator));
             this.pn_menu_sidebar = new System.Windows.Forms.Panel();
+            this.btn_products = new System.Windows.Forms.Button();
+            this.btn_ideas = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.pn_sidebar_top = new System.Windows.Forms.Panel();
             this.lb_idea_creator = new System.Windows.Forms.Label();
             this.pn_top_bar = new System.Windows.Forms.Panel();
             this.lb_idea_dashboard = new System.Windows.Forms.Label();
-            this.btn_home = new System.Windows.Forms.Button();
-            this.btn_ideas = new System.Windows.Forms.Button();
-            this.btn_products = new System.Windows.Forms.Button();
             this.pn_menu_sidebar.SuspendLayout();
             this.pn_sidebar_top.SuspendLayout();
             this.pn_top_bar.SuspendLayout();
@@ -58,6 +58,54 @@
             this.pn_menu_sidebar.Name = "pn_menu_sidebar";
             this.pn_menu_sidebar.Size = new System.Drawing.Size(200, 555);
             this.pn_menu_sidebar.TabIndex = 0;
+            // 
+            // btn_products
+            // 
+            this.btn_products.FlatAppearance.BorderSize = 0;
+            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_products.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_products.Image = ((System.Drawing.Image)(resources.GetObject("btn_products.Image")));
+            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_products.Location = new System.Drawing.Point(8, 324);
+            this.btn_products.Name = "btn_products";
+            this.btn_products.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_products.Size = new System.Drawing.Size(185, 70);
+            this.btn_products.TabIndex = 5;
+            this.btn_products.Text = "Products";
+            this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_products.UseVisualStyleBackColor = true;
+            // 
+            // btn_ideas
+            // 
+            this.btn_ideas.FlatAppearance.BorderSize = 0;
+            this.btn_ideas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ideas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ideas.Image = ((System.Drawing.Image)(resources.GetObject("btn_ideas.Image")));
+            this.btn_ideas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ideas.Location = new System.Drawing.Point(7, 230);
+            this.btn_ideas.Name = "btn_ideas";
+            this.btn_ideas.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_ideas.Size = new System.Drawing.Size(185, 70);
+            this.btn_ideas.TabIndex = 4;
+            this.btn_ideas.Text = "Ideas";
+            this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ideas.UseVisualStyleBackColor = true;
+            // 
+            // btn_home
+            // 
+            this.btn_home.FlatAppearance.BorderSize = 0;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(7, 129);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_home.Size = new System.Drawing.Size(185, 70);
+            this.btn_home.TabIndex = 3;
+            this.btn_home.Text = "Main Dashboard";
+            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_home.UseVisualStyleBackColor = true;
             // 
             // btn_logout
             // 
@@ -92,7 +140,7 @@
             this.pn_sidebar_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_sidebar_top.Location = new System.Drawing.Point(0, 0);
             this.pn_sidebar_top.Name = "pn_sidebar_top";
-            this.pn_sidebar_top.Size = new System.Drawing.Size(200, 63);
+            this.pn_sidebar_top.Size = new System.Drawing.Size(200, 77);
             this.pn_sidebar_top.TabIndex = 0;
             // 
             // lb_idea_creator
@@ -112,7 +160,7 @@
             this.pn_top_bar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_top_bar.Location = new System.Drawing.Point(200, 0);
             this.pn_top_bar.Name = "pn_top_bar";
-            this.pn_top_bar.Size = new System.Drawing.Size(788, 63);
+            this.pn_top_bar.Size = new System.Drawing.Size(788, 77);
             this.pn_top_bar.TabIndex = 1;
             // 
             // lb_idea_dashboard
@@ -126,54 +174,6 @@
             this.lb_idea_dashboard.TabIndex = 2;
             this.lb_idea_dashboard.Text = "Main Dashboard";
             // 
-            // btn_home
-            // 
-            this.btn_home.FlatAppearance.BorderSize = 0;
-            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_home.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
-            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.Location = new System.Drawing.Point(7, 127);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_home.Size = new System.Drawing.Size(185, 70);
-            this.btn_home.TabIndex = 3;
-            this.btn_home.Text = "Main Dashboard";
-            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_home.UseVisualStyleBackColor = true;
-            // 
-            // btn_ideas
-            // 
-            this.btn_ideas.FlatAppearance.BorderSize = 0;
-            this.btn_ideas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ideas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_ideas.Image = ((System.Drawing.Image)(resources.GetObject("btn_ideas.Image")));
-            this.btn_ideas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ideas.Location = new System.Drawing.Point(7, 215);
-            this.btn_ideas.Name = "btn_ideas";
-            this.btn_ideas.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_ideas.Size = new System.Drawing.Size(185, 70);
-            this.btn_ideas.TabIndex = 4;
-            this.btn_ideas.Text = "Ideas";
-            this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ideas.UseVisualStyleBackColor = true;
-            // 
-            // btn_products
-            // 
-            this.btn_products.FlatAppearance.BorderSize = 0;
-            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_products.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_products.Image = ((System.Drawing.Image)(resources.GetObject("btn_products.Image")));
-            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_products.Location = new System.Drawing.Point(7, 300);
-            this.btn_products.Name = "btn_products";
-            this.btn_products.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btn_products.Size = new System.Drawing.Size(185, 70);
-            this.btn_products.TabIndex = 5;
-            this.btn_products.Text = "Products";
-            this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_products.UseVisualStyleBackColor = true;
-            // 
             // idea_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -184,6 +184,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "idea_creator";
             this.Text = "idea_creator";
+            this.Load += new System.EventHandler(this.idea_creator_Load);
             this.pn_menu_sidebar.ResumeLayout(false);
             this.pn_sidebar_top.ResumeLayout(false);
             this.pn_sidebar_top.PerformLayout();
