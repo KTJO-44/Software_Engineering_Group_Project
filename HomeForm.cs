@@ -152,6 +152,16 @@ namespace Investment_ideas_platform
                 }
             }
         }
+
+        private void btnASortclientProfile_Click(object sender, EventArgs e)
+        {
+            DGVViewAllClients.Sort(DGVViewAllClients.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void btnDSortclientProfile_Click(object sender, EventArgs e)
+        {
+            DGVViewAllClients.Sort(DGVViewAllClients.Columns[0], ListSortDirection.Descending);
+        }
     }
 }
 

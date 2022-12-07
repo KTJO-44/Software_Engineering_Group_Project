@@ -57,6 +57,8 @@ namespace Investment_ideas_platform
             this.btnASortProducts = new System.Windows.Forms.Button();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
             this.pnViewAllClients = new System.Windows.Forms.Panel();
+            this.btnDSortclientProfile = new System.Windows.Forms.Button();
+            this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
@@ -349,20 +351,42 @@ namespace Investment_ideas_platform
             // pnViewAllClients
             // 
             this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllClients.Controls.Add(this.btnDSortclientProfile);
+            this.pnViewAllClients.Controls.Add(this.btnASortclientProfile);
             this.pnViewAllClients.Controls.Add(this.DGVViewAllClients);
             this.pnViewAllClients.Location = new System.Drawing.Point(0, 0);
             this.pnViewAllClients.Name = "pnViewAllClients";
             this.pnViewAllClients.Size = new System.Drawing.Size(1325, 772);
             this.pnViewAllClients.TabIndex = 7;
             // 
+            // btnDSortclientProfile
+            // 
+            this.btnDSortclientProfile.Location = new System.Drawing.Point(758, 604);
+            this.btnDSortclientProfile.Name = "btnDSortclientProfile";
+            this.btnDSortclientProfile.Size = new System.Drawing.Size(94, 29);
+            this.btnDSortclientProfile.TabIndex = 2;
+            this.btnDSortclientProfile.Text = "button2";
+            this.btnDSortclientProfile.UseVisualStyleBackColor = true;
+            this.btnDSortclientProfile.Click += new System.EventHandler(this.btnDSortclientProfile_Click);
+            // 
+            // btnASortclientProfile
+            // 
+            this.btnASortclientProfile.Location = new System.Drawing.Point(472, 605);
+            this.btnASortclientProfile.Name = "btnASortclientProfile";
+            this.btnASortclientProfile.Size = new System.Drawing.Size(94, 29);
+            this.btnASortclientProfile.TabIndex = 1;
+            this.btnASortclientProfile.Text = "Accend";
+            this.btnASortclientProfile.UseVisualStyleBackColor = true;
+            this.btnASortclientProfile.Click += new System.EventHandler(this.btnASortclientProfile_Click);
+            // 
             // DGVViewAllClients
             // 
             this.DGVViewAllClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVViewAllClients.Location = new System.Drawing.Point(600, 298);
+            this.DGVViewAllClients.Location = new System.Drawing.Point(437, 48);
             this.DGVViewAllClients.Name = "DGVViewAllClients";
             this.DGVViewAllClients.RowHeadersWidth = 51;
             this.DGVViewAllClients.RowTemplate.Height = 29;
-            this.DGVViewAllClients.Size = new System.Drawing.Size(447, 319);
+            this.DGVViewAllClients.Size = new System.Drawing.Size(738, 495);
             this.DGVViewAllClients.TabIndex = 0;
             this.DGVViewAllClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVViewAllClients_CellContentClick);
             // 
@@ -440,5 +464,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btnViewClients;
         private System.Windows.Forms.Panel pnViewAllClients;
         private System.Windows.Forms.DataGridView DGVViewAllClients;
+        private System.Windows.Forms.Button btnDSortclientProfile;
+        private System.Windows.Forms.Button btnASortclientProfile;
     }
 }
