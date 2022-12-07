@@ -233,5 +233,47 @@ namespace Investment_ideas_platform
             }
         }
 
+            public void deleteClientFromDB(string sqlQuery, string firstName)
+            {
+                using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+                {
+                    connToDB.Open();
+                    SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.Add(new SqlParameter("firstName", firstName));
+
+                    command.ExecuteNonQuery();
+
+                    connToDB.Close();
+                }
+            }
+
+        public void  addNewClientToDB(string sqlQuery, string firstName, string lastName, string email, string phoneNumber, string riskRating, string preferenceItem1, string preferenceItem2, string preferenceItem3, string preferenceLocation1, string preferenceLocation2, string preferenceLocation3)
+        {
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+
+                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
+                command.CommandType = CommandType.Text;
+                command.Parameters.Add(new SqlParameter("firstName", firstName));
+                command.Parameters.Add(new SqlParameter("lastName", lastName));
+                command.Parameters.Add(new SqlParameter("email", email));
+                command.Parameters.Add(new SqlParameter("phoneNumber", phoneNumber));
+                command.Parameters.Add(new SqlParameter("riskRating", riskRating));
+                command.Parameters.Add(new SqlParameter("preferenceItem1", preferenceItem1));
+                command.Parameters.Add(new SqlParameter("preferenceItem2", preferenceItem2));
+                command.Parameters.Add(new SqlParameter("preferenceItem3", preferenceItem3));
+                command.Parameters.Add(new SqlParameter("preferenceLocation1", preferenceLocation1));
+                command.Parameters.Add(new SqlParameter("preferenceLocation2", preferenceLocation2));
+                command.Parameters.Add(new SqlParameter("preferenceLocation3", preferenceLocation3));
+
+                command.ExecuteNonQuery();
+
+                connToDB.Close();
+            }
+        }
     }
-}
+
+    }
+

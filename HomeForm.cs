@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Investment_ideas_platform
 {
@@ -14,122 +15,221 @@ namespace Investment_ideas_platform
         {
             InitializeComponent();
 
-            pnNavBtnHighlighter.Height = btnDashboard.Height;
-            pnNavBtnHighlighter.Top = btnDashboard.Top;
-            pnNavBtnHighlighter.Left = btnDashboard.Left;
-        }
-        private void Form2_Shown(object sender, EventArgs e)
-        {
-            //textBox1.Text = username;
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            //dashBoardRM1.BringToFront()
-            // Controls.Clear();
-            /*
-            if (usertype.Equals("RM"))
-            {
-                DashBoardRM dashBoardRM = new DashBoardRM(username);
-                Controls.Add(dashBoardRM);
-            }
-            if (usertype.Equals("CL"))
-            {
-                DashBoardCL dashBoardCL = new DashBoardCL(username);
-                Controls.Add(dashBoardCL);
-            }
-            if (usertype.Equals("IG"))
-            {
-                DashBoardIG dashBoardIG = new DashBoardIG(username);
-                Controls.Add(dashBoardIG);
-            }
-            */
-            setPanelsInvisible();
             pnDashboard.Visible = true;
-            //Controls.Clear();
+            pnViewIdeas.Visible = false;
+            pnViewAllProducts.Visible = false;
+            pnViewAllClients.Visible = false;
+            pnChangePI1.Visible = false;
         }
 
-        public void setUser(String uname, String utype)
-        {
-            //username = uname;
-            //usertype = utype;
-        }
-
-        private void btnExit_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.userLoggedIn = false;
-            Program.currForm = null;
-            Program.f1.Show();
-        }
-
-        private void setPanelsInvisible()
+        private void btnViewIdeas_Click(object sender, EventArgs e)
         {
             pnDashboard.Visible = false;
-            pnIdeas.Visible = false;
-            pnProducts.Visible = false;
-            pnClients.Visible = false;
-            
+            pnViewIdeas.Visible = true;
+
+
+            LoadDGVViewAllIdeas();
+            DGVViewAllIdeas.Columns[0].HeaderText = "Idea Title";
+
+
+
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void LoadDGVViewAllIdeas()
         {
-            setPanelsInvisible();
-            pnNavBtnHighlighter.Height = btnDashboard.Height;
-            pnNavBtnHighlighter.Top = btnDashboard.Top;
-            pnNavBtnHighlighter.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
-            pnDashboard.Visible = true;
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_IDEAS);
+
+
+            DGVViewAllIdeas.DataSource = ds.Tables[0];
+
+
         }
 
-        private void btnIdeas_Click(object sender, EventArgs e)
+        private void ASortIdeas_Click(object sender, EventArgs e)
         {
-            setPanelsInvisible();
-            pnNavBtnHighlighter.Height = btnIdeas.Height;
-            pnNavBtnHighlighter.Top = btnIdeas.Top;
-            pnNavBtnHighlighter.Left = btnIdeas.Left;
-            btnIdeas.BackColor = Color.FromArgb(46, 51, 73);
-            pnIdeas.Visible = true;
+            DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void btnProducts_Click(object sender, EventArgs e)
+        private void DSortIdeas_Click(object sender, EventArgs e)
         {
-            setPanelsInvisible();
-            pnNavBtnHighlighter.Height = btnProducts.Height;
-            pnNavBtnHighlighter.Top = btnProducts.Top;
-            pnNavBtnHighlighter.Left = btnProducts.Left;
-            btnProducts.BackColor = Color.FromArgb(46, 51, 73);
-            pnProducts.Visible = true;
+            DGVViewAllIdeas.Sort(DGVViewAllIdeas.Columns[0], ListSortDirection.Descending);
         }
 
-        private void btnClients_Click(object sender, EventArgs e)
+        private void txtFilterboxIdea_TextChanged(object sender, EventArgs e)
         {
-            setPanelsInvisible();
-            pnNavBtnHighlighter.Height = btnClients.Height;
-            pnNavBtnHighlighter.Top = btnClients.Top;
-            pnNavBtnHighlighter.Left = btnClients.Left;
-            btnClients.BackColor = Color.FromArgb(46, 51, 73);
-            pnClients.Visible = true;
+            (DGVViewAllIdeas.DataSource as DataTable).DefaultView.RowFilter = string.Format("ideaTitle = '{0}' OR abstract = '{0}'", txtFilterboxIdea.Text);
         }
 
-        private void btnDashboard_Leave(object sender, EventArgs e)
+        private void btnViewProducts_Click(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            pnDashboard.Visible = false;
+            pnViewAllProducts.Visible = true;
+
+            LoadDGVViewAllProducts();
+            DGVViewAllProducts.Columns[0].HeaderText = "Product name";
+
+
+
         }
 
-        private void btnIdeas_Leave(object sender, EventArgs e)
+        private void LoadDGVViewAllProducts()
         {
-            btnIdeas.BackColor = Color.FromArgb(24, 30, 54);
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_PRODUCTS);
+
+
+            DGVViewAllProducts.DataSource = ds.Tables[0];
+
+
         }
 
-        private void btnProducts_Leave(object sender, EventArgs e)
+        private void btnASortProducts_Click(object sender, EventArgs e)
         {
-            btnProducts.BackColor = Color.FromArgb(24, 30, 54);
+            DGVViewAllProducts.Sort(DGVViewAllProducts.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void btnClients_Leave(object sender, EventArgs e)
+        private void btnDSortProducts_Click(object sender, EventArgs e)
         {
-            btnClients.BackColor = Color.FromArgb(24, 30, 54);
+            DGVViewAllProducts.Sort(DGVViewAllProducts.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void txtFilterBoxProducts_TextChanged(object sender, EventArgs e)
+        {
+            (DGVViewAllProducts.DataSource as DataTable).DefaultView.RowFilter = string.Format("productName = '{0}' OR productType = '{0}' OR companyName = '{0}' OR productDescription = '{0}'", txtFilterBoxProducts.Text);
+        }
+
+        private void btnViewClients_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnViewAllClients.Visible = true;
+
+
+            LoadDGVViewAllClients();
+            DGVViewAllClients.Columns[0].HeaderText = "First name";
+
+            DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+            btnCol.HeaderText = "Delete account";
+            btnCol.Text = "Delete";
+            btnCol.Name = "btnDeleteAccount";
+            btnCol.UseColumnTextForButtonValue = true;
+            DGVViewAllClients.Columns.Add(btnCol);
+
+
+        }
+
+        private void LoadDGVViewAllClients()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_CLIENTS);
+
+
+            DGVViewAllClients.DataSource = ds.Tables[0];
+
+
+        }
+
+
+
+        private void DGVViewAllClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //int index = dgvViewAllAccounts.SelectedRows[0].Index;
+                    int selectedrowindex = DGVViewAllClients.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = DGVViewAllClients.Rows[selectedrowindex];
+                    string cellValue = Convert.ToString(selectedRow.Cells["firstName"].Value);
+                    bool deleteClientAccount = DeleteClient.deleteClientAccount(cellValue);
+
+                    if (deleteClientAccount)
+                    {
+                        MessageBox.Show("Success!");
+                        //refresh dgv
+                        LoadDGVViewAllClients(); //This adds a couple columns/messes things up.
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete account");
+                    }
+                    //MessageBox.Show(cellValue);
+                    //delete func here
+                }
+            }
+        }
+
+        private void btnASortclientProfile_Click(object sender, EventArgs e)
+        {
+            DGVViewAllClients.Sort(DGVViewAllClients.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void btnDSortclientProfile_Click(object sender, EventArgs e)
+        {
+            DGVViewAllClients.Sort(DGVViewAllClients.Columns[0], ListSortDirection.Descending);
+        }
+
+        private void txtFilterboxClientProfiles_TextChanged(object sender, EventArgs e)
+        {
+            (DGVViewAllClients.DataSource as DataTable).DefaultView.RowFilter = string.Format("firstName = '{0}' OR lastName = '{0}' OR email = '{0}' OR preferenceItem1 = '{0}' OR preferenceItem2 = '{0}' OR preferenceItem3 = '{0}'OR preferenceLocation1 = '{0}' OR preferenceLocation2 = '{0}' OR preferenceLocation3= '{0}'", txtFilterboxClientProfiles.Text);
+        }
+
+        private void btnCreateClient_Click(object sender, EventArgs e)
+        {
+            //Get inputs from the text boxes and send them to the backend to create the account
+            string firstName = textBox1.Text;
+            string lastName = textBox2.Text;
+            string email = textBox3.Text;
+            string phoneNumber = textBox4.Text;
+            string riskRating = comboBox1.GetItemText(comboBox1.Text);
+            string preferenceItem1 = comboBox2.GetItemText(comboBox2.Text);
+            string preferenceItem2 = comboBox3.GetItemText(comboBox3.Text);
+            string preferenceItem3 = comboBox4.GetItemText(comboBox4.Text);
+            string preferenceLocation1 = comboBox5.GetItemText(comboBox5.Text);
+            string preferenceLocation2 = comboBox6.GetItemText(comboBox6.Text);
+            string preferenceLocation3 = comboBox7.GetItemText(comboBox7.Text);
+
+
+            //string password = tbPassword.Text; //Don't need password when creating an account, only when changing/logging in
+
+            //CreateAccount createAccount = new CreateAccount(accountEmail, selectedItem, accountFirstName, accountLastName);
+            bool createClient = CreateClient.createNewClient(firstName, lastName, email, phoneNumber, riskRating, preferenceItem1, preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3);
+
+            if (createClient)
+            {
+                MessageBox.Show("Success!");
+          
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all fields and make sure you use a company email");
+            }
+        }
+
+  
+
+
+        private void btnChangePI1_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnChangePI1.Visible = true;
+        }
+
+        private void btnChangeItem1_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update clientProfiles set preferenceItem1='" + cmbChangePI1.GetItemText(cmbChangePI1.Text) + "' where email='" + txtClientEmailItem1.Text +  "'", con);
+            cmd.ExecuteNonQuery();
+
+
+            MessageBox.Show("Data Updated Successfully.");
+            con.Close();
         }
     }
-}
+    }
+
+
+
+
+       
+    
+
+

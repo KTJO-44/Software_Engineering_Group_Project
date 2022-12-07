@@ -124,7 +124,6 @@ namespace Investment_ideas_platform
                             this.Hide();
                             Program.userLoggedIn = true;
                             HomeForm f2 = new HomeForm();
-                            f2.setUser(txtbx_login_uname.Text, "RM");
                             lab_login_error.Text = "";
                             txtbx_login_uname.Text = "";
                             txb_login_pwd.Text = "";
