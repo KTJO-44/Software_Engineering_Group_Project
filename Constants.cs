@@ -22,16 +22,23 @@ namespace Investment_ideas_platform
         public static string CHECK_EXISTS_SPECIFIC_NOTIFICATION = "SELECT notificationID FROM accountNotifications WHERE staffID=@sID";
         public static string DELETE_RESET_NOTIFICATION = "DELETE FROM accountNotifications WHERE notificationID=@nID AND staffID=@sID";
 
-        public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateCreated, abstract, dateExpires, ideaContent, riskRating, Views FROM InvestmentIdeas";
-        public static string DELETE_STAFF_IDEAS = "DELETE FROM  InvestmentIdeas WHERE ideaTitle=@staffIdeas";
+        // public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateCreated, abstract, dateExpires, ideaContent, riskRating, Views FROM InvestmentIdeas";
+        // SQL statement referenced from the entire database rather than table
+        // from InvestmentIdeas (this is the database name) to investmentIdeas (this is the table name)
 
-        public static string SELECT_VIEW_ALL_PRODUCTS = "SELECT productName, productType, companyName, productDescription FROM Products";
+        public static string DELETE_STAFF_IDEAS = "DELETE FROM  investmentIdeas WHERE ideaTitle=@staffIdeas";
+
+        public static string SELECT_VIEW_ALL_PRODUCTS = "SELECT productName, productType, companyName, productDescription FROM products"; // Changed from Products to products to match the table name
         public static string DELETE_STAFF_PRODUCTS = "DELETE FROM Products WHERE productName=@staffProducts";
 
         public static string SELECT_VIEW_ALL_CLIENTS= "SELECT firstName, lastName, email, phoneNumber, riskRating,preferenceItem1,preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3  FROM clientProfiles";
         public static string ADD_NEW_CLIENT = "INSERT INTO clientProfiles (firstName, lastName, email, phoneNumber, riskRating, preferenceItem1, preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3) VALUES (@firstName, @lastName, @email, @phoneNumber, @riskRating, @preferenceItem1, @preferenceItem2, @preferenceItem3, @preferenceLocation1, @preferenceLocation2, @preferenceLocation3)";
         public static string DELETE_CLIENT_ACCOUNT = "DELETE FROM clientProfiles WHERE firstName=@firstName";
 
-        public static string CHANGE_ITEM1 = "UPDATE clientProfiles SET preferencesItem1=@Item1 WHERE email=@clientEmail";
+        // public static string SQL constants added to be used to view and add data into the grids based on the account
+
+        public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateExpires, riskRating, abstract, views FROM investmentIdeas";
+        public static string ADD_NEW_IDEA = "INSERT INTO investmentIdeas (ideaTitle, abstract, dateExpires, ideaContent, riskRating) VALUES (@idea_name, @abstract, @date_expires, @idea_content, @risk_rating)";
+        public static string ADD_NEW_PRODUCT = "INSERT INTO products (productName, productType, companyName, productDescription) VALUES (@product_name, @product_type, @company_name, @product_description)";
     }
 }

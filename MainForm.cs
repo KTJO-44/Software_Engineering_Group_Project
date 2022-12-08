@@ -130,23 +130,44 @@ namespace Investment_ideas_platform
                             Program.currForm = f2;
                             f2.Show();
                             break;
+                            
+                            // (NATHAN) Added on to Biraj's original code logic.
+                            // Create a case in which the idea creator is selected to login
+                            // Using credientials with the account creation from admin, account type be an idea creator saved in database
+                            // Hide until called upon when database is referenced with login details with the account type
+                            // ic.Show to bring the form to the front
+
                         case "Idea creator":
-                            //write code to show IC homepage here
+                            this.Hide(); // Hide the form 
+                            Program.userLoggedIn = true; // Only true if credentials are correct
+                            lab_login_error.Text = "";
+                            txtbx_login_uname.Clear();
+                            txb_login_pwd.Clear();
+                            idea_creator ic = new idea_creator();
+                            ic.Show(); // Show the form when the case is called
                             break;
                     }
                 }
+
+                // Nathan - create a condition in which the password or email does match the database records
+                // If conditions are not mentioned within the cases then show else conditions
+
                 else
                 {
-                    MessageBox.Show("Incorrect password");
-                    txb_login_pwd.Clear();
+                    MessageBox.Show("Incorrect password"); // Display message when password is incorrect
+                    txb_login_pwd.Clear(); // inbuilt function to clear text box
                 }
 
             } 
             else
+
+            // Conditions created so that if pwd and email dont work
+            // Display the relevent message that meets this expectation of the case
+
             {
-                MessageBox.Show("Account does not exist, please use a valid email");
-                txtbx_login_uname.Clear();
-                txb_login_pwd.Clear();
+                MessageBox.Show("Account does not exist, please use a valid email"); // Use credentials that are matched to the database
+                txtbx_login_uname.Clear(); // Based on email
+                txb_login_pwd.Clear(); // Based on pwd
             }
         }
 
