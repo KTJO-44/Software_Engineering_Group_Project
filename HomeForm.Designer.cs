@@ -46,6 +46,7 @@ namespace Investment_ideas_platform
             this.btnASortProducts = new System.Windows.Forms.Button();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
             this.pnViewAllClients = new System.Windows.Forms.Panel();
+            this.Refresh = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -97,6 +98,7 @@ namespace Investment_ideas_platform
             this.btnViewClients = new System.Windows.Forms.Button();
             this.btnChangePI1 = new System.Windows.Forms.Button();
             this.pnDashboard = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePL = new System.Windows.Forms.Button();
             this.pnChangePL1 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -286,6 +288,7 @@ namespace Investment_ideas_platform
             // pnViewAllClients
             // 
             this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllClients.Controls.Add(this.Refresh);
             this.pnViewAllClients.Controls.Add(this.label18);
             this.pnViewAllClients.Controls.Add(this.label17);
             this.pnViewAllClients.Controls.Add(this.label16);
@@ -320,11 +323,21 @@ namespace Investment_ideas_platform
             this.pnViewAllClients.Size = new System.Drawing.Size(1325, 772);
             this.pnViewAllClients.TabIndex = 7;
             // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(1155, 636);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(94, 29);
+            this.Refresh.TabIndex = 29;
+            this.Refresh.Text = "button1";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(1116, 603);
+            this.label18.Location = new System.Drawing.Point(998, 603);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(77, 23);
             this.label18.TabIndex = 28;
@@ -465,8 +478,17 @@ namespace Investment_ideas_platform
             // 
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
-            "C",
-            "D"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.comboBox7.Location = new System.Drawing.Point(275, 545);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(151, 29);
@@ -476,8 +498,17 @@ namespace Investment_ideas_platform
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "C",
-            "D"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.comboBox6.Location = new System.Drawing.Point(275, 462);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(151, 29);
@@ -487,8 +518,17 @@ namespace Investment_ideas_platform
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "C",
-            "D"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.comboBox5.Location = new System.Drawing.Point(275, 382);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(151, 29);
@@ -572,7 +612,7 @@ namespace Investment_ideas_platform
             // 
             // txtFilterboxClientProfiles
             // 
-            this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(1098, 637);
+            this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(980, 637);
             this.txtFilterboxClientProfiles.Name = "txtFilterboxClientProfiles";
             this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 29);
             this.txtFilterboxClientProfiles.TabIndex = 3;
@@ -580,7 +620,7 @@ namespace Investment_ideas_platform
             // 
             // btnDSortclientProfile
             // 
-            this.btnDSortclientProfile.Location = new System.Drawing.Point(919, 636);
+            this.btnDSortclientProfile.Location = new System.Drawing.Point(767, 615);
             this.btnDSortclientProfile.Name = "btnDSortclientProfile";
             this.btnDSortclientProfile.Size = new System.Drawing.Size(94, 29);
             this.btnDSortclientProfile.TabIndex = 2;
@@ -590,7 +630,7 @@ namespace Investment_ideas_platform
             // 
             // btnASortclientProfile
             // 
-            this.btnASortclientProfile.Location = new System.Drawing.Point(737, 636);
+            this.btnASortclientProfile.Location = new System.Drawing.Point(621, 615);
             this.btnASortclientProfile.Name = "btnASortclientProfile";
             this.btnASortclientProfile.Size = new System.Drawing.Size(94, 29);
             this.btnASortclientProfile.TabIndex = 1;
@@ -837,6 +877,7 @@ namespace Investment_ideas_platform
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnDashboard.Controls.Add(this.btnLogout);
             this.pnDashboard.Controls.Add(this.btnChangePL);
             this.pnDashboard.Controls.Add(this.btnChangePI1);
             this.pnDashboard.Controls.Add(this.btnViewClients);
@@ -848,6 +889,16 @@ namespace Investment_ideas_platform
             this.pnDashboard.Name = "pnDashboard";
             this.pnDashboard.Size = new System.Drawing.Size(1765, 882);
             this.pnDashboard.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(1062, 567);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(94, 29);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnChangePL
             // 
@@ -941,9 +992,17 @@ namespace Investment_ideas_platform
             // 
             this.cmbChangePL3.FormattingEnabled = true;
             this.cmbChangePL3.Items.AddRange(new object[] {
-            "7",
-            "8",
-            "9"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.cmbChangePL3.Location = new System.Drawing.Point(924, 274);
             this.cmbChangePL3.Name = "cmbChangePL3";
             this.cmbChangePL3.Size = new System.Drawing.Size(151, 29);
@@ -953,9 +1012,17 @@ namespace Investment_ideas_platform
             // 
             this.cmbChangePL2.FormattingEnabled = true;
             this.cmbChangePL2.Items.AddRange(new object[] {
-            "4",
-            "5",
-            "6"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.cmbChangePL2.Location = new System.Drawing.Point(498, 274);
             this.cmbChangePL2.Name = "cmbChangePL2";
             this.cmbChangePL2.Size = new System.Drawing.Size(151, 29);
@@ -975,9 +1042,17 @@ namespace Investment_ideas_platform
             // 
             this.cmbChangePL1.FormattingEnabled = true;
             this.cmbChangePL1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "NONE",
+            "China",
+            "France",
+            "Germany",
+            "Italy",
+            "Mexico",
+            "Sweden",
+            "Thailand ",
+            "Turkey",
+            "United Kingdom",
+            "United States Of America"});
             this.cmbChangePL1.Location = new System.Drawing.Point(124, 274);
             this.cmbChangePL1.Name = "cmbChangePL1";
             this.cmbChangePL1.Size = new System.Drawing.Size(151, 29);
@@ -997,12 +1072,12 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pnChangePL1);
-            this.Controls.Add(this.pnChangePI1);
-            this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewIdeas);
+            this.Controls.Add(this.pnChangePL1);
+            this.Controls.Add(this.pnChangePI1);
+            this.Controls.Add(this.pnDashboard);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1114,5 +1189,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.ComboBox cmbChangePL1;
         private System.Windows.Forms.TextBox txtClientEmailLocation1;
         private System.Windows.Forms.Button btnChangePL;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button Refresh;
     }
 }
