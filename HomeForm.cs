@@ -20,6 +20,7 @@ namespace Investment_ideas_platform
             pnViewAllProducts.Visible = false;
             pnViewAllClients.Visible = false;
             pnChangePI1.Visible = false;
+            pnChangePL1.Visible = false;
         }
 
         private void btnViewIdeas_Click(object sender, EventArgs e)
@@ -238,6 +239,12 @@ namespace Investment_ideas_platform
             con1.Close();
             con2.Close();
             con3.Close();
+        }
+
+        private void btnChangePL_Click(object sender, EventArgs e)
+        {
+            pnDashboard.Visible = false;
+            pnChangePL1.Visible = true; 
         }
     }
     }
