@@ -272,51 +272,8 @@ namespace Investment_ideas_platform
 
                 connToDB.Close();
             }
-
         }
-
-        // This can be used as a function to be called upon when adding data to the data grid
-        // You take the SQL queries and provide the data value types corrosponding to each attribute
-        // If listed in order, this will be used to generate entries when adding to the data grid
-
-        public void add_idea_to_DB(string sqlQuery, string idea_title, string abstract_description, string date_expire, string content, string risk_rating)
-        {
-            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
-            {
-                connToDB.Open();
-
-                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
-                command.CommandType = CommandType.Text;
-                command.Parameters.Add(new SqlParameter("idea_name", idea_title));
-                command.Parameters.Add(new SqlParameter("abstract", abstract_description));
-                command.Parameters.Add(new SqlParameter("date_expires", date_expire));
-                command.Parameters.Add(new SqlParameter("idea_content", content));
-                command.Parameters.Add(new SqlParameter("risk_rating", risk_rating));
-
-                command.ExecuteNonQuery();
-
-                connToDB.Close();
-            }
-        }
-        public void add_product_to_DB(string sqlQuery, string product_name, string product_type,  string company_name, string product_description)
-        {
-            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
-            {
-                connToDB.Open();
-
-                SqlCommand command = new SqlCommand(sqlQuery, connToDB);
-                command.CommandType = CommandType.Text;
-                command.Parameters.Add(new SqlParameter("product_name", product_name));
-                command.Parameters.Add(new SqlParameter("product_type", product_type));
-                command.Parameters.Add(new SqlParameter("company_name", company_name));
-                command.Parameters.Add(new SqlParameter("product_description", product_description));
-
-                command.ExecuteNonQuery();
-
-                connToDB.Close();
-            }
-        }
-    } 
+    }
 
     }
 
