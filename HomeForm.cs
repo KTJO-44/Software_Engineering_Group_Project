@@ -185,6 +185,7 @@ namespace Investment_ideas_platform
             string preferenceLocation1 = comboBox5.GetItemText(comboBox5.Text);
             string preferenceLocation2 = comboBox6.GetItemText(comboBox6.Text);
             string preferenceLocation3 = comboBox7.GetItemText(comboBox7.Text);
+     
 
 
             //string password = tbPassword.Text; //Don't need password when creating an account, only when changing/logging in
@@ -194,8 +195,9 @@ namespace Investment_ideas_platform
 
             if (createClient)
             {
-                MessageBox.Show("Success!");
-          
+                LoadDGVViewAllClients();
+
+
             }
             else
             {
@@ -273,6 +275,41 @@ namespace Investment_ideas_platform
             con1.Close();
             con2.Close();
             con3.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnHomepage_Click(object sender, EventArgs e)
+        {
+            pnViewAllClients.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGotohomepagefromproducts_Click(object sender, EventArgs e)
+        {
+            pnViewAllProducts.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGoToHomepageFromIdeas_Click(object sender, EventArgs e)
+        {
+            pnViewIdeas.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void GoToHomepageFromLocations_Click(object sender, EventArgs e)
+        {
+            pnChangePL1.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGoToHomepageFromItems_Click(object sender, EventArgs e)
+        {
+            pnChangePI1.Visible = false;
+            pnDashboard.Visible = true;
         }
     }
     }
