@@ -279,9 +279,7 @@ namespace Investment_ideas_platform
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Form MainForm = new MainForm();
-            MainForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnHomepage_Click(object sender, EventArgs e)
@@ -293,6 +291,24 @@ namespace Investment_ideas_platform
         private void btnGotohomepagefromproducts_Click(object sender, EventArgs e)
         {
             pnViewAllProducts.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGoToHomepageFromIdeas_Click(object sender, EventArgs e)
+        {
+            pnViewIdeas.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void GoToHomepageFromLocations_Click(object sender, EventArgs e)
+        {
+            pnChangePL1.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGoToHomepageFromItems_Click(object sender, EventArgs e)
+        {
+            pnChangePI1.Visible = false;
             pnDashboard.Visible = true;
         }
     }
