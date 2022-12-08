@@ -14,13 +14,13 @@ namespace Investment_ideas_platform
 {
     public partial class idea_creator : Form // Form created
     {
-        public idea_creator() 
+        public idea_creator()
         {
             InitializeComponent();
             hideMainPanel(); // Function created to hide panels
             pn_main_dashboard.Visible = true; // When form is called upon by login, set dashboard panel to true to be shown first
         }
-        
+
         // Adding a button to the form 
         // Named as btn_exit with behaviour activated on click
         // Used to exit out of the application
@@ -61,6 +61,7 @@ namespace Investment_ideas_platform
         {
             hideMainPanel(); // Function
             pn_ideas.Visible = true; // When btn click show the ideas page
+            cb_risk_rating.DropDownStyle = ComboBoxStyle.DropDownList; // Stops user from inputting data into dropdown box
         }
 
         private void btn_products_Click(object sender, EventArgs e) // Create event on btn click
@@ -68,5 +69,12 @@ namespace Investment_ideas_platform
             hideMainPanel(); // Function
             pnl_products.Visible = true;  // When btn is clicked show the products page
         }
+
+        private void load_dgv_view_all_ideas()
+        {
+            DataSet ds = DBConnection.getInstanceOfDBConnection().getDataSet(Constants.SELECT_VIEW_ALL_IDEAS);
+            dgv_view_all_ideas.DataSource = ds.Tables[0];
+        }
+        
     }
 }
