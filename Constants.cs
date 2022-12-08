@@ -35,6 +35,10 @@ namespace Investment_ideas_platform
         public static string ADD_NEW_CLIENT = "INSERT INTO clientProfiles (firstName, lastName, email, phoneNumber, riskRating, preferenceItem1, preferenceItem2, preferenceItem3, preferenceLocation1, preferenceLocation2, preferenceLocation3) VALUES (@firstName, @lastName, @email, @phoneNumber, @riskRating, @preferenceItem1, @preferenceItem2, @preferenceItem3, @preferenceLocation1, @preferenceLocation2, @preferenceLocation3)";
         public static string DELETE_CLIENT_ACCOUNT = "DELETE FROM clientProfiles WHERE firstName=@firstName";
 
+        // public static string SQL constants added to be used to view and add data into the grids based on the account
+
         public static string SELECT_VIEW_ALL_IDEAS = "SELECT ideaTitle, dateExpires, riskRating, abstract, views FROM investmentIdeas";
+        public static string ADD_NEW_IDEA = "INSERT INTO investmentIdeas (ideaTitle, abstract, dateExpires, ideaContent, riskRating) VALUES (@idea_name, @abstract, @date_expires, @idea_content, @risk_rating)";
+        public static string ADD_NEW_PRODUCT = "INSERT INTO products (productName, productType, companyName, productDescription) VALUES (@product_name, @product_type, @company_name, @product_description)";
     }
 }

@@ -75,10 +75,10 @@ namespace Investment_ideas_platform
             this.btnASortclientProfile = new System.Windows.Forms.Button();
             this.DGVViewAllClients = new System.Windows.Forms.DataGridView();
             this.pnChangePI1 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnChangeItem1 = new System.Windows.Forms.Button();
             this.cmbChangePI1 = new System.Windows.Forms.ComboBox();
             this.txtClientEmailItem1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.pnDashboard.SuspendLayout();
             this.pnDashboardIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDMIdeas)).BeginInit();
@@ -190,7 +190,7 @@ namespace Investment_ideas_platform
             this.lblDMIdeasNumbers.ForeColor = System.Drawing.Color.White;
             this.lblDMIdeasNumbers.Location = new System.Drawing.Point(25, 76);
             this.lblDMIdeasNumbers.Name = "lblDMIdeasNumbers";
-            this.lblDMIdeasNumbers.Size = new System.Drawing.Size(109, 50);
+            this.lblDMIdeasNumbers.Size = new System.Drawing.Size(88, 41);
             this.lblDMIdeasNumbers.TabIndex = 0;
             this.lblDMIdeasNumbers.Text = "405K";
             // 
@@ -201,7 +201,7 @@ namespace Investment_ideas_platform
             this.lblDMIdeas.ForeColor = System.Drawing.Color.White;
             this.lblDMIdeas.Location = new System.Drawing.Point(25, 14);
             this.lblDMIdeas.Name = "lblDMIdeas";
-            this.lblDMIdeas.Size = new System.Drawing.Size(85, 38);
+            this.lblDMIdeas.Size = new System.Drawing.Size(68, 30);
             this.lblDMIdeas.TabIndex = 0;
             this.lblDMIdeas.Text = "Ideas";
             // 
@@ -212,7 +212,7 @@ namespace Investment_ideas_platform
             this.lblRMDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRMDashboard.Location = new System.Drawing.Point(54, 17);
             this.lblRMDashboard.Name = "lblRMDashboard";
-            this.lblRMDashboard.Size = new System.Drawing.Size(1133, 81);
+            this.lblRMDashboard.Size = new System.Drawing.Size(908, 65);
             this.lblRMDashboard.TabIndex = 0;
             this.lblRMDashboard.Text = "RELATIONSHIP MANAGER - DASHBOARD";
             // 
@@ -233,7 +233,7 @@ namespace Investment_ideas_platform
             this.lblIdeas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblIdeas.Location = new System.Drawing.Point(54, 17);
             this.lblIdeas.Name = "lblIdeas";
-            this.lblIdeas.Size = new System.Drawing.Size(561, 81);
+            this.lblIdeas.Size = new System.Drawing.Size(451, 65);
             this.lblIdeas.TabIndex = 0;
             this.lblIdeas.Text = "INVESTMENT IDEAS";
             // 
@@ -254,7 +254,7 @@ namespace Investment_ideas_platform
             this.lblProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblProducts.Location = new System.Drawing.Point(54, 17);
             this.lblProducts.Name = "lblProducts";
-            this.lblProducts.Size = new System.Drawing.Size(332, 81);
+            this.lblProducts.Size = new System.Drawing.Size(268, 65);
             this.lblProducts.TabIndex = 0;
             this.lblProducts.Text = "PRODUCTS";
             // 
@@ -275,7 +275,7 @@ namespace Investment_ideas_platform
             this.lblClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblClients.Location = new System.Drawing.Point(54, 17);
             this.lblClients.Name = "lblClients";
-            this.lblClients.Size = new System.Drawing.Size(254, 81);
+            this.lblClients.Size = new System.Drawing.Size(205, 65);
             this.lblClients.TabIndex = 0;
             this.lblClients.Text = "CLIENTS";
             // 
@@ -295,7 +295,7 @@ namespace Investment_ideas_platform
             // 
             this.txtFilterboxIdea.Location = new System.Drawing.Point(127, 357);
             this.txtFilterboxIdea.Name = "txtFilterboxIdea";
-            this.txtFilterboxIdea.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterboxIdea.Size = new System.Drawing.Size(125, 25);
             this.txtFilterboxIdea.TabIndex = 3;
             this.txtFilterboxIdea.TextChanged += new System.EventHandler(this.txtFilterboxIdea_TextChanged);
             // 
@@ -345,7 +345,7 @@ namespace Investment_ideas_platform
             // 
             this.txtFilterBoxProducts.Location = new System.Drawing.Point(190, 462);
             this.txtFilterBoxProducts.Name = "txtFilterBoxProducts";
-            this.txtFilterBoxProducts.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterBoxProducts.Size = new System.Drawing.Size(125, 25);
             this.txtFilterBoxProducts.TabIndex = 3;
             this.txtFilterBoxProducts.TextChanged += new System.EventHandler(this.txtFilterBoxProducts_TextChanged);
             // 
@@ -421,7 +421,7 @@ namespace Investment_ideas_platform
             "D"});
             this.comboBox7.Location = new System.Drawing.Point(275, 490);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(151, 29);
+            this.comboBox7.Size = new System.Drawing.Size(151, 25);
             this.comboBox7.TabIndex = 14;
             // 
             // comboBox6
@@ -432,7 +432,7 @@ namespace Investment_ideas_platform
             "D"});
             this.comboBox6.Location = new System.Drawing.Point(275, 399);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(151, 29);
+            this.comboBox6.Size = new System.Drawing.Size(151, 25);
             this.comboBox6.TabIndex = 13;
             // 
             // comboBox5
@@ -443,7 +443,7 @@ namespace Investment_ideas_platform
             "D"});
             this.comboBox5.Location = new System.Drawing.Point(275, 325);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(151, 29);
+            this.comboBox5.Size = new System.Drawing.Size(151, 25);
             this.comboBox5.TabIndex = 12;
             // 
             // comboBox4
@@ -454,7 +454,7 @@ namespace Investment_ideas_platform
             "B"});
             this.comboBox4.Location = new System.Drawing.Point(13, 490);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(151, 29);
+            this.comboBox4.Size = new System.Drawing.Size(151, 25);
             this.comboBox4.TabIndex = 11;
             // 
             // comboBox3
@@ -465,7 +465,7 @@ namespace Investment_ideas_platform
             "B"});
             this.comboBox3.Location = new System.Drawing.Point(13, 401);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(151, 29);
+            this.comboBox3.Size = new System.Drawing.Size(151, 25);
             this.comboBox3.TabIndex = 10;
             // 
             // comboBox2
@@ -476,7 +476,7 @@ namespace Investment_ideas_platform
             "B"});
             this.comboBox2.Location = new System.Drawing.Point(12, 329);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 29);
+            this.comboBox2.Size = new System.Drawing.Size(151, 25);
             this.comboBox2.TabIndex = 9;
             // 
             // comboBox1
@@ -490,42 +490,42 @@ namespace Investment_ideas_platform
             "5"});
             this.comboBox1.Location = new System.Drawing.Point(133, 274);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 29);
+            this.comboBox1.Size = new System.Drawing.Size(151, 25);
             this.comboBox1.TabIndex = 8;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(281, 202);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 29);
+            this.textBox4.Size = new System.Drawing.Size(125, 25);
             this.textBox4.TabIndex = 7;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(69, 202);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 29);
+            this.textBox3.Size = new System.Drawing.Size(125, 25);
             this.textBox3.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(275, 105);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 29);
+            this.textBox2.Size = new System.Drawing.Size(125, 25);
             this.textBox2.TabIndex = 5;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(66, 105);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 29);
+            this.textBox1.Size = new System.Drawing.Size(125, 25);
             this.textBox1.TabIndex = 4;
             // 
             // txtFilterboxClientProfiles
             // 
             this.txtFilterboxClientProfiles.Location = new System.Drawing.Point(950, 606);
             this.txtFilterboxClientProfiles.Name = "txtFilterboxClientProfiles";
-            this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 29);
+            this.txtFilterboxClientProfiles.Size = new System.Drawing.Size(125, 25);
             this.txtFilterboxClientProfiles.TabIndex = 3;
             this.txtFilterboxClientProfiles.TextChanged += new System.EventHandler(this.txtFilterboxClientProfiles_TextChanged);
             // 
@@ -572,9 +572,16 @@ namespace Investment_ideas_platform
             this.pnChangePI1.Size = new System.Drawing.Size(1332, 745);
             this.pnChangePI1.TabIndex = 8;
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(500, 264);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(125, 25);
+            this.textBox5.TabIndex = 3;
+            // 
             // btnChangeItem1
             // 
-            this.btnChangeItem1.Location = new System.Drawing.Point(239, 376);
+            this.btnChangeItem1.Location = new System.Drawing.Point(266, 373);
             this.btnChangeItem1.Name = "btnChangeItem1";
             this.btnChangeItem1.Size = new System.Drawing.Size(94, 29);
             this.btnChangeItem1.TabIndex = 2;
@@ -591,26 +598,19 @@ namespace Investment_ideas_platform
             "3"});
             this.cmbChangePI1.Location = new System.Drawing.Point(290, 274);
             this.cmbChangePI1.Name = "cmbChangePI1";
-            this.cmbChangePI1.Size = new System.Drawing.Size(151, 29);
+            this.cmbChangePI1.Size = new System.Drawing.Size(151, 25);
             this.cmbChangePI1.TabIndex = 1;
             // 
             // txtClientEmailItem1
             // 
             this.txtClientEmailItem1.Location = new System.Drawing.Point(280, 152);
             this.txtClientEmailItem1.Name = "txtClientEmailItem1";
-            this.txtClientEmailItem1.Size = new System.Drawing.Size(125, 29);
+            this.txtClientEmailItem1.Size = new System.Drawing.Size(125, 25);
             this.txtClientEmailItem1.TabIndex = 0;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(500, 264);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 29);
-            this.textBox5.TabIndex = 3;
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);

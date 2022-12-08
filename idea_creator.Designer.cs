@@ -40,6 +40,8 @@
             this.pn_top_bar = new System.Windows.Forms.Panel();
             this.lb_idea_header = new System.Windows.Forms.Label();
             this.pn_main_dashboard = new System.Windows.Forms.Panel();
+            this.dgv_products = new System.Windows.Forms.DataGridView();
+            this.dgv_ideas = new System.Windows.Forms.DataGridView();
             this.pn_ideas = new System.Windows.Forms.Panel();
             this.btn_add_idea = new System.Windows.Forms.Button();
             this.txtb_idea_description = new System.Windows.Forms.TextBox();
@@ -62,17 +64,15 @@
             this.lb_product_type = new System.Windows.Forms.Label();
             this.txtb_product_type = new System.Windows.Forms.TextBox();
             this.lb_product_name = new System.Windows.Forms.Label();
-            this.txtb_ = new System.Windows.Forms.TextBox();
+            this.txtb_product_name = new System.Windows.Forms.TextBox();
             this.lb_products = new System.Windows.Forms.Label();
-            this.dgv_ideas = new System.Windows.Forms.DataGridView();
-            this.dgv_products = new System.Windows.Forms.DataGridView();
             this.pn_menu_sidebar.SuspendLayout();
             this.pn_sidebar_top.SuspendLayout();
             this.pn_main_dashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).BeginInit();
             this.pn_ideas.SuspendLayout();
             this.pnl_products.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_menu_sidebar
@@ -218,6 +218,32 @@
             this.pn_main_dashboard.Size = new System.Drawing.Size(788, 493);
             this.pn_main_dashboard.TabIndex = 2;
             // 
+            // dgv_products
+            // 
+            this.dgv_products.AllowUserToAddRows = false;
+            this.dgv_products.AllowUserToDeleteRows = false;
+            this.dgv_products.AllowUserToOrderColumns = true;
+            this.dgv_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_products.Location = new System.Drawing.Point(53, 259);
+            this.dgv_products.Name = "dgv_products";
+            this.dgv_products.ReadOnly = true;
+            this.dgv_products.RowTemplate.Height = 25;
+            this.dgv_products.Size = new System.Drawing.Size(498, 177);
+            this.dgv_products.TabIndex = 4;
+            // 
+            // dgv_ideas
+            // 
+            this.dgv_ideas.AllowUserToAddRows = false;
+            this.dgv_ideas.AllowUserToDeleteRows = false;
+            this.dgv_ideas.AllowUserToOrderColumns = true;
+            this.dgv_ideas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ideas.Location = new System.Drawing.Point(53, 83);
+            this.dgv_ideas.Name = "dgv_ideas";
+            this.dgv_ideas.ReadOnly = true;
+            this.dgv_ideas.RowTemplate.Height = 25;
+            this.dgv_ideas.Size = new System.Drawing.Size(498, 163);
+            this.dgv_ideas.TabIndex = 3;
+            // 
             // pn_ideas
             // 
             this.pn_ideas.BackColor = System.Drawing.Color.DimGray;
@@ -254,6 +280,7 @@
             this.btn_add_idea.Text = "Add Idea";
             this.btn_add_idea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_add_idea.UseVisualStyleBackColor = true;
+            this.btn_add_idea.Click += new System.EventHandler(this.btn_add_idea_Click);
             // 
             // txtb_idea_description
             // 
@@ -263,7 +290,6 @@
             this.txtb_idea_description.Multiline = true;
             this.txtb_idea_description.Name = "txtb_idea_description";
             this.txtb_idea_description.PlaceholderText = "Description of the Idea";
-            this.txtb_idea_description.ReadOnly = true;
             this.txtb_idea_description.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtb_idea_description.Size = new System.Drawing.Size(332, 116);
             this.txtb_idea_description.TabIndex = 14;
@@ -379,7 +405,7 @@
             this.pnl_products.Controls.Add(this.lb_product_type);
             this.pnl_products.Controls.Add(this.txtb_product_type);
             this.pnl_products.Controls.Add(this.lb_product_name);
-            this.pnl_products.Controls.Add(this.txtb_);
+            this.pnl_products.Controls.Add(this.txtb_product_name);
             this.pnl_products.Controls.Add(this.lb_products);
             this.pnl_products.Location = new System.Drawing.Point(201, 62);
             this.pnl_products.Name = "pnl_products";
@@ -402,6 +428,7 @@
             this.btn_add_product.Text = "Add Product";
             this.btn_add_product.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_add_product.UseVisualStyleBackColor = true;
+            this.btn_add_product.Click += new System.EventHandler(this.btn_add_product_Click);
             // 
             // lb_product_description
             // 
@@ -470,13 +497,13 @@
             this.lb_product_name.TabIndex = 4;
             this.lb_product_name.Text = "Product Name";
             // 
-            // txtb_
+            // txtb_product_name
             // 
-            this.txtb_.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtb_.Location = new System.Drawing.Point(53, 92);
-            this.txtb_.Name = "txtb_";
-            this.txtb_.Size = new System.Drawing.Size(195, 27);
-            this.txtb_.TabIndex = 3;
+            this.txtb_product_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_product_name.Location = new System.Drawing.Point(53, 92);
+            this.txtb_product_name.Name = "txtb_product_name";
+            this.txtb_product_name.Size = new System.Drawing.Size(195, 27);
+            this.txtb_product_name.TabIndex = 3;
             // 
             // lb_products
             // 
@@ -489,32 +516,6 @@
             this.lb_products.TabIndex = 2;
             this.lb_products.Text = "Products";
             // 
-            // dgv_ideas
-            // 
-            this.dgv_ideas.AllowUserToAddRows = false;
-            this.dgv_ideas.AllowUserToDeleteRows = false;
-            this.dgv_ideas.AllowUserToOrderColumns = true;
-            this.dgv_ideas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ideas.Location = new System.Drawing.Point(53, 83);
-            this.dgv_ideas.Name = "dgv_ideas";
-            this.dgv_ideas.ReadOnly = true;
-            this.dgv_ideas.RowTemplate.Height = 25;
-            this.dgv_ideas.Size = new System.Drawing.Size(381, 163);
-            this.dgv_ideas.TabIndex = 3;
-            // 
-            // dgv_products
-            // 
-            this.dgv_products.AllowUserToAddRows = false;
-            this.dgv_products.AllowUserToDeleteRows = false;
-            this.dgv_products.AllowUserToOrderColumns = true;
-            this.dgv_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_products.Location = new System.Drawing.Point(53, 259);
-            this.dgv_products.Name = "dgv_products";
-            this.dgv_products.ReadOnly = true;
-            this.dgv_products.RowTemplate.Height = 25;
-            this.dgv_products.Size = new System.Drawing.Size(381, 177);
-            this.dgv_products.TabIndex = 4;
-            // 
             // idea_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -522,8 +523,8 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(988, 555);
             this.Controls.Add(this.pn_main_dashboard);
-            this.Controls.Add(this.pn_ideas);
             this.Controls.Add(this.pnl_products);
+            this.Controls.Add(this.pn_ideas);
             this.Controls.Add(this.pn_top_bar);
             this.Controls.Add(this.pn_menu_sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -534,12 +535,12 @@
             this.pn_sidebar_top.PerformLayout();
             this.pn_main_dashboard.ResumeLayout(false);
             this.pn_main_dashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).EndInit();
             this.pn_ideas.ResumeLayout(false);
             this.pn_ideas.PerformLayout();
             this.pnl_products.ResumeLayout(false);
             this.pnl_products.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,7 +573,7 @@
         private System.Windows.Forms.TextBox txtb_idea_description;
         private System.Windows.Forms.Label lb_description;
         private System.Windows.Forms.Button btn_add_idea;
-        private System.Windows.Forms.TextBox txtb_;
+        private System.Windows.Forms.TextBox txtb_product_name;
         private System.Windows.Forms.Label lb_product_description;
         private System.Windows.Forms.TextBox txtb_product_description;
         private System.Windows.Forms.Label lb_company_name;
