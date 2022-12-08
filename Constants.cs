@@ -33,5 +33,6 @@ namespace Investment_ideas_platform
         public static string DELETE_CLIENT_ACCOUNT = "DELETE FROM clientProfiles WHERE firstName=@firstName";
 
         public static string CHANGE_ITEM1 = "UPDATE clientProfiles SET preferencesItem1=@Item1 WHERE email=@clientEmail";
+
     }
 }

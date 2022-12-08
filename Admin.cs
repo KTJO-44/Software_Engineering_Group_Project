@@ -23,6 +23,9 @@ namespace Investment_ideas_platform
 
             loadDGVViewAllAccounts();
             dgvViewAllAccounts.Columns[0].HeaderText = "Email";
+            dgvViewAllAccounts.Columns[1].HeaderText = "First name";
+            dgvViewAllAccounts.Columns[2].HeaderText = "Last name";
+            dgvViewAllAccounts.Columns[3].HeaderText = "Account type";
             DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
             btnCol.HeaderText = "Delete account";
             btnCol.Text = "Delete";
@@ -32,6 +35,10 @@ namespace Investment_ideas_platform
             
             loadDGVViewAdminNotifications();
             dgvViewAdminNotifications.Columns[0].HeaderText = "Email";
+            dgvViewAdminNotifications.Columns[1].HeaderText = "First name";
+            dgvViewAdminNotifications.Columns[2].HeaderText = "Last name";
+            dgvViewAdminNotifications.Columns[3].HeaderText = "Timestamp";
+            dgvViewAdminNotifications.Columns[4].HeaderText = "Notification type";
             DataGridViewButtonColumn btnColResetPassword = new DataGridViewButtonColumn();
             btnColResetPassword.HeaderText = "Reset password";
             btnColResetPassword.Text = "Reset";
