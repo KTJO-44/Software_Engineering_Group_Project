@@ -46,7 +46,7 @@ namespace Investment_ideas_platform
             this.btnASortProducts = new System.Windows.Forms.Button();
             this.DGVViewAllProducts = new System.Windows.Forms.DataGridView();
             this.pnViewAllClients = new System.Windows.Forms.Panel();
-            this.Refresh = new System.Windows.Forms.Button();
+            this.btnHomepage = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -112,6 +112,7 @@ namespace Investment_ideas_platform
             this.btnChangeLocations1 = new System.Windows.Forms.Button();
             this.cmbChangePL1 = new System.Windows.Forms.ComboBox();
             this.txtClientEmailLocation1 = new System.Windows.Forms.TextBox();
+            this.btnGotohomepagefromproducts = new System.Windows.Forms.Button();
             this.pnViewIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllIdeas)).BeginInit();
             this.pnViewAllProducts.SuspendLayout();
@@ -215,6 +216,7 @@ namespace Investment_ideas_platform
             // pnViewAllProducts
             // 
             this.pnViewAllProducts.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pnViewAllProducts.Controls.Add(this.btnGotohomepagefromproducts);
             this.pnViewAllProducts.Controls.Add(this.label20);
             this.pnViewAllProducts.Controls.Add(this.label19);
             this.pnViewAllProducts.Controls.Add(this.txtFilterBoxProducts);
@@ -288,7 +290,7 @@ namespace Investment_ideas_platform
             // pnViewAllClients
             // 
             this.pnViewAllClients.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.pnViewAllClients.Controls.Add(this.Refresh);
+            this.pnViewAllClients.Controls.Add(this.btnHomepage);
             this.pnViewAllClients.Controls.Add(this.label18);
             this.pnViewAllClients.Controls.Add(this.label17);
             this.pnViewAllClients.Controls.Add(this.label16);
@@ -323,15 +325,15 @@ namespace Investment_ideas_platform
             this.pnViewAllClients.Size = new System.Drawing.Size(1325, 772);
             this.pnViewAllClients.TabIndex = 7;
             // 
-            // Refresh
+            // btnHomepage
             // 
-            this.Refresh.Location = new System.Drawing.Point(1155, 636);
-            this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(94, 29);
-            this.Refresh.TabIndex = 29;
-            this.Refresh.Text = "button1";
-            this.Refresh.UseVisualStyleBackColor = true;
-            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            this.btnHomepage.Location = new System.Drawing.Point(1155, 636);
+            this.btnHomepage.Name = "btnHomepage";
+            this.btnHomepage.Size = new System.Drawing.Size(109, 54);
+            this.btnHomepage.TabIndex = 29;
+            this.btnHomepage.Text = "Go to homepage";
+            this.btnHomepage.UseVisualStyleBackColor = true;
+            this.btnHomepage.Click += new System.EventHandler(this.btnHomepage_Click);
             // 
             // label18
             // 
@@ -1065,6 +1067,16 @@ namespace Investment_ideas_platform
             this.txtClientEmailLocation1.Size = new System.Drawing.Size(125, 29);
             this.txtClientEmailLocation1.TabIndex = 0;
             // 
+            // btnGotohomepagefromproducts
+            // 
+            this.btnGotohomepagefromproducts.Location = new System.Drawing.Point(166, 578);
+            this.btnGotohomepagefromproducts.Name = "btnGotohomepagefromproducts";
+            this.btnGotohomepagefromproducts.Size = new System.Drawing.Size(109, 54);
+            this.btnGotohomepagefromproducts.TabIndex = 30;
+            this.btnGotohomepagefromproducts.Text = "Go to homepage";
+            this.btnGotohomepagefromproducts.UseVisualStyleBackColor = true;
+            this.btnGotohomepagefromproducts.Click += new System.EventHandler(this.btnGotohomepagefromproducts_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -1072,12 +1084,12 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewIdeas);
             this.Controls.Add(this.pnChangePL1);
             this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.pnDashboard);
+            this.Controls.Add(this.pnViewAllClients);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1190,6 +1202,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.TextBox txtClientEmailLocation1;
         private System.Windows.Forms.Button btnChangePL;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.Button btnHomepage;
+        private System.Windows.Forms.Button btnGotohomepagefromproducts;
     }
 }

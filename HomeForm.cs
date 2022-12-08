@@ -284,9 +284,16 @@ namespace Investment_ideas_platform
             this.Hide();
         }
 
-        private void Refresh_Click(object sender, EventArgs e)
+        private void btnHomepage_Click(object sender, EventArgs e)
         {
-            pnViewAllClients.Visible = true;
+            pnViewAllClients.Visible = false;
+            pnDashboard.Visible = true;
+        }
+
+        private void btnGotohomepagefromproducts_Click(object sender, EventArgs e)
+        {
+            pnViewAllProducts.Visible = false;
+            pnDashboard.Visible = true;
         }
     }
     }
