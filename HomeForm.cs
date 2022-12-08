@@ -246,8 +246,37 @@ namespace Investment_ideas_platform
             pnDashboard.Visible = false;
             pnChangePL1.Visible = true; 
         }
+
+        private void btnChangeLocations1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("update clientProfiles set preferenceLocation1='" + cmbChangePL1.GetItemText(cmbChangePL1.Text) + "' where email='" + txtClientEmailLocation1.Text + "'", con1);
+            cmd1.ExecuteNonQuery();
+
+
+            SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con2.Open();
+            SqlCommand cmd2 = new SqlCommand("update clientProfiles set preferenceLocation2='" + cmbChangePL2.GetItemText(cmbChangePL2.Text) + "' where email='" + txtClientEmailLocation1.Text + "'", con2);
+            cmd2.ExecuteNonQuery();
+
+
+            SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jordan English\OneDrive - Anglia Ruskin University\seee\InvestmentIdeasDB.mdf;Integrated Security=True;Connect Timeout=30");
+            con3.Open();
+            SqlCommand cmd3 = new SqlCommand("update clientProfiles set preferenceLocation3='" + cmbChangePL3.GetItemText(cmbChangePL3.Text) + "' where email='" + txtClientEmailLocation1.Text + "'", con2);
+            cmd3.ExecuteNonQuery();
+
+
+
+            MessageBox.Show("Please check database to see if your data is updated.");
+
+            con1.Close();
+            con2.Close();
+            con3.Close();
+        }
     }
     }
+    
 
 
 

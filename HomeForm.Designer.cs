@@ -97,6 +97,7 @@ namespace Investment_ideas_platform
             this.btnViewClients = new System.Windows.Forms.Button();
             this.btnChangePI1 = new System.Windows.Forms.Button();
             this.pnDashboard = new System.Windows.Forms.Panel();
+            this.btnChangePL = new System.Windows.Forms.Button();
             this.pnChangePL1 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -108,8 +109,7 @@ namespace Investment_ideas_platform
             this.cmbChangePL2 = new System.Windows.Forms.ComboBox();
             this.btnChangeLocations1 = new System.Windows.Forms.Button();
             this.cmbChangePL1 = new System.Windows.Forms.ComboBox();
-            this.txtClientEmailILocation1 = new System.Windows.Forms.TextBox();
-            this.btnChangePL = new System.Windows.Forms.Button();
+            this.txtClientEmailLocation1 = new System.Windows.Forms.TextBox();
             this.pnViewIdeas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVViewAllIdeas)).BeginInit();
             this.pnViewAllProducts.SuspendLayout();
@@ -849,6 +849,16 @@ namespace Investment_ideas_platform
             this.pnDashboard.Size = new System.Drawing.Size(1765, 882);
             this.pnDashboard.TabIndex = 2;
             // 
+            // btnChangePL
+            // 
+            this.btnChangePL.Location = new System.Drawing.Point(869, 562);
+            this.btnChangePL.Name = "btnChangePL";
+            this.btnChangePL.Size = new System.Drawing.Size(152, 78);
+            this.btnChangePL.TabIndex = 8;
+            this.btnChangePL.Text = "Change preference locations";
+            this.btnChangePL.UseVisualStyleBackColor = true;
+            this.btnChangePL.Click += new System.EventHandler(this.btnChangePL_Click);
+            // 
             // pnChangePL1
             // 
             this.pnChangePL1.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -862,7 +872,7 @@ namespace Investment_ideas_platform
             this.pnChangePL1.Controls.Add(this.cmbChangePL2);
             this.pnChangePL1.Controls.Add(this.btnChangeLocations1);
             this.pnChangePL1.Controls.Add(this.cmbChangePL1);
-            this.pnChangePL1.Controls.Add(this.txtClientEmailILocation1);
+            this.pnChangePL1.Controls.Add(this.txtClientEmailLocation1);
             this.pnChangePL1.Location = new System.Drawing.Point(0, 0);
             this.pnChangePL1.Name = "pnChangePL1";
             this.pnChangePL1.Size = new System.Drawing.Size(1412, 957);
@@ -959,6 +969,7 @@ namespace Investment_ideas_platform
             this.btnChangeLocations1.TabIndex = 2;
             this.btnChangeLocations1.Text = "Update data";
             this.btnChangeLocations1.UseVisualStyleBackColor = true;
+            this.btnChangeLocations1.Click += new System.EventHandler(this.btnChangeLocations1_Click);
             // 
             // cmbChangePL1
             // 
@@ -972,22 +983,12 @@ namespace Investment_ideas_platform
             this.cmbChangePL1.Size = new System.Drawing.Size(151, 29);
             this.cmbChangePL1.TabIndex = 1;
             // 
-            // txtClientEmailILocation1
+            // txtClientEmailLocation1
             // 
-            this.txtClientEmailILocation1.Location = new System.Drawing.Point(502, 159);
-            this.txtClientEmailILocation1.Name = "txtClientEmailILocation1";
-            this.txtClientEmailILocation1.Size = new System.Drawing.Size(125, 29);
-            this.txtClientEmailILocation1.TabIndex = 0;
-            // 
-            // btnChangePL
-            // 
-            this.btnChangePL.Location = new System.Drawing.Point(869, 562);
-            this.btnChangePL.Name = "btnChangePL";
-            this.btnChangePL.Size = new System.Drawing.Size(152, 78);
-            this.btnChangePL.TabIndex = 8;
-            this.btnChangePL.Text = "Change preference locations";
-            this.btnChangePL.UseVisualStyleBackColor = true;
-            this.btnChangePL.Click += new System.EventHandler(this.btnChangePL_Click);
+            this.txtClientEmailLocation1.Location = new System.Drawing.Point(502, 159);
+            this.txtClientEmailLocation1.Name = "txtClientEmailLocation1";
+            this.txtClientEmailLocation1.Size = new System.Drawing.Size(125, 29);
+            this.txtClientEmailLocation1.TabIndex = 0;
             // 
             // HomeForm
             // 
@@ -1111,7 +1112,7 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.ComboBox cmbChangePL2;
         private System.Windows.Forms.Button btnChangeLocations1;
         private System.Windows.Forms.ComboBox cmbChangePL1;
-        private System.Windows.Forms.TextBox txtClientEmailILocation1;
+        private System.Windows.Forms.TextBox txtClientEmailLocation1;
         private System.Windows.Forms.Button btnChangePL;
     }
 }
