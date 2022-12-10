@@ -283,7 +283,7 @@ namespace Investment_ideas_platform
             this.dgvViewAdminNotifications.ReadOnly = true;
             this.dgvViewAdminNotifications.RowHeadersWidth = 51;
             this.dgvViewAdminNotifications.RowTemplate.Height = 29;
-            this.dgvViewAdminNotifications.Size = new System.Drawing.Size(896, 488);
+            this.dgvViewAdminNotifications.Size = new System.Drawing.Size(1220, 488);
             this.dgvViewAdminNotifications.TabIndex = 2;
             this.dgvViewAdminNotifications.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewAdminNotifications_CellContentClick);
             // 
