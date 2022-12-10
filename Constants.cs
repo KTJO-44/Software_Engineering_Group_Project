@@ -6,6 +6,7 @@ namespace Investment_ideas_platform
 {
     class Constants
     {
+        //SQL queries are stored here so they can be used throughout the program, and they are all in one place, so they are easy to view and edit
         public static string FETCH_USER_FIRSTNAME = "SELECT firstName FROM staffAccounts WHERE email=@userEmail";
         public static string FETCH_USER_LASTNAME = "SELECT lastName FROM staffAccounts WHERE email=@userEmail";
         public static string CHECK_EXISTS_userEmail = "SELECT email FROM staffAccounts WHERE email=@userEmail";
