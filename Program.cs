@@ -21,7 +21,6 @@ namespace Investment_ideas_platform
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
             f1 = new MainForm();
             Application.Run(f1);
         }

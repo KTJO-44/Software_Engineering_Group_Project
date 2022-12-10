@@ -7,8 +7,8 @@ namespace Investment_ideas_platform
     public static class User
     {
         public static string userEmail { get; set; }
- }
     }
+ }
 
         
 
