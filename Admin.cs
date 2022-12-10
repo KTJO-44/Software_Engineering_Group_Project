@@ -131,6 +131,8 @@ namespace Investment_ideas_platform
             //Get this information from the database using the User class (which contains the user's email),
             //then set the label on the panel to the corresponding information.
             lblAdminMPEmailFetched.Text = User.userEmail;
+            //We only need to get a single, but different value, but we can use the same method with different input parameters - in this case, different
+            //SQL queries were used with the same email.
             lblAdminMPFirstNameFetched.Text = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_FIRSTNAME, User.userEmail);
             lblAdminMPLastNameFetched.Text = DBConnection.getInstanceOfDBConnection().getSingleValueUsingJustEmail(Constants.FETCH_USER_LASTNAME, User.userEmail);
 
