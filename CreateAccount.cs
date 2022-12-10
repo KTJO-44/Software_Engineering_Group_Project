@@ -69,12 +69,13 @@ namespace Investment_ideas_platform
                 else
                 {
                     MessageBox.Show("An account with this email already exists. Please use a different email");
-                    return ""; //basically returning false
+                    return ""; //return an empty string which is basically returning false
                 }
 
             }
             else
             {
+                //return false
                 return "";
             }
         }
