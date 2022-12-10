@@ -11,18 +11,21 @@ namespace Investment_ideas_platform
         {
             if (DBConnection.getInstanceOfDBConnection().emailExists(Constants.CHECK_EXISTS_userEmail, email))
             {
+                //If the email exists, return true so that the program knows the account exists
                 return true;
             }
             return false;
         }
 
+        //Method to log the user in by checking if the password in the database matches the
+        //password associated with the account the user entered.
         public static bool logIn(string email, string password)
         {
             if (DBConnection.getInstanceOfDBConnection().authenticatePassword(Constants.FETCH_PASSWORD, email, password))
             {
+                //If the passwords match, return true so the user can be logged in
                 return true;
             }
-
             return false;
         }
     }
