@@ -69,7 +69,13 @@ namespace Investment_ideas_platform
                             f2.Show();
                             break;
                         case "Idea creator":
-                            //write code to show IC homepage here
+                            this.Hide(); // Hide the form 
+                            Program.userLoggedIn = true; // Only true if credentials are correct
+                            lab_login_error.Text = "";
+                            txtbx_login_uname.Clear();
+                            txb_login_pwd.Clear();
+                            idea_creator ic = new idea_creator();
+                            ic.Show(); // Show the form when the case is called
                             break;
                     }
                 }
