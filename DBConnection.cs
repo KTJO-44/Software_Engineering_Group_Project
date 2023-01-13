@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-//May have to install this package (below), just search for System.Data.SqlClient in NuGet packet manager
 using System.Data.SqlClient;
 
 namespace Investment_ideas_platform

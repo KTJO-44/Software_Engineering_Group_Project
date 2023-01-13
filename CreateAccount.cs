@@ -59,15 +59,16 @@ namespace Investment_ideas_platform
             {
                 if (!LogUserIn.userExists(email))
                 {
-                    //string uPass = generatePassword();
+                    //Password that will be inserted into the database
                     string uPass = "password";
-                    //string encryptedPassword = Encrypt.encryptString(uPass);
+                    //Insert new account info into the database
                     DBConnection.getInstanceOfDBConnection().addNewAccountToDB(Constants.ADD_NEW_ACCOUNT, email, accountType, firstName, lastName, "password");
-                    //MessageBox.Show(uPass);
+                    //return the password so the admin can send it to the new account owner
                     return uPass;
                 }
                 else
                 {
+                    //show an error if failed to create a new account
                     MessageBox.Show("An account with this email already exists. Please use a different email");
                     return ""; //return an empty string which is basically returning false
                 }
