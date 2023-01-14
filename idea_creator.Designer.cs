@@ -43,11 +43,37 @@ namespace Investment_ideas_platform
             this.dgv_products = new System.Windows.Forms.DataGridView();
             this.dgv_ideas = new System.Windows.Forms.DataGridView();
             this.lb_idea_header = new System.Windows.Forms.Label();
+            this.pn_ideas = new System.Windows.Forms.Panel();
+            this.cb_risk_rating = new System.Windows.Forms.ComboBox();
+            this.dtp_expiry_date = new System.Windows.Forms.DateTimePicker();
+            this.txtb_idea_description = new System.Windows.Forms.TextBox();
+            this.btn_add_idea = new System.Windows.Forms.Button();
+            this.txtb_abstract = new System.Windows.Forms.TextBox();
+            this.txtb_idea_title = new System.Windows.Forms.TextBox();
+            this.lb_description = new System.Windows.Forms.Label();
+            this.lb_risk_rating = new System.Windows.Forms.Label();
+            this.lb_expiry_date = new System.Windows.Forms.Label();
+            this.lb_abstract = new System.Windows.Forms.Label();
+            this.lb_idea_title = new System.Windows.Forms.Label();
+            this.lb_ideas_header = new System.Windows.Forms.Label();
+            this.pnl_products = new System.Windows.Forms.Panel();
+            this.lb_products = new System.Windows.Forms.Label();
+            this.lb_product_description = new System.Windows.Forms.Label();
+            this.lb_company_name = new System.Windows.Forms.Label();
+            this.btn_add_product = new System.Windows.Forms.Button();
+            this.lb_product_type = new System.Windows.Forms.Label();
+            this.lb_product_name = new System.Windows.Forms.Label();
+            this.txtb_product_description = new System.Windows.Forms.TextBox();
+            this.txtb_company_name = new System.Windows.Forms.TextBox();
+            this.txtb_product_type = new System.Windows.Forms.TextBox();
+            this.txtb_product_name = new System.Windows.Forms.TextBox();
             this.pn_menu_sidebar.SuspendLayout();
             this.pn_sidebar_top.SuspendLayout();
             this.pn_main_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).BeginInit();
+            this.pn_ideas.SuspendLayout();
+            this.pnl_products.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_menu_sidebar
@@ -114,6 +140,7 @@ namespace Investment_ideas_platform
             this.btn_products.Text = "Products";
             this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_products.UseVisualStyleBackColor = true;
+            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
             // 
             // btn_ideas
             // 
@@ -131,6 +158,7 @@ namespace Investment_ideas_platform
             this.btn_ideas.Text = "Ideas";
             this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ideas.UseVisualStyleBackColor = true;
+            this.btn_ideas.Click += new System.EventHandler(this.btn_ideas_Click);
             // 
             // btn_home
             // 
@@ -148,6 +176,7 @@ namespace Investment_ideas_platform
             this.btn_home.Text = "Main Dashboard";
             this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // pn_sidebar_top
             // 
@@ -232,13 +261,291 @@ namespace Investment_ideas_platform
             this.lb_idea_header.TabIndex = 0;
             this.lb_idea_header.Text = "Main Dashboard";
             // 
+            // pn_ideas
+            // 
+            this.pn_ideas.Controls.Add(this.cb_risk_rating);
+            this.pn_ideas.Controls.Add(this.dtp_expiry_date);
+            this.pn_ideas.Controls.Add(this.txtb_idea_description);
+            this.pn_ideas.Controls.Add(this.btn_add_idea);
+            this.pn_ideas.Controls.Add(this.txtb_abstract);
+            this.pn_ideas.Controls.Add(this.txtb_idea_title);
+            this.pn_ideas.Controls.Add(this.lb_description);
+            this.pn_ideas.Controls.Add(this.lb_risk_rating);
+            this.pn_ideas.Controls.Add(this.lb_expiry_date);
+            this.pn_ideas.Controls.Add(this.lb_abstract);
+            this.pn_ideas.Controls.Add(this.lb_idea_title);
+            this.pn_ideas.Controls.Add(this.lb_ideas_header);
+            this.pn_ideas.Location = new System.Drawing.Point(230, 83);
+            this.pn_ideas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pn_ideas.Name = "pn_ideas";
+            this.pn_ideas.Size = new System.Drawing.Size(901, 657);
+            this.pn_ideas.TabIndex = 2;
+            // 
+            // cb_risk_rating
+            // 
+            this.cb_risk_rating.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cb_risk_rating.FormattingEnabled = true;
+            this.cb_risk_rating.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cb_risk_rating.Location = new System.Drawing.Point(63, 336);
+            this.cb_risk_rating.Name = "cb_risk_rating";
+            this.cb_risk_rating.Size = new System.Drawing.Size(138, 31);
+            this.cb_risk_rating.TabIndex = 4;
+            // 
+            // dtp_expiry_date
+            // 
+            this.dtp_expiry_date.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtp_expiry_date.Location = new System.Drawing.Point(63, 247);
+            this.dtp_expiry_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtp_expiry_date.Name = "dtp_expiry_date";
+            this.dtp_expiry_date.Size = new System.Drawing.Size(233, 32);
+            this.dtp_expiry_date.TabIndex = 3;
+            // 
+            // txtb_idea_description
+            // 
+            this.txtb_idea_description.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_idea_description.Location = new System.Drawing.Point(63, 427);
+            this.txtb_idea_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_idea_description.Multiline = true;
+            this.txtb_idea_description.Name = "txtb_idea_description";
+            this.txtb_idea_description.PlaceholderText = "Description of the Idea";
+            this.txtb_idea_description.Size = new System.Drawing.Size(379, 153);
+            this.txtb_idea_description.TabIndex = 2;
+            // 
+            // btn_add_idea
+            // 
+            this.btn_add_idea.FlatAppearance.BorderSize = 0;
+            this.btn_add_idea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_idea.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_add_idea.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_idea.Image")));
+            this.btn_add_idea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_idea.Location = new System.Drawing.Point(719, 487);
+            this.btn_add_idea.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_add_idea.Name = "btn_add_idea";
+            this.btn_add_idea.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_add_idea.Size = new System.Drawing.Size(141, 95);
+            this.btn_add_idea.TabIndex = 1;
+            this.btn_add_idea.Text = "Add Idea";
+            this.btn_add_idea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_add_idea.UseVisualStyleBackColor = true;
+            this.btn_add_idea.Click += new System.EventHandler(this.btn_add_idea_Click);
+            // 
+            // txtb_abstract
+            // 
+            this.txtb_abstract.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_abstract.Location = new System.Drawing.Point(63, 167);
+            this.txtb_abstract.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_abstract.Name = "txtb_abstract";
+            this.txtb_abstract.Size = new System.Drawing.Size(233, 32);
+            this.txtb_abstract.TabIndex = 2;
+            // 
+            // txtb_idea_title
+            // 
+            this.txtb_idea_title.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_idea_title.Location = new System.Drawing.Point(63, 89);
+            this.txtb_idea_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_idea_title.Name = "txtb_idea_title";
+            this.txtb_idea_title.Size = new System.Drawing.Size(233, 32);
+            this.txtb_idea_title.TabIndex = 2;
+            // 
+            // lb_description
+            // 
+            this.lb_description.AutoSize = true;
+            this.lb_description.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_description.Location = new System.Drawing.Point(63, 395);
+            this.lb_description.Name = "lb_description";
+            this.lb_description.Size = new System.Drawing.Size(169, 23);
+            this.lb_description.TabIndex = 1;
+            this.lb_description.Text = "Idea Description";
+            // 
+            // lb_risk_rating
+            // 
+            this.lb_risk_rating.AutoSize = true;
+            this.lb_risk_rating.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_risk_rating.Location = new System.Drawing.Point(63, 304);
+            this.lb_risk_rating.Name = "lb_risk_rating";
+            this.lb_risk_rating.Size = new System.Drawing.Size(110, 23);
+            this.lb_risk_rating.TabIndex = 1;
+            this.lb_risk_rating.Text = "Risk Rating";
+            // 
+            // lb_expiry_date
+            // 
+            this.lb_expiry_date.AutoSize = true;
+            this.lb_expiry_date.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_expiry_date.Location = new System.Drawing.Point(63, 215);
+            this.lb_expiry_date.Name = "lb_expiry_date";
+            this.lb_expiry_date.Size = new System.Drawing.Size(120, 23);
+            this.lb_expiry_date.TabIndex = 1;
+            this.lb_expiry_date.Text = "Expiry Date";
+            // 
+            // lb_abstract
+            // 
+            this.lb_abstract.AutoSize = true;
+            this.lb_abstract.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_abstract.Location = new System.Drawing.Point(63, 135);
+            this.lb_abstract.Name = "lb_abstract";
+            this.lb_abstract.Size = new System.Drawing.Size(94, 23);
+            this.lb_abstract.TabIndex = 1;
+            this.lb_abstract.Text = "Abstract";
+            // 
+            // lb_idea_title
+            // 
+            this.lb_idea_title.AutoSize = true;
+            this.lb_idea_title.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_idea_title.Location = new System.Drawing.Point(63, 57);
+            this.lb_idea_title.Name = "lb_idea_title";
+            this.lb_idea_title.Size = new System.Drawing.Size(123, 23);
+            this.lb_idea_title.TabIndex = 1;
+            this.lb_idea_title.Text = "Name Idea";
+            // 
+            // lb_ideas_header
+            // 
+            this.lb_ideas_header.AutoSize = true;
+            this.lb_ideas_header.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_ideas_header.ForeColor = System.Drawing.Color.Black;
+            this.lb_ideas_header.Location = new System.Drawing.Point(406, 9);
+            this.lb_ideas_header.Name = "lb_ideas_header";
+            this.lb_ideas_header.Size = new System.Drawing.Size(108, 40);
+            this.lb_ideas_header.TabIndex = 0;
+            this.lb_ideas_header.Text = "Ideas";
+            // 
+            // pnl_products
+            // 
+            this.pnl_products.Controls.Add(this.lb_products);
+            this.pnl_products.Controls.Add(this.lb_product_description);
+            this.pnl_products.Controls.Add(this.lb_company_name);
+            this.pnl_products.Controls.Add(this.btn_add_product);
+            this.pnl_products.Controls.Add(this.lb_product_type);
+            this.pnl_products.Controls.Add(this.lb_product_name);
+            this.pnl_products.Controls.Add(this.txtb_product_description);
+            this.pnl_products.Controls.Add(this.txtb_company_name);
+            this.pnl_products.Controls.Add(this.txtb_product_type);
+            this.pnl_products.Controls.Add(this.txtb_product_name);
+            this.pnl_products.Location = new System.Drawing.Point(230, 83);
+            this.pnl_products.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnl_products.Name = "pnl_products";
+            this.pnl_products.Size = new System.Drawing.Size(901, 657);
+            this.pnl_products.TabIndex = 2;
+            // 
+            // lb_products
+            // 
+            this.lb_products.AutoSize = true;
+            this.lb_products.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_products.Location = new System.Drawing.Point(377, 19);
+            this.lb_products.Name = "lb_products";
+            this.lb_products.Size = new System.Drawing.Size(158, 40);
+            this.lb_products.TabIndex = 1;
+            this.lb_products.Text = "Products";
+            // 
+            // lb_product_description
+            // 
+            this.lb_product_description.AutoSize = true;
+            this.lb_product_description.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_product_description.Location = new System.Drawing.Point(59, 427);
+            this.lb_product_description.Name = "lb_product_description";
+            this.lb_product_description.Size = new System.Drawing.Size(200, 23);
+            this.lb_product_description.TabIndex = 1;
+            this.lb_product_description.Text = "Product Description";
+            // 
+            // lb_company_name
+            // 
+            this.lb_company_name.AutoSize = true;
+            this.lb_company_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_company_name.Location = new System.Drawing.Point(59, 313);
+            this.lb_company_name.Name = "lb_company_name";
+            this.lb_company_name.Size = new System.Drawing.Size(176, 23);
+            this.lb_company_name.TabIndex = 1;
+            this.lb_company_name.Text = "Company Name";
+            // 
+            // btn_add_product
+            // 
+            this.btn_add_product.FlatAppearance.BorderSize = 0;
+            this.btn_add_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_product.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_add_product.Image = ((System.Drawing.Image)(resources.GetObject("btn_add_product.Image")));
+            this.btn_add_product.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_add_product.Location = new System.Drawing.Point(693, 511);
+            this.btn_add_product.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_add_product.Name = "btn_add_product";
+            this.btn_add_product.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btn_add_product.Size = new System.Drawing.Size(167, 95);
+            this.btn_add_product.TabIndex = 1;
+            this.btn_add_product.Text = "Add Product";
+            this.btn_add_product.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_add_product.UseVisualStyleBackColor = true;
+            this.btn_add_product.Click += new System.EventHandler(this.btn_add_product_Click);
+            // 
+            // lb_product_type
+            // 
+            this.lb_product_type.AutoSize = true;
+            this.lb_product_type.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_product_type.Location = new System.Drawing.Point(59, 200);
+            this.lb_product_type.Name = "lb_product_type";
+            this.lb_product_type.Size = new System.Drawing.Size(139, 23);
+            this.lb_product_type.TabIndex = 1;
+            this.lb_product_type.Text = "Product Type";
+            // 
+            // lb_product_name
+            // 
+            this.lb_product_name.AutoSize = true;
+            this.lb_product_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_product_name.Location = new System.Drawing.Point(59, 85);
+            this.lb_product_name.Name = "lb_product_name";
+            this.lb_product_name.Size = new System.Drawing.Size(154, 23);
+            this.lb_product_name.TabIndex = 1;
+            this.lb_product_name.Text = "Product Name";
+            // 
+            // txtb_product_description
+            // 
+            this.txtb_product_description.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_product_description.Location = new System.Drawing.Point(61, 459);
+            this.txtb_product_description.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_product_description.Multiline = true;
+            this.txtb_product_description.Name = "txtb_product_description";
+            this.txtb_product_description.PlaceholderText = "Desciption of the product";
+            this.txtb_product_description.Size = new System.Drawing.Size(401, 145);
+            this.txtb_product_description.TabIndex = 2;
+            // 
+            // txtb_company_name
+            // 
+            this.txtb_company_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_company_name.Location = new System.Drawing.Point(61, 345);
+            this.txtb_company_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_company_name.Name = "txtb_company_name";
+            this.txtb_company_name.Size = new System.Drawing.Size(222, 32);
+            this.txtb_company_name.TabIndex = 2;
+            // 
+            // txtb_product_type
+            // 
+            this.txtb_product_type.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_product_type.Location = new System.Drawing.Point(61, 232);
+            this.txtb_product_type.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_product_type.Name = "txtb_product_type";
+            this.txtb_product_type.Size = new System.Drawing.Size(222, 32);
+            this.txtb_product_type.TabIndex = 2;
+            // 
+            // txtb_product_name
+            // 
+            this.txtb_product_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtb_product_name.Location = new System.Drawing.Point(61, 123);
+            this.txtb_product_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtb_product_name.Name = "txtb_product_name";
+            this.txtb_product_name.Size = new System.Drawing.Size(222, 32);
+            this.txtb_product_name.TabIndex = 2;
+            // 
             // idea_creator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1129, 740);
+            this.Controls.Add(this.pn_ideas);
             this.Controls.Add(this.pn_main_dashboard);
+            this.Controls.Add(this.pnl_products);
             this.Controls.Add(this.pn_top_bar);
             this.Controls.Add(this.pn_menu_sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -251,6 +558,10 @@ namespace Investment_ideas_platform
             this.pn_main_dashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ideas)).EndInit();
+            this.pn_ideas.ResumeLayout(false);
+            this.pn_ideas.PerformLayout();
+            this.pnl_products.ResumeLayout(false);
+            this.pnl_products.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +581,29 @@ namespace Investment_ideas_platform
         private System.Windows.Forms.Button btn_ideas;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Panel pn_ideas;
+        private System.Windows.Forms.ComboBox cb_risk_rating;
+        private System.Windows.Forms.DateTimePicker dtp_expiry_date;
+        private System.Windows.Forms.TextBox txtb_idea_description;
+        private System.Windows.Forms.Button btn_add_idea;
+        private System.Windows.Forms.TextBox txtb_abstract;
+        private System.Windows.Forms.TextBox txtb_idea_title;
+        private System.Windows.Forms.Label lb_description;
+        private System.Windows.Forms.Label lb_risk_rating;
+        private System.Windows.Forms.Label lb_expiry_date;
+        private System.Windows.Forms.Label lb_abstract;
+        private System.Windows.Forms.Label lb_idea_title;
+        private System.Windows.Forms.Label lb_ideas_header;
+        private System.Windows.Forms.Panel pnl_products;
+        private System.Windows.Forms.Label lb_products;
+        private System.Windows.Forms.Label lb_product_description;
+        private System.Windows.Forms.Label lb_company_name;
+        private System.Windows.Forms.Button btn_add_product;
+        private System.Windows.Forms.Label lb_product_type;
+        private System.Windows.Forms.Label lb_product_name;
+        private System.Windows.Forms.TextBox txtb_product_description;
+        private System.Windows.Forms.TextBox txtb_company_name;
+        private System.Windows.Forms.TextBox txtb_product_type;
+        private System.Windows.Forms.TextBox txtb_product_name;
     }
 }
