@@ -473,7 +473,7 @@ namespace Investment_ideas_platform
             this.btn_add_product.Name = "btn_add_product";
             this.btn_add_product.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_add_product.Size = new System.Drawing.Size(167, 95);
-            this.btn_add_product.TabIndex = 1;
+            this.btn_add_product.TabIndex = 4;
             this.btn_add_product.Text = "Add Product";
             this.btn_add_product.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_add_product.UseVisualStyleBackColor = true;
@@ -508,7 +508,7 @@ namespace Investment_ideas_platform
             this.txtb_product_description.Name = "txtb_product_description";
             this.txtb_product_description.PlaceholderText = "Desciption of the product";
             this.txtb_product_description.Size = new System.Drawing.Size(401, 145);
-            this.txtb_product_description.TabIndex = 2;
+            this.txtb_product_description.TabIndex = 3;
             // 
             // txtb_company_name
             // 
@@ -526,7 +526,7 @@ namespace Investment_ideas_platform
             this.txtb_product_type.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtb_product_type.Name = "txtb_product_type";
             this.txtb_product_type.Size = new System.Drawing.Size(222, 32);
-            this.txtb_product_type.TabIndex = 2;
+            this.txtb_product_type.TabIndex = 1;
             // 
             // txtb_product_name
             // 
@@ -535,7 +535,7 @@ namespace Investment_ideas_platform
             this.txtb_product_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtb_product_name.Name = "txtb_product_name";
             this.txtb_product_name.Size = new System.Drawing.Size(222, 32);
-            this.txtb_product_name.TabIndex = 2;
+            this.txtb_product_name.TabIndex = 0;
             // 
             // idea_creator
             // 
@@ -543,9 +543,9 @@ namespace Investment_ideas_platform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1129, 740);
+            this.Controls.Add(this.pnl_products);
             this.Controls.Add(this.pn_ideas);
             this.Controls.Add(this.pn_main_dashboard);
-            this.Controls.Add(this.pnl_products);
             this.Controls.Add(this.pn_top_bar);
             this.Controls.Add(this.pn_menu_sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
