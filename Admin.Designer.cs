@@ -128,7 +128,7 @@ namespace Investment_ideas_platform
             this.btnAdminLogout.Location = new System.Drawing.Point(0, 816);
             this.btnAdminLogout.Name = "btnAdminLogout";
             this.btnAdminLogout.Size = new System.Drawing.Size(280, 82);
-            this.btnAdminLogout.TabIndex = 1;
+            this.btnAdminLogout.TabIndex = 12;
             this.btnAdminLogout.Text = "Logout";
             this.btnAdminLogout.UseVisualStyleBackColor = true;
             this.btnAdminLogout.Click += new System.EventHandler(this.btnAdminLogout_Click);
@@ -142,7 +142,7 @@ namespace Investment_ideas_platform
             this.btnHomepage.Location = new System.Drawing.Point(0, 494);
             this.btnHomepage.Name = "btnHomepage";
             this.btnHomepage.Size = new System.Drawing.Size(280, 82);
-            this.btnHomepage.TabIndex = 1;
+            this.btnHomepage.TabIndex = 11;
             this.btnHomepage.Text = "Home";
             this.btnHomepage.UseVisualStyleBackColor = true;
             this.btnHomepage.Click += new System.EventHandler(this.btnHomepage_Click);
@@ -156,7 +156,7 @@ namespace Investment_ideas_platform
             this.btnMyProfileAdmin.Location = new System.Drawing.Point(0, 412);
             this.btnMyProfileAdmin.Name = "btnMyProfileAdmin";
             this.btnMyProfileAdmin.Size = new System.Drawing.Size(280, 82);
-            this.btnMyProfileAdmin.TabIndex = 1;
+            this.btnMyProfileAdmin.TabIndex = 10;
             this.btnMyProfileAdmin.Text = "My profile";
             this.btnMyProfileAdmin.UseVisualStyleBackColor = true;
             this.btnMyProfileAdmin.Click += new System.EventHandler(this.btnMyProfileAdmin_Click);
@@ -170,7 +170,7 @@ namespace Investment_ideas_platform
             this.btnViewAccounts.Location = new System.Drawing.Point(0, 330);
             this.btnViewAccounts.Name = "btnViewAccounts";
             this.btnViewAccounts.Size = new System.Drawing.Size(280, 82);
-            this.btnViewAccounts.TabIndex = 1;
+            this.btnViewAccounts.TabIndex = 9;
             this.btnViewAccounts.Text = "View accounts";
             this.btnViewAccounts.UseVisualStyleBackColor = true;
             this.btnViewAccounts.Click += new System.EventHandler(this.btnViewAccounts_Click);
@@ -184,7 +184,7 @@ namespace Investment_ideas_platform
             this.btnCreateAccounts.Location = new System.Drawing.Point(0, 248);
             this.btnCreateAccounts.Name = "btnCreateAccounts";
             this.btnCreateAccounts.Size = new System.Drawing.Size(280, 82);
-            this.btnCreateAccounts.TabIndex = 1;
+            this.btnCreateAccounts.TabIndex = 8;
             this.btnCreateAccounts.Text = "Create accounts";
             this.btnCreateAccounts.UseVisualStyleBackColor = true;
             this.btnCreateAccounts.Click += new System.EventHandler(this.btnCreateAccounts_Click);
@@ -198,7 +198,7 @@ namespace Investment_ideas_platform
             this.btnAdminNotifications.Location = new System.Drawing.Point(0, 166);
             this.btnAdminNotifications.Name = "btnAdminNotifications";
             this.btnAdminNotifications.Size = new System.Drawing.Size(280, 82);
-            this.btnAdminNotifications.TabIndex = 1;
+            this.btnAdminNotifications.TabIndex = 7;
             this.btnAdminNotifications.Text = "Notifications";
             this.btnAdminNotifications.UseVisualStyleBackColor = true;
             this.btnAdminNotifications.Click += new System.EventHandler(this.btnAdminNotifications_Click);
@@ -346,7 +346,7 @@ namespace Investment_ideas_platform
             this.btnCAContinue.Location = new System.Drawing.Point(127, 162);
             this.btnCAContinue.Name = "btnCAContinue";
             this.btnCAContinue.Size = new System.Drawing.Size(128, 47);
-            this.btnCAContinue.TabIndex = 2;
+            this.btnCAContinue.TabIndex = 6;
             this.btnCAContinue.Text = "OK";
             this.btnCAContinue.UseVisualStyleBackColor = false;
             this.btnCAContinue.Click += new System.EventHandler(this.btnCAContinue_Click);
@@ -360,7 +360,7 @@ namespace Investment_ideas_platform
             this.tbCAGeneratedPassword.Name = "tbCAGeneratedPassword";
             this.tbCAGeneratedPassword.ReadOnly = true;
             this.tbCAGeneratedPassword.Size = new System.Drawing.Size(301, 27);
-            this.tbCAGeneratedPassword.TabIndex = 1;
+            this.tbCAGeneratedPassword.TabIndex = 5;
             this.tbCAGeneratedPassword.TabStop = false;
             this.tbCAGeneratedPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -576,7 +576,7 @@ namespace Investment_ideas_platform
             this.tbConfirmNewPassword.Name = "tbConfirmNewPassword";
             this.tbConfirmNewPassword.PasswordChar = '*';
             this.tbConfirmNewPassword.Size = new System.Drawing.Size(319, 31);
-            this.tbConfirmNewPassword.TabIndex = 1;
+            this.tbConfirmNewPassword.TabIndex = 2;
             // 
             // btnChangePasswordCancel
             // 
@@ -587,7 +587,7 @@ namespace Investment_ideas_platform
             this.btnChangePasswordCancel.Location = new System.Drawing.Point(294, 528);
             this.btnChangePasswordCancel.Name = "btnChangePasswordCancel";
             this.btnChangePasswordCancel.Size = new System.Drawing.Size(319, 40);
-            this.btnChangePasswordCancel.TabIndex = 3;
+            this.btnChangePasswordCancel.TabIndex = 4;
             this.btnChangePasswordCancel.Text = "Cancel";
             this.btnChangePasswordCancel.UseVisualStyleBackColor = false;
             this.btnChangePasswordCancel.Click += new System.EventHandler(this.btnChangePasswordCancel_Click);
@@ -626,7 +626,7 @@ namespace Investment_ideas_platform
             this.tbOldPassword.Name = "tbOldPassword";
             this.tbOldPassword.PasswordChar = '*';
             this.tbOldPassword.Size = new System.Drawing.Size(319, 31);
-            this.tbOldPassword.TabIndex = 1;
+            this.tbOldPassword.TabIndex = 0;
             // 
             // lblConfirmNewPassword
             // 
@@ -677,7 +677,7 @@ namespace Investment_ideas_platform
             this.btnMPChangePassword.Location = new System.Drawing.Point(186, 361);
             this.btnMPChangePassword.Name = "btnMPChangePassword";
             this.btnMPChangePassword.Size = new System.Drawing.Size(144, 40);
-            this.btnMPChangePassword.TabIndex = 3;
+            this.btnMPChangePassword.TabIndex = 0;
             this.btnMPChangePassword.Text = "Change";
             this.btnMPChangePassword.UseVisualStyleBackColor = false;
             this.btnMPChangePassword.Click += new System.EventHandler(this.btnMPChangePassword_Click);
@@ -779,7 +779,7 @@ namespace Investment_ideas_platform
             this.btnAdminExit.Location = new System.Drawing.Point(1777, 0);
             this.btnAdminExit.Name = "btnAdminExit";
             this.btnAdminExit.Size = new System.Drawing.Size(37, 41);
-            this.btnAdminExit.TabIndex = 2;
+            this.btnAdminExit.TabIndex = 13;
             this.btnAdminExit.Text = "X";
             this.btnAdminExit.UseVisualStyleBackColor = true;
             this.btnAdminExit.Click += new System.EventHandler(this.btnAdminExit_Click);
@@ -791,11 +791,11 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnAdminExit);
-            this.Controls.Add(this.pnAdminNotifications);
-            this.Controls.Add(this.pnAdminMyProfile);
-            this.Controls.Add(this.pnAdminHomepage);
-            this.Controls.Add(this.pnViewAccounts);
             this.Controls.Add(this.pnCreateAccounts);
+            this.Controls.Add(this.pnViewAccounts);
+            this.Controls.Add(this.pnAdminMyProfile);
+            this.Controls.Add(this.pnAdminNotifications);
+            this.Controls.Add(this.pnAdminHomepage);
             this.Controls.Add(this.pnAdminMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
