@@ -294,7 +294,7 @@ namespace Investment_ideas_platform
             this.cb_risk_rating.Location = new System.Drawing.Point(63, 336);
             this.cb_risk_rating.Name = "cb_risk_rating";
             this.cb_risk_rating.Size = new System.Drawing.Size(138, 31);
-            this.cb_risk_rating.TabIndex = 4;
+            this.cb_risk_rating.TabIndex = 3;
             // 
             // dtp_expiry_date
             // 
@@ -303,7 +303,7 @@ namespace Investment_ideas_platform
             this.dtp_expiry_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtp_expiry_date.Name = "dtp_expiry_date";
             this.dtp_expiry_date.Size = new System.Drawing.Size(233, 32);
-            this.dtp_expiry_date.TabIndex = 3;
+            this.dtp_expiry_date.TabIndex = 2;
             // 
             // txtb_idea_description
             // 
@@ -314,7 +314,7 @@ namespace Investment_ideas_platform
             this.txtb_idea_description.Name = "txtb_idea_description";
             this.txtb_idea_description.PlaceholderText = "Description of the Idea";
             this.txtb_idea_description.Size = new System.Drawing.Size(379, 153);
-            this.txtb_idea_description.TabIndex = 2;
+            this.txtb_idea_description.TabIndex = 4;
             // 
             // btn_add_idea
             // 
@@ -328,7 +328,7 @@ namespace Investment_ideas_platform
             this.btn_add_idea.Name = "btn_add_idea";
             this.btn_add_idea.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_add_idea.Size = new System.Drawing.Size(141, 95);
-            this.btn_add_idea.TabIndex = 1;
+            this.btn_add_idea.TabIndex = 5;
             this.btn_add_idea.Text = "Add Idea";
             this.btn_add_idea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_add_idea.UseVisualStyleBackColor = true;
@@ -341,7 +341,7 @@ namespace Investment_ideas_platform
             this.txtb_abstract.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtb_abstract.Name = "txtb_abstract";
             this.txtb_abstract.Size = new System.Drawing.Size(233, 32);
-            this.txtb_abstract.TabIndex = 2;
+            this.txtb_abstract.TabIndex = 1;
             // 
             // txtb_idea_title
             // 
@@ -350,7 +350,7 @@ namespace Investment_ideas_platform
             this.txtb_idea_title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtb_idea_title.Name = "txtb_idea_title";
             this.txtb_idea_title.Size = new System.Drawing.Size(233, 32);
-            this.txtb_idea_title.TabIndex = 2;
+            this.txtb_idea_title.TabIndex = 0;
             // 
             // lb_description
             // 
