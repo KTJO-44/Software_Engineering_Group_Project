@@ -902,7 +902,7 @@ namespace Investment_ideas_platform
             this.btnViewProducts.Name = "btnViewProducts";
             this.btnViewProducts.Size = new System.Drawing.Size(131, 62);
             this.btnViewProducts.TabIndex = 5;
-            this.btnViewProducts.Text = "View all Iroducts";
+            this.btnViewProducts.Text = "View all products";
             this.btnViewProducts.UseVisualStyleBackColor = true;
             this.btnViewProducts.Click += new System.EventHandler(this.btnViewProducts_Click);
             // 
@@ -1135,8 +1135,8 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.pnDashboard);
+            this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewIdeas);
