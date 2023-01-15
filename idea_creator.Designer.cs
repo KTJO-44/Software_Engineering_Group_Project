@@ -102,7 +102,7 @@ namespace Investment_ideas_platform
             this.btn_logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(118, 53);
-            this.btn_logout.TabIndex = 1;
+            this.btn_logout.TabIndex = 10;
             this.btn_logout.Text = "Logout";
             this.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_logout.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@ namespace Investment_ideas_platform
             this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(104, 53);
-            this.btn_exit.TabIndex = 1;
+            this.btn_exit.TabIndex = 9;
             this.btn_exit.Text = "Exit";
             this.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@ namespace Investment_ideas_platform
             this.btn_products.Name = "btn_products";
             this.btn_products.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_products.Size = new System.Drawing.Size(211, 93);
-            this.btn_products.TabIndex = 1;
+            this.btn_products.TabIndex = 8;
             this.btn_products.Text = "Products";
             this.btn_products.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_products.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@ namespace Investment_ideas_platform
             this.btn_ideas.Name = "btn_ideas";
             this.btn_ideas.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_ideas.Size = new System.Drawing.Size(211, 93);
-            this.btn_ideas.TabIndex = 1;
+            this.btn_ideas.TabIndex = 7;
             this.btn_ideas.Text = "Ideas";
             this.btn_ideas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ideas.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@ namespace Investment_ideas_platform
             this.btn_home.Name = "btn_home";
             this.btn_home.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_home.Size = new System.Drawing.Size(211, 93);
-            this.btn_home.TabIndex = 1;
+            this.btn_home.TabIndex = 6;
             this.btn_home.Text = "Main Dashboard";
             this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_home.UseVisualStyleBackColor = true;
