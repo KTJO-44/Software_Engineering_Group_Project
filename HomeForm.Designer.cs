@@ -659,7 +659,7 @@ namespace Investment_ideas_platform
             this.btnDSortclientProfile.Name = "btnDSortclientProfile";
             this.btnDSortclientProfile.Size = new System.Drawing.Size(94, 29);
             this.btnDSortclientProfile.TabIndex = 2;
-            this.btnDSortclientProfile.Text = "Decend";
+            this.btnDSortclientProfile.Text = "Descend";
             this.btnDSortclientProfile.UseVisualStyleBackColor = true;
             this.btnDSortclientProfile.Click += new System.EventHandler(this.btnDSortclientProfile_Click);
             // 
@@ -669,7 +669,7 @@ namespace Investment_ideas_platform
             this.btnASortclientProfile.Name = "btnASortclientProfile";
             this.btnASortclientProfile.Size = new System.Drawing.Size(94, 29);
             this.btnASortclientProfile.TabIndex = 1;
-            this.btnASortclientProfile.Text = "Accend";
+            this.btnASortclientProfile.Text = "Ascend";
             this.btnASortclientProfile.UseVisualStyleBackColor = true;
             this.btnASortclientProfile.Click += new System.EventHandler(this.btnASortclientProfile_Click);
             // 
@@ -1135,9 +1135,9 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.pnDashboard);
-            this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.pnViewAllClients);
+            this.Controls.Add(this.pnChangePI1);
+            this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewIdeas);
             this.Controls.Add(this.pnChangePL1);
