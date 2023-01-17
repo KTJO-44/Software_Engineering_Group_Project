@@ -203,7 +203,7 @@ namespace Investment_ideas_platform
             this.DSortIdeas.Name = "DSortIdeas";
             this.DSortIdeas.Size = new System.Drawing.Size(94, 29);
             this.DSortIdeas.TabIndex = 2;
-            this.DSortIdeas.Text = "Decend";
+            this.DSortIdeas.Text = "Descend";
             this.DSortIdeas.UseVisualStyleBackColor = true;
             this.DSortIdeas.Click += new System.EventHandler(this.DSortIdeas_Click);
             // 
@@ -213,7 +213,7 @@ namespace Investment_ideas_platform
             this.ASortIdeas.Name = "ASortIdeas";
             this.ASortIdeas.Size = new System.Drawing.Size(94, 29);
             this.ASortIdeas.TabIndex = 1;
-            this.ASortIdeas.Text = "Accend";
+            this.ASortIdeas.Text = "Ascend";
             this.ASortIdeas.UseVisualStyleBackColor = true;
             this.ASortIdeas.Click += new System.EventHandler(this.ASortIdeas_Click);
             // 
@@ -287,7 +287,7 @@ namespace Investment_ideas_platform
             this.btnDSortProducts.Name = "btnDSortProducts";
             this.btnDSortProducts.Size = new System.Drawing.Size(94, 29);
             this.btnDSortProducts.TabIndex = 2;
-            this.btnDSortProducts.Text = "decend";
+            this.btnDSortProducts.Text = "Descend";
             this.btnDSortProducts.UseVisualStyleBackColor = true;
             this.btnDSortProducts.Click += new System.EventHandler(this.btnDSortProducts_Click);
             // 
@@ -297,7 +297,7 @@ namespace Investment_ideas_platform
             this.btnASortProducts.Name = "btnASortProducts";
             this.btnASortProducts.Size = new System.Drawing.Size(94, 29);
             this.btnASortProducts.TabIndex = 1;
-            this.btnASortProducts.Text = "Accend";
+            this.btnASortProducts.Text = "Ascend";
             this.btnASortProducts.UseVisualStyleBackColor = true;
             this.btnASortProducts.Click += new System.EventHandler(this.btnASortProducts_Click);
             // 
@@ -1018,9 +1018,9 @@ namespace Investment_ideas_platform
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(100, 222);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(279, 23);
+            this.label27.Size = new System.Drawing.Size(275, 23);
             this.label27.TabIndex = 8;
-            this.label27.Text = "Choose new location for Location 1";
+            this.label27.Text = "Choose new location for location 1";
             // 
             // label28
             // 
@@ -1047,9 +1047,9 @@ namespace Investment_ideas_platform
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Location = new System.Drawing.Point(290, 11);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(730, 62);
+            this.label30.Size = new System.Drawing.Size(723, 62);
             this.label30.TabIndex = 5;
-            this.label30.Text = "UPDATE PREFENCED LOCATIONS";
+            this.label30.Text = "UPDATE PREFERRED LOCATIONS";
             // 
             // cmbChangePL3
             // 
@@ -1135,12 +1135,12 @@ namespace Investment_ideas_platform
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1813, 898);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pnChangePL1);
+            this.Controls.Add(this.pnViewIdeas);
+            this.Controls.Add(this.pnViewAllProducts);
             this.Controls.Add(this.pnViewAllClients);
             this.Controls.Add(this.pnChangePI1);
             this.Controls.Add(this.pnDashboard);
-            this.Controls.Add(this.pnViewAllProducts);
-            this.Controls.Add(this.pnViewIdeas);
-            this.Controls.Add(this.pnChangePL1);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
